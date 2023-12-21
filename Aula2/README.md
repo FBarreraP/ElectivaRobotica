@@ -17,6 +17,10 @@ sudo update-alternatives --config python3
 
 <h1>Introducción a Python</h1>
 
+1. Instalar Python en Windows 
+Descargar el instalador del siguiente link: https://www.python.org
+* Seleccionar la opción Add path
+
 ```python
 print("Hola mundo '2024'")
 print('Hola mundo "2024"')
@@ -77,9 +81,13 @@ print(i1,i2)
 
 <h1>Toolbox Peter Corke</h1>
 
-1. Para instalar el toolbox de Peter Corke en Python (https://petercorke.github.io/robotics-toolbox-python/intro.html)
+(https://petercorke.github.io/robotics-toolbox-python/intro.html)
 
-https://www.makeuseof.com/fix-pip-error-externally-managed-environment-linux/
+1. Instalar el toolbox de Peter Corke en Python a través de un terminal
+pip3 install roboticstoolbox-python
+
+* La instalación en la raspberry se deben tener en cuenta:
+
 
 2. 
 
@@ -117,8 +125,10 @@ print(MTH)
 
 <h1>Interfaces gráficas (GUI) con Qt designer</h1>
 
-1. Instalar Qt designer en Windows 
-Descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
+1. Instalar Qt designer 
+En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
+En Raspberry, correr en el terminal el siguiente comando: sudo apt-get install qtcreator
+
 
 2. Realizar el front end de la interfaz gráfica para una suma aritmética de dos números editnado algunas propiedades de cada widget utilizado
 
