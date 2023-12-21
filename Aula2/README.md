@@ -75,19 +75,47 @@ print(i1,i2)
 ```
 
 
-<h2>toolbox Peter Corke</h2>
+<h1>Toolbox Peter Corke</h1>
 
-Para instalar el toolbox de Peter Corke en Python (https://petercorke.github.io/robotics-toolbox-python/intro.html)
+1. Para instalar el toolbox de Peter Corke en Python (https://petercorke.github.io/robotics-toolbox-python/intro.html)
 
 https://www.makeuseof.com/fix-pip-error-externally-managed-environment-linux/
 
-sudo apt install python3 virtualenv
+2. 
 
+3. Ejecutar un código en Python donde se importe la libreria roboticstoolbox
 
-# Import the robotics toolbox
+```python
+from roboticstoolbox import *
+import matplotlib.pyplot as plt
 import roboticstoolbox as rtb
+import math
+import numpy as np
 
-<h2>Interfaces gráifcas (GUI) con Qt designer</h2>
+l1 = 12
+l2 = 14
+l3 = 6
+l4 = 4
+
+q1 = 0
+q2 = 0
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=math.pi/2, a=l2, offset=0))
+R.append(RevoluteDH(d=l3, alpha=0, a=l4, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2], limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2])
+print(MTH)
+```
+
+<h1>Interfaces gráficas (GUI) con Qt designer</h1>
 
 1. Instalar Qt designer en Windows 
 Descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
