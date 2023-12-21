@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Ejemplo1"))
         self.pushButton.setText(_translate("MainWindow", "CALCULAR"))
         self.label_2.setText(_translate("MainWindow", "+"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -115,13 +115,13 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "SUMA ARITMÉTICA"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Prof. Fabián Barrera Prieto (MSc.)</p><p align=\"center\">Ingeniería mecatrónica</p><p align=\"center\">Electiva de robótica</p><p align=\"center\">2024-1</p></body></html>"))
 
-
     #Función que se llama al presionar
     def Suma(self):
         a = self.textEdit.toPlainText()
         b = self.textEdit_2.toPlainText()
         c = int(a)+int(b)
         self.label.setText(str(c))
+
 
 if __name__ == "__main__":
     import sys
