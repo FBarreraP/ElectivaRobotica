@@ -268,7 +268,7 @@ if __name__ == "__main__":
 
 ![Alt text](image-1.png)
 
-<h1> Git hub </h1>
+<h1>Repositorio git</h1>
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
 Los repositorios GitHub y GitLab son utilizados principalmente por un terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
