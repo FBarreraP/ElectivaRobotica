@@ -15,7 +15,7 @@ sudo update-alternatives --config python3
 
 
 
-<h1>Introduccion a Python</h1>
+<h1>Introducción a Python</h1>
 
 ```python
 print("Hola mundo '2024'")
