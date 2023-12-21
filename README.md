@@ -322,7 +322,7 @@ La electiva de robótica está enfocada a la robótica de brazos manipuladores p
 		<li> Prohibido el uso de celular en quices y clase</li>
 		<li> Permitidas las salidas al baño y a recibir llamadas; en los quices se debe dejar el celular en el puesto para salir al baño</li>
 		<li> No comparto diapositivas</li>
-		<li> No es permitido tomar fotos, ni videos. El material de clase está en el siguiente repositorio: https://github.com/FBarreraP/ElectivaRobotica </li>
+		<li> No es permitido tomar fotos, ni videos en clase. El material de clase está en el siguiente repositorio: https://github.com/FBarreraP/ElectivaRobotica </li>
 		<li> Los laboratorios consistirán únicamente de montaje y podrán ser realizados en grupos de maximo 2 estudiantes</li>
 		<li> El proyecto consistirá únicamente de montaje, podrá ser realizado en grupos de máximo 2 estudiantes y deberá ser desarrollado sobre IoT</li> 
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo</li>
