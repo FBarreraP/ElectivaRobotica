@@ -148,7 +148,7 @@ En Raspberry, correr en el terminal el siguiente comando: sudo apt-get install q
 ![Alt text](image.png)
 
 3. Convertir un archivo .ui a .py
-En Windows, pyuic5 -x [FILENAME].ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
+En Windows, pyuic5 -x `[FILENAME]`.ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
 En Raspberry, python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py (ej: python -m PyQt5.uic.pyuic -x suma.ui -o suma.py)
 
 4. Realizar el back end de la interfaz gráfica, es decir, editar el archivo .py para realizar la suma de dos números cuando se presione el botón
