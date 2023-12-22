@@ -21,6 +21,8 @@ sudo update-alternatives --config python3
 En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path
 En Raspberry, ya viene instalado Python versión 3.1X
 
+* Para conocer la versión de Python sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: python --version
+
 Instalar Visual Studio Code
 En Windows, descargar el instalador del siguiente link: 
 En Raspberry, a través de la siguiente línea de comando: sudo apt install code
@@ -146,7 +148,8 @@ En Raspberry, correr en el terminal el siguiente comando: sudo apt-get install q
 ![Alt text](image.png)
 
 3. Convertir un archivo .ui a .py
-pyuic5 -x nombre_archivo.ui -o nombre_archivo.py (ej: pyuic5 -x suma.ui -o suma.py)
+En Windows, pyuic5 -x [FILENAME].ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
+En Raspberry, python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py (ej: python -m PyQt5.uic.pyuic -x suma.ui -o suma.py)
 
 4. Realizar el back end de la interfaz gráfica, es decir, editar el archivo .py para realizar la suma de dos números cuando se presione el botón
 
