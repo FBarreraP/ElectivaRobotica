@@ -17,9 +17,13 @@ sudo update-alternatives --config python3
 
 <h1>Introducción a Python</h1>
 
-1. Instalar Python en Windows 
-Descargar el instalador del siguiente link: https://www.python.org
-* Seleccionar la opción Add path
+1. Instalar Python 
+En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path
+En Raspberry, ya viene instalado Python versión 3.1X
+
+Instalar Visual Studio Code
+En Windows, descargar el instalador del siguiente link: 
+En Raspberry, a través de la siguiente línea de comando: sudo apt install code
 
 ```python
 print("Hola mundo '2024'")
@@ -88,6 +92,13 @@ pip3 install roboticstoolbox-python
 
 * La instalación en la raspberry se deben tener en cuenta:
 
+![Alt text](image-2.png)
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+1. En el terminal, con los comandos linux entrar a la carpeta /etc
+2. Ejecutar la siguiente línea de comando: sudo nano pip.conf
+3. Al final del archivo agregar la siguiente línea: break-system-packages = true
+4. Presionar Ctrl+X, presionar posteriormente la s para guardar las modificaciones y enter
 
 2. 
 
