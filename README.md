@@ -316,16 +316,15 @@ La electiva de robótica está enfocada al desarrollo de brazos manipuladores de
 	<ul>
 		<li> Inicio de clases: Quince (15) minutos después de la hora inicial definida de la clase y el control de asistencia se realiza a cada inicio de clase ⌚</li>
 		<li> Fin de clases: Quince (15) minutos antes de la hora final definida de la clase ⏱️</li>
-		<li> Respeto en clase</li>
+		<li> Respeto en clase 🤝</li>
 		<li> No presto mi computador para presentar laboratorios, talleres y/o proyectos 🤦‍♂️</li>
 		<li> Prohibido el uso de celular en quices y clase 📵</li>
 		<li> Permitidas las salidas al baño 🚻 y a recibir llamadas 📲, en los quices se debe dejar el celular en el puesto para salir al baño</li>
 		<li> Si no dejan dictar la clase, pasan al tablero a dar la clase o doy la clase por vista 😤</li>
-		<li> No es permitido tomar fotos, ni videos en clase . El material de clase está en el siguiente repositorio: https://github.com/FBarreraP/ElectivaRobotica </li>
-		<li> Los laboratorios consistirán únicamente de montaje y podrán ser realizados en grupos de maximo 2 estudiantes</li>
-		<li> El proyecto consistirá únicamente de montaje, podrá ser realizado en grupos de máximo 2 estudiantes y deberá ser desarrollado sobre IoT</li> 
-		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo</li>
-		<li> Uso obligatorio de bata blanca en el laboratorio de robótica</li>
+		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/ElectivaRobotica </li>
+		<li> Los laboratorios y el proyecto consistirán únicamente de montaje y podrán ser realizados en grupos de máximo 2 estudiantes 🧍‍♂️🧍‍♀️</li>
+		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
+		<li> Uso obligatorio de bata blanca en el laboratorio de robótica 🥼</li>
 	</ul>
 
 <h4>Observaciones de reglamento estudiantil</h4>
