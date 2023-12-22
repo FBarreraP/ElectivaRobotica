@@ -1,9 +1,9 @@
-<h1 align="center">Profesor: MSc. Fabián Barrera Prieto<br>
-Materia: Electiva de robótica<br>
-Universidad: ECCI<br>
-Año: 2024</h1><br>
+<h1 align="center">Profesor: MSc. Fabián Barrera Prieto 👨‍🏫<br>
+Materia: Electiva de robótica 🦾<br>
+Universidad: ECCI 🏫<br>
+Año: 2024 📅</h1><br>
 
-La electiva de robótica está enfocada a la robótica de brazos manipuladores programados con Python a través de Raspberry Pi 3B, 3B+ o 4B
+La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 6 DOF programados con Python a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
 
 <h2 id="aula1">Aula 1 - Presentación de la materia</h2>
 
