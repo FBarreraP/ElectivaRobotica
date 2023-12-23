@@ -3,25 +3,29 @@
 <h2>Introducción a Python :atom:</h2>
 
 1. Instalar `Python`<br>
-En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path.<br>
+En Windows, descargar el instalador del siguiente link: https://www.python.org y al momento de instalarlo, seleccionar la opción Add path.<br>
 En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
-* Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: 
+Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: 
 
 ```
 python --version
 ```
 
-Instalar Visual Studio Code
-En Windows, descargar el instalador del siguiente link: 
-En Raspberry, a través de la siguiente línea de comando: sudo apt install code
+2. Instalar Visual Studio Code <br>
+En Windows, descargar el instalador del siguiente link: https://code.visualstudio.com
+En Raspbian, ejecutar en el terminal la siguiente línea de comando: sudo apt install code
+
+3. Ejemplos de programación en `Python`
+
+Es posible inicializar un <em>string<em> en comillas simples o dobles.
 
 ```python
 print("Hola mundo '2024'")
 print('Hola mundo "2024"')
 ```
 
-El primer ejemplo es sobre declaracion de variables numericas
+No hay necesidad de declarar variables, sin embargo, pueden ser inicializadas y específicamente a las variables numéricas se les puede modificar el tipo de variable.
 
 ```python
 #Variables int y float
@@ -53,7 +57,7 @@ print('Los valores de d, e y f, respectivamente son: %f, %f y %f'%(d,e,f))
 
 ```
 
-En el caso de variables tipo <em>string</em> se puede acceder a una posicion especifica de un vector tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando
+En el caso de variables tipo <em>string</em> se puede acceder a una posición específica de un vector tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando).
 
 ```python
 #Variables string
@@ -78,15 +82,21 @@ print(i1,i2)
 
 (https://petercorke.github.io/robotics-toolbox-python/intro.html)
 
-1. Instalar el toolbox de Peter Corke en Python a través de un terminal
-pip3 install roboticstoolbox-python
+1. Instalar el toolbox de Peter Corke en Python (https://github.com/petercorke/robotics-toolbox-python)
 
-* La instalación en la raspberry se deben tener en cuenta:
+En Windows y en Raspbian, ejecutar a través de un terminal el siguiente comando:
+
+```
+pip3 install roboticstoolbox-python
+```
+
+Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
 ![Alt text](image-2.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
-1. En el terminal, con los comandos linux entrar a la carpeta /etc
+
+1. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc
 2. Ejecutar la siguiente línea de comando: sudo nano pip.conf
 3. Al final del archivo agregar la siguiente línea: break-system-packages = true
 4. Presionar Ctrl+X, presionar posteriormente la s para guardar las modificaciones y enter
