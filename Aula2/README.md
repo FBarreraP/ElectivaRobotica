@@ -1,10 +1,10 @@
 <h2>Aula 2</h2>
 
-<h2>Introducción a `Python` :atom:</h2>
+<h2>Introducción a Python :atom:</h2>
 
-1. Instalar `Python` 
-En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path
-En Raspberry, ya viene instalado `Python` versión 3.1X
+1. Instalar `Python`<br>
+En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path.<br>
+En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
 * Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: 
 
