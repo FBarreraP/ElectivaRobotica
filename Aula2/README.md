@@ -64,9 +64,9 @@ Algunas veces que se empujen (<em>push</em>) los archivos del repositorio local 
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
-I.
-II.
-III.
+I. <br>
+II. <br>
+III. <br>
 
 Si se tienen dos repositorios locales (dos computadores), es necesario actualizar el repositorio desactualizado, a través del siguiente comando:
 
@@ -87,8 +87,11 @@ python --version
 ```
 
 2. Instalar Visual Studio Code <br>
-En Windows, descargar el instalador del siguiente link: https://code.visualstudio.com
-En Raspbian, ejecutar en el terminal la siguiente línea de comando: sudo apt install code
+En Windows, descargar el instalador del siguiente link: https://code.visualstudio.com<br>
+En Raspbian, ejecutar en el terminal la siguiente línea de comando: 
+```
+sudo apt install code
+```
 
 3. Ejemplos de programación en `Python`
 
