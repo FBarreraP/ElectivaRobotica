@@ -1,27 +1,16 @@
-cd /usr/src 
-sudo wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz 
-sudo tar xzf Python-3.9.0.tgz 
-cd Python-3.9.0
-sudo ./configure --enable-optimizations 
-sudo make altinstall 
+<h2>Aula 2</h2>
 
+<h2>Introducción a `Python` :atom:</h2>
 
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9.0 2
-
-sudo update-alternatives --config python3
-
-
-
-
-
-<h1>Introducción a Python</h1>
-
-1. Instalar Python 
+1. Instalar `Python` 
 En Windows, descargar el instalador del siguiente link: https://www.python.org y seleccionar la opción Add path
-En Raspberry, ya viene instalado Python versión 3.1X
+En Raspberry, ya viene instalado `Python` versión 3.1X
 
-* Para conocer la versión de Python sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: python --version
+* Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: 
+
+```
+python --version
+```
 
 Instalar Visual Studio Code
 En Windows, descargar el instalador del siguiente link: 
@@ -85,7 +74,7 @@ print(i1,i2)
 ```
 
 
-<h1>Toolbox Peter Corke</h1>
+<h2>Toolbox Peter Corke</h2>
 
 (https://petercorke.github.io/robotics-toolbox-python/intro.html)
 
@@ -136,7 +125,7 @@ MTH = Robot.fkine([q1,q2])
 print(MTH)
 ```
 
-<h1>Interfaces gráficas (GUI) con Qt designer</h1>
+<h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
 1. Instalar Qt designer 
 En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
@@ -292,7 +281,7 @@ if __name__ == "__main__":
 
 ![Alt text](image-1.png)
 
-<h1>Repositorio git</h1>
+<h2>Repositorio git</h2>
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
 Los repositorios GitHub y GitLab son utilizados principalmente por un terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
