@@ -138,7 +138,7 @@ print(MTH)
 
 <h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
-1. Instalar Qt designer 
+1. Instalar Qt designer<br>
 En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download<br>
 En Raspbian, en el terminal ejecutar el siguiente comando: 
 ```
@@ -149,9 +149,18 @@ sudo apt-get install qtcreator
 
 ![Alt text](image.png)
 
-3. Convertir un archivo `.ui` a `.py`
-En Windows, pyuic5 -x `[FILENAME].ui` -o `[FILENAME].py` (ej: pyuic5 -x `suma.ui` -o `suma.py`)
-En Raspberry, python -m PyQt5.uic.pyuic -x `[FILENAME].ui` -o `[FILENAME].py` (ej: python -m PyQt5.uic.pyuic -x `suma.ui` -o `suma.py`)
+3. Convertir un archivo `.ui` a `.py`<br>
+
+I. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta donde se encuentre el archivo `.ui`<br>
+
+II. En Windows, ejecutar en el terminal el siguiente comando:
+```
+pyuic5 -x [FILENAME].ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
+```
+En Raspbian, ejecutar en el terminal el siguiente comando:
+```
+python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py (ej: python -m PyQt5.uic.pyuic -x suma.ui -o suma.py)
+```
 
 4. Realizar el <em>back end</em> de la interfaz gráfica, es decir, editar el archivo `.py` para que realice la tarea específica de la suma de dos números cuando se presione el botón.
 
