@@ -6,7 +6,7 @@
 En Windows, descargar el instalador del siguiente link: https://www.python.org y al momento de instalarlo, seleccionar la opción Add path.<br>
 En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
-Para conocer la versión de `Python` sobre la cual se está trabajando, en un terminal ejecutar el siguiente comando: 
+Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal ejecutar el siguiente comando: 
 
 ```
 python --version
@@ -84,7 +84,7 @@ print(i1,i2)
 
 1. Instalar el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
 
-En Windows y en Raspbian, en un terminal ejecutar el siguiente comando:
+En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
 
 ```
 pip3 install roboticstoolbox-python
@@ -107,14 +107,11 @@ break-system-packages = true
 ```
 IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
 
-2. Ejecutar un código en Python donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
+2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
 ```python
 from roboticstoolbox import *
-import matplotlib.pyplot as plt
-import roboticstoolbox as rtb
 import math
-import numpy as np
 
 l1 = 12
 l2 = 14
@@ -142,21 +139,21 @@ print(MTH)
 <h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
 1. Instalar Qt designer 
-En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
+En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download<br>
 En Raspbian, en el terminal ejecutar el siguiente comando: 
 ```
 sudo apt-get install qtcreator
 ```
 
-2. Realizar el front end de la interfaz gráfica para una suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado
+2. Realizar el <em>front</em> end de la interfaz gráfica para la suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado.
 
 ![Alt text](image.png)
 
-3. Convertir un archivo .ui a .py
-En Windows, pyuic5 -x `[FILENAME]`.ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
-En Raspberry, python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py (ej: python -m PyQt5.uic.pyuic -x suma.ui -o suma.py)
+3. Convertir un archivo `.ui` a `.py`
+En Windows, pyuic5 -x `[FILENAME].ui` -o `[FILENAME].py` (ej: pyuic5 -x `suma.ui` -o `suma.py`)
+En Raspberry, python -m PyQt5.uic.pyuic -x `[FILENAME].ui` -o `[FILENAME].py` (ej: python -m PyQt5.uic.pyuic -x `suma.ui` -o `suma.py`)
 
-4. Realizar el back end de la interfaz gráfica, es decir, editar el archivo .py para realizar la suma de dos números cuando se presione el botón
+4. Realizar el <em>back end</em> de la interfaz gráfica, es decir, editar el archivo `.py` para que realice la tarea específica de la suma de dos números cuando se presione el botón.
 
 ```python
 # -*- coding: utf-8 -*-
@@ -300,7 +297,7 @@ if __name__ == "__main__":
 <h2>Repositorio git</h2>
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
-Los repositorios GitHub y GitLab son utilizados principalmente por un terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
+Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
 
 ```linux
 COMANDOS LINUX
@@ -322,7 +319,7 @@ git config --global user.email “correo_registrado” (ej: git config --global 
 Para crear un repositorio web a partir de una carpeta local (PC)
 
 ```git
-Entrar a la carpeta a través de un terminal teniendo en cuenta los comandos linux anteriormente presentados
+Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
 git init -> Convierte la carpeta en un repositorio local a partir de la creación del archivo .git
 git add README.md -> 
 git commit -m "algun_comentario" ->
@@ -334,7 +331,7 @@ git push -u origin main ->
 Para crear un repositorio local (PC) desde un repositorio web
 
 ```git
-Entrar a la carpeta a través de un terminal teniendo en cuenta los comandos linux anteriormente presentados
+Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
 git clone https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
 cd nombre_repositorio_web (ej: ElectivaRobotica)
 ```
