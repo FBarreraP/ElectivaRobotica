@@ -18,7 +18,7 @@ En Raspbian, ejecutar en el terminal la siguiente línea de comando: sudo apt in
 
 3. Ejemplos de programación en `Python`
 
-Es posible inicializar un <em>string<em> en comillas simples o dobles.
+Es posible inicializar un <em>string</em> en comillas simples o dobles.
 
 ```python
 print("Hola mundo '2024'")
@@ -96,7 +96,8 @@ Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente erro
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
-1. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc
+<ol type=”I”>
+<li> En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc</li>
 2. Para abrir el archivo pi.conf en el terminal, ejecutar la siguiente línea de comando: 
 ```
 sudo nano pip.conf
@@ -106,10 +107,9 @@ sudo nano pip.conf
 break-system-packages = true
 ```
 4. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
+</ol>
 
-2. 
-
-3. Ejecutar un código en Python donde se importe la libreria roboticstoolbox
+2. Ejecutar un código en Python donde se importe la libreria roboticstoolbox
 
 ```python
 from roboticstoolbox import *
