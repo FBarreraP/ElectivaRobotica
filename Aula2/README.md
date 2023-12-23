@@ -96,8 +96,8 @@ Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente erro
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
-I. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc
-II. Para abrir el archivo pi.conf en el terminal, ejecutar la siguiente línea de comando: 
+I. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc<br>
+II. Para abrir el archivo `pi.conf` en el terminal, ejecutar la siguiente línea de comando: 
 ```
 sudo nano pip.conf
 ```
@@ -107,7 +107,7 @@ break-system-packages = true
 ```
 IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
 
-2. Ejecutar un código en Python donde se importe la libreria roboticstoolbox
+2. Ejecutar un código en Python donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
 ```python
 from roboticstoolbox import *
@@ -143,10 +143,12 @@ print(MTH)
 
 1. Instalar Qt designer 
 En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download
-En Raspberry, correr en el terminal el siguiente comando: sudo apt-get install qtcreator
+En Raspbian, en el terminal ejecutar el siguiente comando: 
+```
+sudo apt-get install qtcreator
+```
 
-
-2. Realizar el front end de la interfaz gráfica para una suma aritmética de dos números editnado algunas propiedades de cada widget utilizado
+2. Realizar el front end de la interfaz gráfica para una suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado
 
 ![Alt text](image.png)
 
