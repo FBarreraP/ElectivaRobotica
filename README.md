@@ -7,6 +7,8 @@ La electiva de robótica está enfocada al desarrollo de brazos manipuladores de
 
 <h1>Aula 1</h1>
 
+En esta clase se presenta la materia: el contenido temático, los métodos de evaluación, las observaciones, las NO EXCUSAS y los recursos para el desarrollo del curso.
+
 <h2>Presentación de la materia 🚀</h2>
 
 <h3>TEMAS 🤓</h3>

@@ -1,42 +1,46 @@
 <h1>Aula 2</h1>
 
+En esta clase se enseña a utilizar repositorio git, `Python` con el Toolbox de Peter Corke e interfaces gráficas (GUIs).
+
 <h2>Repositorio git</h2>
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
 Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
 
 ```linux
 COMANDOS LINUX
-ls -> Muestra la lista de archivos en la ruta
+ls -> Muestra la lista de archivos en la ruta actual
+la -a -> Muestra la lista de archivos incluyendo archivos ocultos en la ruta actual
 pwd -> Muestra la ruta actual
 cd -> Entra a una carpeta especificada
 cd .. -> Regresa al punto anterior de la ruta
-touch  -> Crea un archivo
-mkdir -> Crea una carpeta 
+touch  -> Crea un archivo en la ruta actual
+mkdir -> Crea una carpeta en la ruta actual
+sudo -> Brinda permisos de administrador (superusuario)
+nano -> Abre un archivo específico
 ```
 
 Para iniciar con la sincronización del repositorio local con el repositorio local se debe realizar la configuración teniendo en cuenta los siguientes comandos:
 
 ```git
 COMANDOS GIT
-git config --global user.name “nombre_usuario” (ej: git config --global user.name “FBarreraP”)
-git config --global user.email “correo_registrado” (ej: git config --global user.email “fbarrera6@gmail.com”)
+git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
+git config --global user.email “[USEREMAIL]” (ej: git config --global user.email “fbarrera6@gmail.com”)
 ```
 Para crear un repositorio web a partir de una carpeta local (PC)
 
-```git
+```
 Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
-git init -> Convierte la carpeta en un repositorio local a partir de la creación del archivo .git
-git add README.md -> 
-git commit -m "algun_comentario" ->
+git init 
+git add README.md 
+git commit -m "algun_comentario" 
 git branch -M main
 git remote add origin https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
-git push -u origin main ->
+git push -u origin main 
 ```
 
 Para crear un repositorio local (PC) desde un repositorio web
 
-```git
+```
 Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
 git clone https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
 cd nombre_repositorio_web (ej: ElectivaRobotica)
@@ -44,11 +48,24 @@ cd nombre_repositorio_web (ej: ElectivaRobotica)
 
 Para sincronizar los repositorios (web y local) se utilizan los siguientes comandos de git
 
-```git
-git status -> lista todas los archivos o carpetas nuevas o modificadas que no han sido commit
-git add --all ->
-git commit -m "algun_comentario" ->
-git push -u origin main ->
+```
+git status
+git add --all
+git commit -m "algun_comentario"
+git push -u origin main
+```
+Algunas veces que se empujen (<em>push</em>) los archivos del repositorio local al repositorio web hay que autenticar (usuario y contraseña) el perfil, sin embargo, se debe colocar una <em>Key</em>, siguiendo los siguientes pasos:<br>
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+I.
+II.
+III.
+
+Si se tienen dos repositorios locales (dos computadores), es necesario actualizar el repositorio desactualizado, a través del siguiente comando:
+
+```
+git pull origin main
 ```
 
 <h2>Introducción a Python :atom:</h2>
@@ -140,8 +157,8 @@ En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
 ```
 pip3 install roboticstoolbox-python
 ```
-
-Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
+>[!IMPORTANTE]
+>Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
 ![Alt text](image-2.png)
 
