@@ -157,7 +157,7 @@ En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
 ```
 pip3 install roboticstoolbox-python
 ```
->[!IMPORTANTE]
+>[!IMPORTANT]
 >Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
 ![Alt text](image-2.png)
