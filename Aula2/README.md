@@ -96,18 +96,16 @@ Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente erro
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
-<ol type=”I”>
-<li> En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc</li>
-2. Para abrir el archivo pi.conf en el terminal, ejecutar la siguiente línea de comando: 
+I. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc
+II. Para abrir el archivo pi.conf en el terminal, ejecutar la siguiente línea de comando: 
 ```
 sudo nano pip.conf
 ```
-3. Al final del archivo agregar la siguiente línea: 
+III. Al final del archivo agregar la siguiente línea: 
 ```
 break-system-packages = true
 ```
-4. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
-</ol>
+IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
 
 2. Ejecutar un código en Python donde se importe la libreria roboticstoolbox
 
