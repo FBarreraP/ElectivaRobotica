@@ -260,7 +260,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        #Acción al presionar el botón
+        #Acción al presionar el botón en la GUI
         self.pushButton.clicked.connect(self.Suma)
 
     def retranslateUi(self, MainWindow):
@@ -282,7 +282,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "SUMA ARITMÉTICA"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Prof. Fabián Barrera Prieto (MSc.)</p><p align=\"center\">Ingeniería mecatrónica</p><p align=\"center\">Electiva de robótica</p><p align=\"center\">2024-1</p></body></html>"))
 
-    #Función que se llama al presionar
+    #Función que se ejecuta con la acción anterior
     def Suma(self):
         a = self.textEdit.toPlainText()
         b = self.textEdit_2.toPlainText()
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     MainWindow.show()
     sys.exit(app.exec_())
 ```
-5. Ejecutar el archivo .py para correr la aplicación
+5. Ejecutar el archivo `.py` para probar la aplicación
 
 ![Alt text](image-1.png)
 
