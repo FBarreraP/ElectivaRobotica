@@ -1,4 +1,55 @@
-<h2>Aula 2</h2>
+<h1>Aula 2</h1>
+
+<h2>Repositorio git</h2>
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
+
+```linux
+COMANDOS LINUX
+ls -> Muestra la lista de archivos en la ruta
+pwd -> Muestra la ruta actual
+cd -> Entra a una carpeta especificada
+cd .. -> Regresa al punto anterior de la ruta
+touch  -> Crea un archivo
+mkdir -> Crea una carpeta 
+```
+
+Para iniciar con la sincronización del repositorio local con el repositorio local se debe realizar la configuración teniendo en cuenta los siguientes comandos:
+
+```git
+COMANDOS GIT
+git config --global user.name “nombre_usuario” (ej: git config --global user.name “FBarreraP”)
+git config --global user.email “correo_registrado” (ej: git config --global user.email “fbarrera6@gmail.com”)
+```
+Para crear un repositorio web a partir de una carpeta local (PC)
+
+```git
+Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
+git init -> Convierte la carpeta en un repositorio local a partir de la creación del archivo .git
+git add README.md -> 
+git commit -m "algun_comentario" ->
+git branch -M main
+git remote add origin https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
+git push -u origin main ->
+```
+
+Para crear un repositorio local (PC) desde un repositorio web
+
+```git
+Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
+git clone https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
+cd nombre_repositorio_web (ej: ElectivaRobotica)
+```
+
+Para sincronizar los repositorios (web y local) se utilizan los siguientes comandos de git
+
+```git
+git status -> lista todas los archivos o carpetas nuevas o modificadas que no han sido commit
+git add --all ->
+git commit -m "algun_comentario" ->
+git push -u origin main ->
+```
 
 <h2>Introducción a Python :atom:</h2>
 
@@ -302,54 +353,3 @@ if __name__ == "__main__":
 5. Ejecutar el archivo `.py` para probar la aplicación
 
 ![Alt text](image-1.png)
-
-<h2>Repositorio git</h2>
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-
-Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
-
-```linux
-COMANDOS LINUX
-ls -> Muestra la lista de archivos en la ruta
-pwd -> Muestra la ruta actual
-cd -> Entra a una carpeta especificada
-cd .. -> Regresa al punto anterior de la ruta
-touch  -> Crea un archivo
-mkdir -> Crea una carpeta 
-```
-
-Para iniciar con la sincronización del repositorio local con el repositorio local se debe realizar la configuración teniendo en cuenta los siguientes comandos:
-
-```git
-COMANDOS GIT
-git config --global user.name “nombre_usuario” (ej: git config --global user.name “FBarreraP”)
-git config --global user.email “correo_registrado” (ej: git config --global user.email “fbarrera6@gmail.com”)
-```
-Para crear un repositorio web a partir de una carpeta local (PC)
-
-```git
-Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
-git init -> Convierte la carpeta en un repositorio local a partir de la creación del archivo .git
-git add README.md -> 
-git commit -m "algun_comentario" ->
-git branch -M main
-git remote add origin https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
-git push -u origin main ->
-```
-
-Para crear un repositorio local (PC) desde un repositorio web
-
-```git
-Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
-git clone https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
-cd nombre_repositorio_web (ej: ElectivaRobotica)
-```
-
-Para sincronizar los repositorios (web y local) se utilizan los siguientes comandos de git
-
-```git
-git status -> lista todas los archivos o carpetas nuevas o modificadas que no han sido commit
-git add --all ->
-git commit -m "algun_comentario" ->
-git push -u origin main ->
-```

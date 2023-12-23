@@ -5,7 +5,7 @@ Año: 2024 📅</h1><br>
 
 La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 6 DOF programados con `Python` a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
 
-<h2>Aula 1</h2>
+<h1>Aula 1</h1>
 
 <h2>Presentación de la materia 🚀</h2>
 
