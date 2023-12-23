@@ -6,7 +6,7 @@
 En Windows, descargar el instalador del siguiente link: https://www.python.org y al momento de instalarlo, seleccionar la opción Add path.<br>
 En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
-Para conocer la versión de `Python` sobre la cual se está trabajando, en el terminal se debe ejecutar el siguiente comando: 
+Para conocer la versión de `Python` sobre la cual se está trabajando, en un terminal ejecutar el siguiente comando: 
 
 ```
 python --version
@@ -36,7 +36,7 @@ print(type(a),type(int(b)),type(c)) #up o down casting
 text = 'Los valores de a, b y c, respectivamente son:'
 print(text+str(a)+' '+str(b)+" "+str(c)+"\n")
 
-#Operaciones aritmeticas
+#Operaciones aritméticas
 temp = a
 a += b
 print('a += b es: %f'%a)
@@ -82,9 +82,9 @@ print(i1,i2)
 
 (https://petercorke.github.io/robotics-toolbox-python/intro.html)
 
-1. Instalar el toolbox de Peter Corke en Python (https://github.com/petercorke/robotics-toolbox-python)
+1. Instalar el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
 
-En Windows y en Raspbian, ejecutar a través de un terminal el siguiente comando:
+En Windows y en Raspbian, en un terminal ejecutar el siguiente comando:
 
 ```
 pip3 install roboticstoolbox-python
@@ -97,9 +97,15 @@ Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente erro
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
 1. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta /etc
-2. Ejecutar la siguiente línea de comando: sudo nano pip.conf
-3. Al final del archivo agregar la siguiente línea: break-system-packages = true
-4. Presionar Ctrl+X, presionar posteriormente la s para guardar las modificaciones y enter
+2. Para abrir el archivo pi.conf en el terminal, ejecutar la siguiente línea de comando: 
+```
+sudo nano pip.conf
+```
+3. Al final del archivo agregar la siguiente línea: 
+```
+break-system-packages = true
+```
+4. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
 
 2. 
 
