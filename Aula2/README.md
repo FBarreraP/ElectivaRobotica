@@ -11,10 +11,16 @@ COMANDOS LINUX
 ls -> Muestra la lista de archivos en la ruta actual
 la -a -> Muestra la lista de archivos incluyendo archivos ocultos en la ruta actual
 pwd -> Muestra la ruta actual
-cd -> Entra a una carpeta especificada
+cd [FOLDERNAME] -> Entra a una carpeta especificada
 cd .. -> Regresa al punto anterior de la ruta
-touch  -> Crea un archivo en la ruta actual
-mkdir -> Crea una carpeta en la ruta actual
+cp [FILETOCOPY] [DESTINATIONFOLDER]-> Copia archivos o carpetas
+mv [FILETOMOVE] [DESTINATIONFOLDER]-> Mueve archivos y carpetas
+mv [ORIGINALFILE] [RENAMEDFILE]-> Renombra archivos y carpetas
+touch [FILE] -> Crea un archivo en la ruta actual
+rm [FILE] -> Elimina un archivo
+rm -r [FOLDER] -> Elimina una carpeta
+mkdir [FOLDERNAME] -> Crea una carpeta en la ruta actual
+rmdir [FOLDERNAME] -> Elimina una carpeta en la ruta actual
 sudo -> Brinda permisos de administrador (superusuario)
 nano -> Abre un archivo específico
 ```
@@ -157,8 +163,8 @@ En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
 ```
 pip3 install roboticstoolbox-python
 ```
->[!IMPORTANT]
->Sin embargo, en las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
+>[!WARNING]
+>En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
 ![Alt text](image-2.png)
 
