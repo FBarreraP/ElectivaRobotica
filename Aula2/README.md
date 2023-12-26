@@ -94,7 +94,7 @@ sudo apt install code
 
 3. Ejemplos de programación en `Python`
 
-Es posible inicializar un <em>string</em> en comillas simples o dobles.
+Para imprimir informacion se utiliza la funcion `print`, en la cual es posible inicializar un <em>string</em> en comillas simples o dobles.
 
 ```python
 print("Hola mundo '2024'")
@@ -171,17 +171,53 @@ Asi mismo, en `Python` se pueden obtener y concatenar diferentes caracteres de u
 ```python
 n = "Fabián"
 s = "Barrera Prieto"
-o = 'profesor'
+o = 'PROFESOR'
 a = '2024'
 
 print("Primer apellido: %s" %s[:7])
 print("Segundo apellido: %s" %s[8:])
 
-c = n+' '+s+" es "+o+' en el semestre '+a+"\"2\""
+c = n.upper()+' '+s+" es "+o.lower()+' en el semestre '+a+"\"2\""
 print(c)
 print(c[:int(len(c)/2)])
 ```
+Para ingresar datos por teclado se utiliza la funcion `input`
 
+```python
+name = input('Ingrese el nombre \n') 
+age = input("Ingrese la edad \n")
+print('%s tiene %s años' %(name,age))
+```
+Arreglos
+
+```python
+import numpy
+
+nums1 = numpy.array([3,7,4,9,1])
+nums2 = numpy.array([[6.3,7.2,1.1],[9.6,5.7,2.4]])
+print("Datos y tamaño del vector nums1: %s y %d" %(nums1[0:4],nums1.size))
+print("Datos y tamaño del vector nums2: %s y %d(%d)" %(nums2,len(nums2),nums2.size)) 
+
+nums1[2] = 100
+nums2[0,:] = 83
+print("Datos y tamaño del vector nums1: %s y %d" %(nums1[1:4],nums1.size))
+print("Datos y tamaño del vector nums2: %s y %d(%d)" %(nums2,len(nums2),nums2.size)) 
+```
+Condicionales
+
+```python
+
+```
+Bucles o ciclos
+
+```python
+
+```
+Funciones
+
+```python
+
+```
 
 <h2>Toolbox Peter Corke</h2>
 
