@@ -28,7 +28,6 @@ nano -> Abre un archivo específico
 Para iniciar con la sincronización del repositorio local con el repositorio local se debe realizar la configuración teniendo en cuenta los siguientes comandos:
 
 ```git
-COMANDOS GIT
 git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
 git config --global user.email “[USEREMAIL]” (ej: git config --global user.email “fbarrera6@gmail.com”)
 ```
@@ -134,11 +133,35 @@ print('Los valores de d, e y f, respectivamente son: %f, %f y %f'%(d,e,f))
 
 ```
 
-En el caso de variables tipo <em>string</em> se puede acceder a una posición específica de un vector tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando).
+Ademas, es posible realizar operaciones logicas con las variables numericas
+
+``` python
+num1 = 7
+num2 = 2
+equal = num1 == num2
+different = num1 != num2
+greater = num1 >= num2
+less = num1 <= num2
+print(equal, different, greater, less)
+```
+
+En el caso de variables tipo <em>string</em>, tambien se pueden hacer comparaciones, teniendo en cuenta los valores de codificacion Unicode (similar a ASCII)
+
+``` python
+word1 = "Hola"
+word2 = "hola"
+equal = word1 == word2
+different = word1 != word2
+greater = word1 >= word2
+less = word1 <= word2
+print(equal, different, greater, less)
+```
+
+es posible acceder a un caracter determinado a traves de una posición específica tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando).
 
 ```python
 #Variables string
-nombre = "Fabian"
+n = "Fabián"
 i1 = n[4]
 i2 = n[-2]
 print(i1,i2)
