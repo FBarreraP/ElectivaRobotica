@@ -25,7 +25,7 @@ sudo -> Brinda permisos de administrador (superusuario)
 nano -> Abre un archivo específico
 ```
 
-Para iniciar con la sincronización del repositorio local con el repositorio local se debe realizar la configuración teniendo en cuenta los siguientes comandos:
+Para la sincronización (`push` o `pull`) del repositorio local con el repositorio web se debe configurar la identidad de la cuenta teniendo en cuenta los siguientes comandos:
 
 ```git
 git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
