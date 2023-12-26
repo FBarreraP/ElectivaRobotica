@@ -25,7 +25,7 @@ sudo -> Brinda permisos de administrador (superusuario)
 nano -> Abre un archivo específico
 ```
 
-Para la sincronización (`push` o `pull`) del repositorio local con el repositorio web se debe configurar la identidad de la cuenta teniendo en cuenta los siguientes comandos:
+Inicialmente se debe configurar la identidad de la cuenta para posteriormente realizar la sincronización del repositorio local con el repositorio web, teniendo en cuenta los siguientes comandos:
 
 ```git
 git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
@@ -59,7 +59,7 @@ git add --all
 git commit -m "algun_comentario"
 git push -u origin main
 ```
-Algunas veces que se empujen (<em>push</em>) los archivos del repositorio local al repositorio web hay que autenticar (usuario y contraseña) el perfil, sin embargo, se debe colocar una <em>Key</em>, siguiendo los siguientes pasos:<br>
+Algunas veces que se empujen (<em>push</em>) los archivos del repositorio local al repositorio web desde el terminal por defecto de Raspbian hay que autenticar (usuario y contraseña) el perfil, sin embargo, se debe colocar una <em>Key</em>, siguiendo los siguientes pasos:<br>
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
@@ -157,24 +157,29 @@ less = word1 <= word2
 print(equal, different, greater, less)
 ```
 
-es posible acceder a un caracter determinado a traves de una posición específica tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando).
+Es posible acceder a un caracter determinado de un <em>string</em> a traves de una posición específica tanto de izquierda a derecha (incrementando) como de derecha a izquierda (decrementando).
 
 ```python
-#Variables string
 n = "Fabián"
 i1 = n[4]
 i2 = n[-2]
 print(i1,i2)
 
 ```
-El segundo ejemplo es
+Asi mismo, en `Python` se pueden obtener y concatenar diferentes caracteres de un <em>string</em> 
 
 ```python
-nombre = "Fabian"
-i1 = n[4]
-i2 = n[-2]
-print(i1,i2)
+n = "Fabián"
+s = "Barrera Prieto"
+o = 'profesor'
+a = '2024'
 
+print("Primer apellido: %s" %s[:7])
+print("Segundo apellido: %s" %s[8:])
+
+c = n+' '+s+" es "+o+' en el semestre '+a+"\"2\""
+print(c)
+print(c[:int(len(c)/2)])
 ```
 
 

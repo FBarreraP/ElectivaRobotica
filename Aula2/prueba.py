@@ -1,15 +1,11 @@
-num1 = 7
-num2 = 2
-equal = num1 == num2
-different = num1 != num2
-greater = num1 >= num2
-less = num1 <= num2
-print(equal, different, greater, less)
+n = "Fabián"
+s = "Barrera Prieto"
+o = 'profesor'
+a = '2024'
 
-word1 = "Hola"
-word2 = "hola"
-equal = word1 == word2
-different = word1 != word2
-greater = word1 >= word2
-less = word1 <= word2
-print(equal, different, greater, less)
+print("Primer apellido: %s" %s[:7])
+print("Segundo apellido: %s" %s[8:])
+
+c = n+' '+s+" es "+o+' en el semestre '+a+"\"2\""
+print(c)
+print(c[:int(len(c)/2)])
