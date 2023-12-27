@@ -96,12 +96,18 @@ sudo apt install code
 
 <h3>3. Ejemplos de programación en Python</h3>
 
+Los ejemplos de esta clase están orientados a un repaso básico de programación, teniendo en cuenta la impresión de datos en consola, variables, ingreso de datos por consola, arreglos, condicionales, bucles, funciones y clases.
+
+<h4>Impresión de datos en consola</h4>
+
 Para imprimir informacion se utiliza la funcion `print`, en la cual es posible inicializar un <em>string</em> en comillas simples o dobles.
 
 ```python
 print("Hola mundo '2024'")
 print('Hola mundo "2024"')
 ```
+
+<h4>Variables</h4>
 
 No hay necesidad de declarar variables, sin embargo, pueden ser inicializadas y específicamente a las variables numéricas se les puede modificar el tipo de variable.
 
@@ -187,6 +193,8 @@ c = n.upper()+' '+s+" es "+o.lower()+' en el semestre '+a+"\"2\""
 print(c)
 print(c[:int(len(c)/2)])
 ```
+<h4>Ingreso de datos por consola</h4>
+
 Para ingresar datos por teclado se utiliza la funcion `input`
 
 ```python
@@ -194,7 +202,7 @@ name = input('Ingrese el nombre \n')
 age = input("Ingrese la edad \n")
 print('%s tiene %s años' %(name,age))
 ```
-Arreglos
+<h4>Arreglos</h4>
 
 ```python
 import numpy
@@ -209,7 +217,7 @@ nums2[0,:] = 83
 print("Datos y tamaño del vector nums1: %s y %d" %(nums1[1:4],nums1.size))
 print("Datos y tamaño del vector nums2: %s y %d(%d)" %(nums2,len(nums2),nums2.size)) 
 ```
-Condicionales
+<h4>Condicionales</h4>
 
 ```python
 name = input('Ingrese el nombre \n') 
@@ -229,7 +237,7 @@ elif age>=70:
 else:
     print("La edad no es válida")
 ```
-Bucles o ciclos
+<h4>Bucles o ciclos</h4>
 
 ```python
 r = "S"
@@ -260,6 +268,7 @@ while t2 <= 20.0:
     print("El tiempo es %f s \n" %t2)
     t2 = time.time() - t1
 ```
+<h4>Funciones</h4>
 
 Una suma es posible independizarla en una función, para que esta sea recursiva, flexible
 
@@ -274,7 +283,7 @@ num3 = sum(num1,num2)
 print('%.2f + %.2f = %.2f' %(num1,num2,num3))
 ```
 
-Arreglos y funciones
+<h4>Arreglos y funciones</h4>
 
 Este ejemplo es la serie de Fibonacci, la cual consiste en una sucesión que se calcula a partir de la suma de los dos últimos números de dicha sucesión
 
@@ -317,7 +326,7 @@ r1,r2 = average(grades)
 print('La suma y el promedio de las notas son: %.2f y %.2f' %(r1,r2))
 ```
 
-Clases
+<h4>Clases</h4>
 
 
 
