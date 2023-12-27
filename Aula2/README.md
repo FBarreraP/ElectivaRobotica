@@ -206,18 +206,92 @@ print("Datos y tamaño del vector nums2: %s y %d(%d)" %(nums2,len(nums2),nums2.s
 Condicionales
 
 ```python
-
+name = input('Ingrese el nombre \n') 
+age = int(input("Ingrese la edad \n"))
+if age>=0 and age<3:
+    print('%s es un bebé' %(name))
+elif age>=3 and age<12:
+    print(name+" es un niño")
+elif age>=12 and age<20:
+    print(name, 'es un adolescente')
+elif age>=20 and age<30:
+    print('%s es un joven' %(name))
+elif age>=30 and age<70:
+    print('%s es un adulto' %(name))
+elif age>=70:
+    print('%s es un abuelo' %(name))
+else:
+    print("La edad no es válida")
 ```
 Bucles o ciclos
 
 ```python
-
+r = "S"
+while r != 'n':
+    name = input('Ingrese el nombre \n') 
+    age = int(input("Ingrese la edad \n"))
+    while age<=0:
+        print('La edad no es válida')    
+        age = int(input("Ingrese nuevamente la edad \n"))
+    if age>=18:
+        print("%s es mayor de edad \n" %name)   
+    else:
+        print("%s es menor de edad \n" %name)   
+    
+    r = input('Desea ingresar la información de otro estudiante (s/n) \n')
+    
+print('Fin') 
 ```
-Funciones
 
 ```python
 
 ```
+
+Funciones
+
+```python
+def fibonacci(x):
+    global data
+    a = 1
+    b = 1
+    index = 0
+    while index < x:
+        data.append(a)
+        temp = b
+        b = a + b
+        a = temp
+        index += 1
+
+data = []
+fibonacci(12)
+print(data)
+```
+
+Arreglos y funciones
+
+```python
+def data():
+    global grades
+    for i in range(0,5,1):
+        n = float(input('Ingrese la nota '+str(i+1)+" : "))
+        grades.append(n)
+
+def average(notas):
+    s = 0.0
+    for i in range(0,5,1):
+        s += notas[i]
+    a = s/len(notas)
+    return s,a
+
+grades = []
+data()
+r1,r2 = average(grades)
+print('La suma y el promedio de las notas son: %.2f y %.2f' %(r1,r2))
+```
+
+Clases
+
+
 
 <h2>Toolbox Peter Corke</h2>
 
