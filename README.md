@@ -328,6 +328,8 @@ En esta clase se presenta la materia: el contenido temático, los métodos de ev
 		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/ElectivaRobotica </li>
 		<li> Los laboratorios y el proyecto consistirán únicamente de montaje y podrán ser realizados en grupos de máximo 2 estudiantes 🧍‍♂️🧍‍♀️</li>
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
+		<li> Los laboratorios y proyecto se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0 y las cuales tendrán una fecha fija de entrega 💥</li> 
+		<li> Los parciales y el examen final serán solucionados en hoja examen 📄</li> 
 		<li> Uso obligatorio de bata blanca en el laboratorio de robótica 🥼</li>
 	</ul>
 
