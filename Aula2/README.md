@@ -75,7 +75,9 @@ git pull origin main
 
 <h2>Introducción a Python :atom:</h2>
 
-1. Instalar `Python`<br>
+`Python` es un lenguaje de programación interpretado, entre sus principales ventajas están: facilidad de sintaxis, no necesita declarar variables, indispensable indentar las líneas de código, fácil manejo de arreglos (vectores y matrices)
+
+<h3>1. Instalar `Python`</h3><br>
 En Windows, descargar el instalador del siguiente link: https://www.python.org y al momento de instalarlo, seleccionar la opción Add path.<br>
 En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
@@ -85,14 +87,14 @@ Para conocer la versión de `Python` sobre la cual se está trabajando, en el te
 python --version
 ```
 
-2. Instalar Visual Studio Code <br>
+<h3>2. Instalar Visual Studio Code</h3><br>
 En Windows, descargar el instalador del siguiente link: https://code.visualstudio.com<br>
 En Raspbian, ejecutar en el terminal la siguiente línea de comando: 
 ```
 sudo apt install code
 ```
 
-3. Ejemplos de programación en `Python`
+<h3>3. Ejemplos de programación en Python</h3>
 
 Para imprimir informacion se utiliza la funcion `print`, en la cual es posible inicializar un <em>string</em> en comillas simples o dobles.
 
@@ -102,6 +104,10 @@ print('Hola mundo "2024"')
 ```
 
 No hay necesidad de declarar variables, sin embargo, pueden ser inicializadas y específicamente a las variables numéricas se les puede modificar el tipo de variable.
+
+print("vectors nums1: %s %d" %(nums1[1:4],nums1.size)) 
+print("vectors nums1:",nums1[1:4],nums1.size) 
+print("vectors nums1:"+str(nums1[1:4])+str(nums1.size))
 
 ```python
 #Variables int y float
@@ -243,11 +249,34 @@ while r != 'n':
 print('Fin') 
 ```
 
-```python
+En algunas ocasiones resulta necesario utilizar un ciclo `while` para garantizar ciertas tareas durante un tiempo específico, teniendo en cuenta el temporizador de la librería `time`.
 
+```python
+import time
+
+t1 = time.time()
+t2 = 0.0
+while t2 <= 20.0:
+    print("El tiempo es %f s \n" %t2)
+    t2 = time.time() - t1
 ```
 
-Funciones
+Una suma es posible independizarla en una función, para que esta sea recursiva, flexible
+
+```python
+def sum(a,b):
+    c = a + b
+    return c
+
+num1 = float(input('Ingrese el primer número: '))
+num2 = float(input('Ingrese el segundo número: '))
+num3 = sum(num1,num2)
+print('%.2f + %.2f = %.2f' %(num1,num2,num3))
+```
+
+Arreglos y funciones
+
+Este ejemplo es la serie de Fibonacci, la cual consiste en una sucesión que se calcula a partir de la suma de los dos últimos números de dicha sucesión
 
 ```python
 def fibonacci(x):
@@ -266,8 +295,7 @@ data = []
 fibonacci(12)
 print(data)
 ```
-
-Arreglos y funciones
+Otro ejemplo son el ingreso de cinco calificaciones de un estudiantes y el cálculo del promedio de dichas notas, siendo que cada tarea se realiza en una función diferente
 
 ```python
 def data():
