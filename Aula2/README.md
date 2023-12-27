@@ -77,7 +77,7 @@ git pull origin main
 
 `Python` es un lenguaje de programación interpretado, entre sus principales ventajas están: facilidad de sintaxis, no necesita declarar variables, indispensable indentar las líneas de código, fácil manejo de arreglos (vectores y matrices)
 
-<h3>1. Instalar `Python`</h3><br>
+<h3>1. Instalar Python</h3><br>
 En Windows, descargar el instalador del siguiente link: https://www.python.org y al momento de instalarlo, seleccionar la opción Add path.<br>
 En Raspbian, por defecto ya está instalado `Python` versión 3.1X
 
