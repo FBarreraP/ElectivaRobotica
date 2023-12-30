@@ -90,6 +90,7 @@ python --version
 <h3>2. Instalar Visual Studio Code</h3><br>
 En Windows, descargar el instalador del siguiente link: https://code.visualstudio.com<br>
 En Raspbian, ejecutar en el terminal la siguiente línea de comando: 
+
 ```
 sudo apt install code
 ```
