@@ -2,6 +2,10 @@
 
 En esta clase se enseña a utilizar repositorio git, `Python` con el Toolbox de Peter Corke e interfaces gráficas (GUIs).
 
+<h2>Introducción a Raspberry</h2>
+
+La Raspberry es un 
+
 <h2>Introducción a Python :atom:</h2>
 
 `Python` es un lenguaje de programación interpretado, entre sus principales ventajas están: facilidad de sintaxis, no necesita declarar variables, indispensable indentar las líneas de código, fácil manejo de arreglos (vectores y matrices)

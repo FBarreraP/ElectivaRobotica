@@ -1,32 +1,28 @@
-class Estudiante():
-    #constructor
-    def __init__(self, nombre, edad):
-        self.nombre = nombre
-        self.edad = edad 
-        self.ocupacion = "Estudiante"
-        self.grades = []
-        self.s = 0.0
-        self.a = 0
-        
-    #atributos
-    
-    #métodos        
-    def data(self, x):
-        for i in range(0,x,1):
-            n = float(input('Ingrese la nota '+str(i+1)+" : "))
-            self.grades.append(n)
+a = 7
+b = c = 5.2
+print(a,b,c)
+print(type(a),type(int(b)),type(c)) #up o down casting
+text = 'Los valores de a, b y c, respectivamente son:'
+print(text+str(a)+' '+str(b)+" "+str(c)+"\n")
 
-    def average(self, x):
-        for i in range(0,x,1):
-            self.s += self.grades[i]
-        self.a = self.s/len(self.grades)
-        return self.s,self.a
-    
-    def result(self):
-        print('La suma y el promedio de las notas son: %.2f y %.2f' %(self.s,self.a))
-    
-Fabian = Estudiante('Fabián',20) #instancia
-Fabian.data(5)
-r1,r2 = Fabian.average(5)
-print('La suma y el promedio de las notas son: %.2f y %.2f' %(r1,r2))
-Fabian.result()
+#Operaciones aritméticas
+temp = a
+a += b
+print('a += b es: %f'%a)
+a = temp
+a -= b
+print('a -= b es: %f'%a)
+a = temp
+a *= b
+print('a *= b es: %f'%a)
+a = temp
+a /= b
+print('a /= b es: %f'%a)
+a = temp
+a **= b
+print('a **= b es: %f'%a)
+a = temp
+d = a/2 #cociente float
+e = a//2 #cociente int
+f = a%2 #residuo float
+print('Los valores de d, e y f, respectivamente son: %f, %f y %f'%(d,e,f))
