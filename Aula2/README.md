@@ -51,11 +51,11 @@ print("vectors nums1:"+str(nums1[1:4])+str(nums1.size))
 
 Este tipo de operaciones se ejecutan de acuerdo a la prioridad:
 
-1. Paréntesis ()
-2. Exponente **
-3. Negación -x
-4. Multiplicación, División, Cociente, Módulo * / // %
-5. Suma, Resta + -
+1. Paréntesis `()`
+2. Exponente `**`
+3. Negación `-x`
+4. Multiplicación, División, Cociente, Módulo `*` `/` `//` `%`
+5. Suma, Resta `+` `-`
 
 ```python
 #Variables int y float
