@@ -45,11 +45,18 @@ print('Hola mundo "2024"')
 
 No hay necesidad de declarar variables, sin embargo, pueden ser inicializadas y específicamente a las variables numéricas se les puede modificar el tipo de variable.
 
-print("vectors nums1: %s %d" %(nums1[1:4],nums1.size)) 
-print("vectors nums1:",nums1[1:4],nums1.size) 
-print("vectors nums1:"+str(nums1[1:4])+str(nums1.size))
+```python
+a = 'Hola'
+b = "Mundo"
+c = 2024
 
-Este tipo de operaciones se ejecutan de acuerdo a la prioridad:
+print("Texto: %s %s %d" %(a,b,c))
+print("Texto:",a,b,c) 
+print("Texto: "+str(a)+' '+str(b)+' '+str(c))
+print(f"Texto: {a} {b} {c}")
+```
+
+Este tipo de operaciones se ejecutan de izquierda a derecha teniendo en cuenta la prioridad:
 
 1. Paréntesis `()`
 2. Exponente `**`
