@@ -48,12 +48,12 @@ No hay necesidad de declarar variables, sin embargo, pueden ser inicializadas y 
 ```python
 a = 'Hola'
 b = "Mundo"
-c = 2024
+c = 2024.0
 
-print("Texto: %s %s %d" %(a,b,c))
+print("Texto: %s %s %.2f" %(a,b,c))
 print("Texto:",a,b,c) 
 print("Texto: "+str(a)+' '+str(b)+' '+str(c))
-print(f"Texto: {a} {b} {c}")
+print(f"Texto: {a} {b} {c:.2f}")
 ```
 
 Este tipo de operaciones se ejecutan de izquierda a derecha teniendo en cuenta la prioridad:
