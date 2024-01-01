@@ -4,6 +4,8 @@ En esta clase ...
 
 <h2>Repositorio git</h2>
 
+Instalar git en Windows, a través del siguiente link: https://git-scm.com/downloads
+
 Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
 
 ```linux
