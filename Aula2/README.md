@@ -192,6 +192,24 @@ else:
 ```
 <h4>Bucles o ciclos</h4>
 
+El bucle `for` es utilizado para ejecutar un código una cantidad determinada de veces, como por ejemplo para recorrer listas y tuplas
+
+```python
+ciudades = ["Bogotá", 'Medellín', 'Cali', "Pasto"]
+for ciudad in ciudades: #for ciudad in range (0,len(ciudades)):
+    print(ciudad) #print(ciudades[ciudad])
+```
+De igual manera, el ciclo `for` permite realizar iteraciones muy sencillas, teniendo en cuenta una condición de inicio, de final y de incremento
+
+```python
+suma = 0
+for i in range (1,101,1):
+    suma += i
+print('La suma de los números del 1 al 100 es: %d' %suma)
+```
+
+El ciclo while `while` se utiliza para ejecutar un código una cantidad indeterminada de veces a partir de una condición
+
 ```python
 r = "S"
 while r != 'n':
