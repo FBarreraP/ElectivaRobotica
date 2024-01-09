@@ -134,11 +134,12 @@ print(i1,i2)
 Asi mismo, en `Python` se pueden obtener y concatenar diferentes caracteres de un <em>string</em> 
 
 ```python
-n = "Fabián"
+n = "Fabián" #string
 s = "Barrera Prieto"
 o = 'PROFESOR'
 a = '2024'
 
+print('Primera letra del nombre: %s' %n[0])
 print("Primer apellido: %s" %s[:7])
 print("Segundo apellido: %s" %s[8:])
 
@@ -146,6 +147,23 @@ c = n.upper()+' '+s+" es "+o.lower()+' en el semestre '+a+"\"2\""
 print(c)
 print(c[:int(len(c)/2)])
 ```
+
+Las listas, al igual que los strings se acceden a las posiciones de igual manera, sin embargo, las listas pueden ser heterogeneas
+
+```python
+a = ['Fabián', "Barrera Prieto", "PROFESOR", 2024]
+print(type(a))
+
+print('Primera letra del nombre: %s' %a[0][0])
+print("Primer apellido: %s" %a[1][:7])
+print("Segundo apellido: %s" %a[1][8:])
+
+b = a[0].upper()+' '+a[1]+" es "+a[2].lower()+' en el semestre '+str(a[3])+"\"2\""
+print(b)
+print(type(b))
+print(b[:int(len(b)/2)])
+```
+
 <h4>Ingreso de datos por consola</h4>
 
 Para ingresar datos por teclado se utiliza la funcion `input`
@@ -208,9 +226,10 @@ ciudades = ["Bogotá", 'Medellín', 'Cali', "Pasto"]
 for ciudad in ciudades: #for ciudad in range (0,len(ciudades)):
     print(ciudad) #print(ciudades[ciudad])
 ```
+Otra herramienta muy útil para depurar código es <a href="https://pythontutor.com">PythonTutor</a>
 
 ```python
-notas = []
+notas = [] #lista 
 c = int(input('Ingrese la cantidad de notas\n'))
 for i in range(0,c):
     n = float(input('Ingrese la nota '+str(i+1)+" : "))
@@ -218,6 +237,8 @@ for i in range(0,c):
 print(notas)
 print('La suma de las notas es: %.2f' %sum(notas))
 ```
+
+![Alt text](image.png)
 
 El ciclo while `while` se utiliza para ejecutar un código una cantidad indeterminada de veces a partir de una condición
 

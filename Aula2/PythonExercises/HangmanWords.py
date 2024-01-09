@@ -1,0 +1,3 @@
+word = ['cangrejo', 
+        'mochila', 
+        'granja']
