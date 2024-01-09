@@ -226,7 +226,7 @@ ciudades = ["Bogotá", 'Medellín', 'Cali', "Pasto"]
 for ciudad in ciudades: #for ciudad in range (0,len(ciudades)):
     print(ciudad) #print(ciudades[ciudad])
 ```
-Otra herramienta muy útil para depurar código es <a href="https://pythontutor.com">PythonTutor</a>
+Otra herramienta muy útil para depurar código es <a href="https://pythontutor.com">PythonTutor</a>; sin embargo, no todas las librerias funcionan en esta página (ej: numpy, roboticstoolbox, entre otras)
 
 ```python
 notas = [] #lista 
