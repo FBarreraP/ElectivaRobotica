@@ -38,10 +38,11 @@ Para crear un repositorio web a partir de una carpeta local (PC)
 ```
 Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
 git init 
+touch README.md
 git add README.md 
 git commit -m "algun_comentario" 
 git branch -M main
-git remote add origin https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
+git remote add origin https://github.com/FBarreraP/nombre_repositorio_web.git (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
 git push -u origin main 
 ```
 

@@ -1,3 +1,0 @@
-word = ['cangrejo', 
-        'mochila', 
-        'granja']

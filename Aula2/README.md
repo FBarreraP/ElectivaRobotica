@@ -290,6 +290,8 @@ print('%.2f + %.2f = %.2f' %(num1,num2,num3))
 
 Este ejemplo es la serie de Fibonacci, la cual consiste en una sucesión que se calcula a partir de la suma de los dos últimos números de dicha sucesión
 
+Es posible leer una variable `global` en cualquier parte del código, sin embargo no es posible escribirla dentro de una función, por tanto, se requiere definir con `global` dicha variable al comienzo de la función
+
 ```python
 def fibonacci(x):
     global data
