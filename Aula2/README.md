@@ -1,6 +1,6 @@
 <h1>Aula 2</h1>
 
-En esta clase se enseña a utilizar y crear repositorios en GitHub y sincronizarlos con carpetas locales en el PC, a través de comandos linux.
+En esta clase se enseña a utilizar y crear repositorios en GitHub y sincronizarlos con carpetas locales en Windows y en Raspbian, a través de comandos linux.
 
 <h2>Repositorio git</h2>
 
