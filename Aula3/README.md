@@ -1,6 +1,6 @@
-<h1>Aula 2</h1>
+<h1>Aula 3</h1>
 
-En esta clase se enseña a utilizar repositorio git, `Python` con el Toolbox de Peter Corke e interfaces gráficas (GUIs).
+En esta clase se realiza un repaso de `Python`.
 
 <h2>Introducción a Raspberry</h2>
 
