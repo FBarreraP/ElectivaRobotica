@@ -4,9 +4,9 @@ En esta clase se enseña a utilizar y crear repositorios en GitHub y sincronizar
 
 <h2>Repositorio git</h2>
 
-Instalar git en Windows, a través del siguiente link: https://git-scm.com/downloads
+Para trabajar un repositorio local por un terminal en Windows, se debe instalar git a través del siguiente link: https://git-scm.com/downloads
 
-Los repositorios GitHub y GitLab son utilizados principalmente por el terminal, donde los comandos son similares a los de Linux, algunos de dichos comandos son:
+Los repositorios GitHub y GitLab son utilizados principalmente por un terminal por medio de comandos, los cuales son similares a los de Linux; algunos de dichos comandos son:
 
 ```linux
 COMANDOS LINUX
@@ -27,7 +27,7 @@ sudo -> Brinda permisos de administrador (superusuario)
 nano -> Abre un archivo específico
 ```
 
-Inicialmente se debe configurar la identidad de la cuenta para posteriormente realizar la sincronización del repositorio local con el repositorio web, teniendo en cuenta los siguientes comandos:
+Inicialmente se debe autenticar la identidad de la cuenta para así posteriormente realizar la sincronización del repositorio local con el repositorio web, teniendo en cuenta los siguientes comandos:
 
 ```git
 git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
