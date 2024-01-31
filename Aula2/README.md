@@ -1,6 +1,6 @@
 <h1>Aula 2</h1>
 
-En esta clase ...
+En esta clase se enseña a utilizar y crear repositorios en GitHub y sincronizarlos con carpetas locales en el PC, a través de comandos linux.
 
 <h2>Repositorio git</h2>
 
@@ -62,13 +62,17 @@ git add --all
 git commit -m "algun_comentario"
 git push -u origin main
 ```
-Algunas veces que se empujen (<em>push</em>) los archivos del repositorio local al repositorio web desde el terminal por defecto de Raspbian hay que autenticar (usuario y contraseña) el perfil, sin embargo, se debe colocar una <em>Key</em>, siguiendo los siguientes pasos:<br>
 
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+Algunas veces desde el terminal nativo de Raspbian que se empujen (<em>push</em>) los archivos del repositorio local al repositorio web hay que autenticar (usuario y contraseña) el perfil, sin embargo, se debe colocar una <em>Key</em>, siguiendo los siguientes pasos:<br>
 
-I. <br>
-II. <br>
-III. <br>
+<!--https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens-->
+
+<ol type="a">
+    <li>Ir a las configuraciones del perfil de GitHub</li>
+    <li>Seleccionar la opción <i>Developer Settings</i> en la lista ubicada a la izquierda</li>
+    <li>Seleccionar la opción <i>Personal access tokens</i> en lista ubicada a la izquierda y dar click en la opción <i>Token (classic)</i></li>
+    <li>Seleccionar la opción <i>Generate new token</i> y dar click en la opción <i>Generate new token (classic)</li>
+</ol>
 
 Si se tienen dos repositorios locales (dos computadores), es necesario actualizar el repositorio desactualizado, a través del siguiente comando:
 
