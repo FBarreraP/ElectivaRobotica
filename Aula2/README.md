@@ -30,8 +30,8 @@ nano -> Abre un archivo específico
 Inicialmente se debe autenticar la identidad de la cuenta para así posteriormente realizar la sincronización del repositorio local con el repositorio web, teniendo en cuenta los siguientes comandos:
 
 ```git
-git config --global user.name “[USERNAME]” (ej: git config --global user.name “FBarreraP”)
-git config --global user.email “[USEREMAIL]” (ej: git config --global user.email “fbarrera6@gmail.com”)
+git config --global user.name "[USERNAME]" (ej: git config --global user.name "FBarreraP")
+git config --global user.email "[USEREMAIL]" (ej: git config --global user.email "fbarrera6@gmail.com")
 ```
 Para crear un repositorio web a partir de una carpeta local (PC)
 
