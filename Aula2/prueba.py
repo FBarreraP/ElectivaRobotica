@@ -1,8 +1,4 @@
-casa = 1
-
-def increase_enemies():
-  a = casa + 2
-  print(a)
-
-increase_enemies()
-print(casa)
+technology = ['Spark','Pandas','Pyspark']
+print(technology)
+technology.insert(0, 'Python')
+print(technology)

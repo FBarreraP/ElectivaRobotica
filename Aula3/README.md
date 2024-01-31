@@ -49,8 +49,8 @@ git push -u origin main
 Para crear un repositorio local (PC) desde un repositorio web
 
 ```
-Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados
-git clone https://github.com/FBarreraP/nombre_repositorio_web (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
+Entrar a la carpeta a través del terminal teniendo en cuenta los comandos linux anteriormente presentados (No crear carpeta del repositorio, porque se crea automáticamente con los siguientes comandos:)
+git clone https://github.com/FBarreraP/nombre_repositorio_web.git (ej: https://github.com/FBarreraP/ElectivaRobotica.git)
 cd nombre_repositorio_web (ej: ElectivaRobotica)
 ```
 
