@@ -1,6 +1,6 @@
-<h1>Aula 3</h1>
+<h1>Aula 6</h1>
 
-En esta clase ...
+En esta clase se enseña a crear interfaces gráficas (GUI) con Python
 
 <h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
@@ -11,7 +11,7 @@ En Raspbian, en el terminal ejecutar el siguiente comando:
 sudo apt-get install qtcreator
 ```
 
-2. Realizar el <em>front</em> end de la interfaz gráfica para la suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado.
+2. Realizar el <em>front end</em> de la interfaz gráfica para la suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado.
 
 ![Alt text](image.png)
 
