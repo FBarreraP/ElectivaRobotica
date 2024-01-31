@@ -71,7 +71,7 @@ Algunas veces desde el terminal nativo de Raspbian que se empujen (<em>push</em>
     <li>Ir a las configuraciones del perfil de GitHub</li>
     <li>Seleccionar la opción <i>Developer Settings</i> en la lista ubicada a la izquierda</li>
     <li>Seleccionar la opción <i>Personal access tokens</i> en lista ubicada a la izquierda y dar click en la opción <i>Token (classic)</i></li>
-    <li>Seleccionar la opción <i>Generate new token</i> y dar click en la opción <i>Generate new token (classic)</li>
+    <li>Seleccionar la opción <i>Generate new token</i> y dar click en la opción <i>Generate new token (classic)</i> </li>
 </ol>
 
 Si se tienen dos repositorios locales (dos computadores), es necesario actualizar el repositorio desactualizado, a través del siguiente comando:
