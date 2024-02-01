@@ -3,7 +3,7 @@ Materia: Electiva de robótica 🦾<br>
 Universidad: ECCI 🏫<br>
 Año: 2024 📅</h1><br>
 
-La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 6 DOF programados con `Python` a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
+La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 3 DOF programados con `Python` a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
 
 <h1>Aula 1</h1>
 
