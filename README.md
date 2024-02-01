@@ -2,19 +2,6 @@
 Materia: Electiva de robótica 🦾<br>
 Universidad: ECCI 🏫<br>
 Año: 2024 📅</h1><br>
-
-La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 3 DOF programados con `Python` a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
-
-<h1>Aula 1</h1>
-
-En esta clase se presenta la materia, en cuanto al contenido temático, los métodos de evaluación, las observaciones, las NO EXCUSAS y los recursos para el desarrollo del curso.
-
-<h2>Presentación de la materia 🚀</h2>
-
-<h3>TEMAS 🤓</h3>
-
-<h4>Primer corte</h4>
-
 <table>
 	<tr>
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
