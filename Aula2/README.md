@@ -24,7 +24,7 @@ rm -r [FOLDER] -> Elimina una carpeta
 mkdir [FOLDERNAME] -> Crea una carpeta en la ruta actual
 rmdir [FOLDERNAME] -> Elimina una carpeta en la ruta actual
 sudo -> Brinda permisos de administrador (superusuario)
-nano -> Abre un archivo específico
+nano [FILE] -> Abre un archivo específico
 ```
 
 Inicialmente se debe autenticar la identidad de la cuenta para así posteriormente realizar la sincronización del repositorio local con el repositorio web, teniendo en cuenta los siguientes comandos:
