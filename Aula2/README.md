@@ -11,7 +11,7 @@ Los repositorios GitHub y GitLab son utilizados principalmente por un terminal p
 ```linux
 COMANDOS LINUX
 ls -> Muestra la lista de archivos en la ruta actual
-la -a -> Muestra la lista de archivos incluyendo archivos ocultos en la ruta actual
+ls -a -> Muestra la lista de archivos incluyendo archivos ocultos en la ruta actual
 pwd -> Muestra la ruta actual
 cd [FOLDERNAME] -> Entra a una carpeta especificada
 cd .. -> Regresa al punto anterior de la ruta
