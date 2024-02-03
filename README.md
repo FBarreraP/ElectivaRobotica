@@ -13,7 +13,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 <h3>TEMAS 🤓</h3>
 
-<h4>Primer corte</h4>
+<h4>Primer corte 8AN</h4>
 
 <table>
 	<tr>
@@ -37,7 +37,31 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 </table>
 
-<h4>Segundo corte</h4>
+<h4>Primer corte 8BN</h4>
+
+<table>
+	<tr>
+		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
+	</tr>
+	<tr>
+		<td>03/02/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
+	</tr>
+	<tr>
+		<td>10/02/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
+	</tr>
+	<tr>
+		<td>17/02/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
+	</tr>
+    <tr>
+		<td>24/02/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
+	</tr>
+	<tr>
+		<td>02/03/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+	</tr><!--semana de parciales del primer corte--><!--semana de registro de notas del primer corte-->
+
+</table>
+
+<h4>Segundo corte 8AN</h4>
 
 <table>
 	<tr>
@@ -61,10 +85,35 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
     <tr>
 		<td>11/04/2024</td> <td>2<br>2</td> <td>19<br>20</td> <td>10</td> <td>Parcial segundo corte<br>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--semana de parciales del segundo corte--><!--semana de registro de notas del segundo corte-->
-
 </table>
 
-<h4>Tercer corte</h4>
+<h4>Segundo corte 8BN</h4>
+
+<table>
+	<tr>
+		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
+	</tr>
+	<tr>
+		<td>09/03/2024</td> <td>2<br>2</td> <td>11<br>12</td> <td>6</td> <td>Propuesta de proyecto<br>GUI Python</td>
+	</tr>
+	<tr>
+		<td>16/03/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Introducción a la cinemática directa<br>Paso 1 DH (asignación de sistemas coordenados)</td>
+	</tr>
+	<tr>
+		<td>23/03/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Paso 2 DH (tabla DH)<br>Paso 3 DH (matriz MTH (Peter Corke))</td>
+	</tr>
+    <tr>
+		<td>30/03/2024</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
+	</tr>
+    <tr>
+		<td>06/04/2024</td> <td>2<br>2</td> <td>17<br>18</td> <td>9</td> <td>Desarrollo de Laboratorio</td>
+	</tr>
+    <tr>
+		<td>13/04/2024</td> <td>2<br>2</td> <td>19<br>20</td> <td>10</td> <td>Parcial segundo corte<br>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+	</tr><!--semana de parciales del segundo corte--><!--semana de registro de notas del segundo corte-->
+</table>
+
+<h4>Tercer corte 8AN</h4>
 
 <table>
 	<tr>
@@ -88,10 +137,88 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
     <tr>
 		<td>23/05/2024</td> <td>2<br>2</td> <td>31<br>32</td> <td>16</td> <td>Examen final<br>Entrega de proyecto</td>
 	</tr><!--Finalización de clases-->
+</table>
 
+<h4>Tercer corte 8BN</h4>
+
+<table>
+	<tr>
+		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
+	</tr>
+	<tr>
+		<td>20/04/2024</td> <td>2<br>2</td> <td>21<br>22</td> <td>11</td> <td>Avance de proyecto<br>Introducción a la cinemática Inversa y 2R</td>
+	</tr>
+	<tr>
+		<td>27/04/2024</td> <td>2<br>2</td> <td>23<br>24</td> <td>12</td> <td>Cinemática Inversa 3R y trayectorias del robot 3R<br>Desarrollo de Laboratorio y proyecto</td>
+	</tr>
+    <tr>
+		<td>04/05/2024</td> <td>2<br>2</td> <td>25<br>26</td> <td>13</td> <td>Desacople cinemático 6R<br>Desarrollo de Laboratorio y proyecto</td>
+	</tr>
+    <tr>
+		<td>11/05/2024</td> <td>2<br>2</td> <td>27<br>28</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
+	</tr>
+    <tr>
+		<td>18/05/2024</td> <td>2<br>2</td> <td>29<br>30</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
+	</tr>
+    <tr>
+		<td>25/05/2024</td> <td>2<br>2</td> <td>31<br>32</td> <td>16</td> <td>Examen final<br>Entrega de proyecto</td>
+	</tr><!--Finalización de clases-->
 </table>
 
 <h3>MÉTODOS DE EVALUACIÓN ✍️</h3>
+
+<h4>8AN</h4>
+
+<table>
+	<tr>
+		<td>Corte</td>
+		<td>Actividad</td>
+		<td>Porcentaje 💯</td>
+		<td>Fecha</td>
+		<td>Metodología</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Primer (20%)</td>
+		<td>Parcial</td>
+		<td>10%</td>
+		<td>29/02/2024</td>
+		<td rowspan="7">Presencial</td>
+	</tr>
+	<tr>
+		<td>Quices y/o laboratorio</td>
+		<td>10%</td>
+		<td>22/02/2024<br>22/02/2024</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Segundo (30%)</td>
+		<td>Parcial</td>
+		<td>15%</td>
+		<td>11/04/2024</td>
+	</tr>
+	<tr>
+		<td>Quices y/o laboratorio</td>
+		<td>15%</td>
+		<td>04/04/2024<br>04/04/2024</td>
+	</tr>
+	<tr>
+		<td rowspan="3">Tercer (50%)</td>
+		<td>Examen final</td>
+		<td>15%</td>
+		<td>23/05/2024</td>
+	</tr>
+	<tr>
+		<td>Quices y/o laboratorio</td>
+		<td>15%</td>
+		<td>25/04/2024<br>09/05/2024<br>09/05/2024<br>16/05/2024<br>16/05/2024</td>
+	</tr>
+    <tr>
+		<td>Proyecto</td>
+		<td>20%</td>
+		<td>23/05/2024</td>
+	</tr>
+</table>
+
+<h4>8BN</h4>
 
 <table>
 	<tr>
