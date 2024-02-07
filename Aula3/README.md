@@ -11,6 +11,8 @@ La Raspberry Pi es un microcomputador sobre la cual pueden correr diferentes sis
 3. Emuladores de video juegos (NES, play, SEGA, etc.)
 4. Crear bots con redes sociales (Whatsapp, Facebook, Twitter, Instagram, etc.)
 
+La documentación detallada de la RPi, en relación a: la placa, la instalación del sistema operativo, las configuraciones de la RPi, el software y librerias de la cámara, el acceso remoto, los datasheets, los tutoriales, etc, se encuentran en: https://www.raspberrypi.com/documentation/computers/
+
 ![RPi 3B+](image-4.png)
 
 Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
@@ -27,20 +29,51 @@ Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
 Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
+<h3>Hola mundo con GPIOs</h3>
+
+Algunos ejemplos con GPIOs se encuentran en: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
+
+![Hola mundo](image-1.png)
+
+```python
+from gpiozero import LED
+from time import sleep
+
+led = LED(17)
+
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
+```
+
 <h3>Instalación de Raspbian en la SD Card</h3>
 
 Toda la información necesaria para instalar de forma adecuada Raspbian en la SD Card (clase 10) para la Raspberry Pi se encuentra en: https://www.raspberrypi.com/software/operating-systems/
 
 1. Descarga la imagen (.iso) correspondiente a la opción <i>Raspberry Pi OS with desktop and recommended software</i>
 2. Cargar la imagen (.iso) de Raspbian en la SD Card a través de Balena etcher (https://etcher.balena.io)
-3. Colocar la SD Card en la RPi y realizar las configuraciones iniciales, para lo cual se necesitará un monitor, un teclado y un mouse
+3. Colocar la SD Card en la RPi y realizar las configuraciones iniciales, para lo cual se necesitará un monitor HDMI, un teclado y un mouse
 
-<h3>Habilitar comunicación VNC entre PC y RPi</h3>
+<h3>Habilitar comunicación remota por VNC entre PC y RPi</h3>
 
-1. 
-2.
-3.
-4.
+Para realizar la comunicación remota por VNC entre PC y RPi es indispensable que los dos dispositivos estén conectados en la misma red de internet.
+
+<h4>PC</h4>
+
+1. Descargar e instalar RealVNC Viewer para Windows
+2. Ingresar la IP del dispositivo (computador, celular, etc.) a controlar remotamente
+
+<h4>RPi</h4>
+
+1. Acceder al menú Inicio > Preferencias > Raspberry Pi Configuración
+2. Seleccionar la pestaña Interfaces
+3. Habilitar la opción VNC
+4. Clic en aceptar
+5. Obtener la IP de la RPi
+5. Apagar la RPi y desconectar el HDMI del monitor
+6. Encender la RPi
 
 <h3>Actualización del Raspbian por consola</h3>
 
@@ -54,8 +87,6 @@ El comando para instalar los paquetes previamente descargados es:
 ```
 sudo apt upgrade
 ```
-
-![Hola mundo ](image-1.png)
 
 <h2>Introducción a Python :atom:</h2>
 
