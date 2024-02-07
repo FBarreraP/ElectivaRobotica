@@ -1,10 +1,61 @@
 <h1>Aula 3</h1>
 
-En esta clase se realiza un repaso de `Python`.
+Esta clase consiste en la presentación de la Raspberry Pi y en realizar un repaso de `Python`.
 
 <h2>Introducción a Raspberry</h2>
 
-La Raspberry es un 
+La Raspberry Pi es un microcomputador sobre la cual pueden correr diferentes sistemas operativos (Raspbian, Linux, Windows, Android), siendo Raspbian el sistema operativo sobre el cual se programa con `Python`, además, esta placa proporciona funcionalidades de pines GPIO. Algunas aplicaciones este sistema embebido son: 
+
+1. Aprender habilidades de programación en `Python`
+2. Construir proyectos de <i>hardware</i> (automatización, robótica, IoT, control, etc.)
+3. Emuladores de video juegos (NES, play, SEGA, etc.)
+4. Crear bots con redes sociales (Whatsapp, Facebook, Twitter, Instagram, etc.)
+
+![RPi 3B+](image-4.png)
+
+Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
+
+![RPi 4B](image-6.png)
+
+Fuente: https://www.seeedstudio.com/blog/2020/05/28/meet-the-brand-new-raspberry-pi-4-8gb-ram/
+
+![Conexiones RPi](image-3.png)
+
+Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
+
+![Conexiones inalámbricas RPi](image-5.png)
+
+Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
+
+<h3>Instalación de Raspbian en la SD Card</h3>
+
+Toda la información necesaria para instalar de forma adecuada Raspbian en la SD Card (clase 10) para la Raspberry Pi se encuentra en: https://www.raspberrypi.com/software/operating-systems/
+
+1. Descarga la imagen (.iso) correspondiente a la opción <i>Raspberry Pi OS with desktop and recommended software</i>
+2. Cargar la imagen (.iso) de Raspbian en la SD Card a través de Balena etcher (https://etcher.balena.io)
+3. Colocar la SD Card en la RPi y realizar las configuraciones iniciales, para lo cual se necesitará un monitor, un teclado y un mouse
+
+<h3>Habilitar comunicación VNC entre PC y RPi</h3>
+
+1. 
+2.
+3.
+4.
+
+<h3>Actualización del Raspbian por consola</h3>
+
+La actualización consiste en descargar todos los paquetes disponibles por el fabricante y posteriormente instalarlos, para esto se debe contar con un buena conexión a internet. El comando para descargar los paquetes es:
+
+```
+sudo apt update
+```
+El comando para instalar los paquetes previamente descargados es:
+
+```
+sudo apt upgrade
+```
+
+![Hola mundo ](image-1.png)
 
 <h2>Introducción a Python :atom:</h2>
 
