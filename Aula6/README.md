@@ -1,170 +1,437 @@
-<h1>Aula 6</h1>
+<h1>Aula 4</h1>
 
-En esta clase se enseña a crear interfaces gráficas (GUI) con Python
+Esta clase consiste en relacionar la traslación y la rotación de un cuerpo rígido en la matriz de transformación homogénea (MTH).
 
-<h2>Interfaces gráficas (GUI) con Qt designer</h2>
+<h2>Matriz de transformación homogénea (MTH)</h2>
 
-1. Instalar Qt designer<br>
-En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download<br>
-En Raspbian, en el terminal ejecutar el siguiente comando: 
+Representa la transformación de la localización (orientación y posición) de un vector de coordenadas homogéneas de un sistema de coordenadas 𝑂𝑈𝑉𝑊 con respecto al sistema de referencia 𝑂𝑋𝑌𝑍.
+
+![MTH](Imagenes/image.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+<h3>Justificaciones de la MTH</h3>
+
+1. Representar la posición y orientación de un sistema girado y trasladado 𝑂’𝑈𝑉𝑊 con respecto a un sistema fijo de referencia 𝑂𝑋𝑌𝑍, que es lo mismo que representar una rotación y traslación realizada sobre un sistema de referencia.
+2. Transformar un vector expresado en coordenadas con respecto a un sistema 𝑂’𝑈𝑉𝑊, a su expresión en coordenadas del sistema de referencia 𝑂𝑋𝑌𝑍.
+3. Rotar y trasladar un vector con respecto a un sistema de referencia fijo 𝑂𝑋𝑌𝑍.
+
+![Características MTH](Imagenes/image-1.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+<h3>Traslación (MTH)</h3>
+
+En la figura, el sistema 𝑂’𝑈𝑉𝑊 está trasladado de un vector 𝑝(6,−3,8) con respecto del sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas ($𝑟_{𝑥}$, $𝑟_{𝑦}$, $𝑟_{𝑧}$) del vector 𝑟, cuyas coordenadas con respecto al sistema 𝑂’𝑈𝑉𝑊 son $𝑟_{𝑢𝑣𝑤}$ (−2,7,3)
+
+![Traslación1](Imagenes/image-2.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+MTH=[1 0 0 6;
+   0 1 0 -3;
+   0 0 1 8;
+   0 0 0 1];
+r = [-2; 7; 3; 1]
+MTHr = MTH*r
 ```
-sudo apt-get install qtcreator
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 𝑝_𝑥\\ 
+0 & 1 & 0 & 𝑝_𝑦\\ 
+0 & 0 & 1 & 𝑝_𝑧\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+𝑟_𝑢\\ 
+𝑟_𝑣\\ 
+𝑟_𝑤\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+𝑟_𝑢+𝑝_𝑥\\ 
+𝑟_𝑣+𝑝_𝑦\\ 
+𝑟_𝑤+𝑝_𝑧\\ 
+1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 6\\ 
+0 & 1 & 0 & -3\\ 
+0 & 0 & 1 & 8\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+-2\\ 
+7\\ 
+3\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+4\\ 
+4\\ 
+11\\ 
+1
+\end{bmatrix}
+$$
+
+Calcular el vector $𝑟_{𝑥𝑦𝑧}^′$ resultante de trasladar el vector $𝑟_{𝑥𝑦𝑧}$ (4,4,11) las coordenadas $𝑝_{𝑥𝑦𝑧}$ (6,−3,8)
+
+![Traslación2](Imagenes/image-3.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+MTH=[1 0 0 6;
+   0 1 0 -3;
+   0 0 1 8;
+   0 0 0 1];
+r = [4; 4; 11; 1]
+MTHr = MTH*r
 ```
 
-2. Realizar el <em>front end</em> de la interfaz gráfica para la suma aritmética de dos números editando algunas propiedades de cada <em>widget</em> utilizado.
+$$
+\begin{bmatrix}
+{𝑟}'_𝑥\\ 
+{𝑟}'_𝑦\\ 
+{𝑟}'_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 𝑝_𝑥\\ 
+0 & 1 & 0 & 𝑝_𝑦\\ 
+0 & 0 & 1 & 𝑝_𝑧\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+𝑟_𝑥+𝑝_𝑥\\ 
+𝑟_𝑦+𝑝_𝑦\\ 
+𝑟_𝑧+𝑝_𝑧\\ 
+1
+\end{bmatrix}
+$$
 
-![Alt text](image.png)
+$$
+\begin{bmatrix}
+{𝑟}'_{𝑥}\\ 
+{𝑟}'_𝑦\\ 
+{𝑟}'_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 6\\ 
+0 & 1 & 0 & -3\\ 
+0 & 0 & 1 & 8\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+4\\ 
+4\\ 
+11\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+10\\ 
+1\\ 
+19\\ 
+1
+\end{bmatrix}
+$$
 
-3. Convertir un archivo `.ui` a `.py`<br>
+<h3>Rotación (MTH)</h3>
 
-I. En el terminal, con los comandos linux (`cd`, `cd ..`, `ls`, `pwd`, etc.) entrar a la carpeta donde se encuentre el archivo `.ui`<br>
+En la figura, el sistema 𝑂𝑈𝑉𝑊 se encuentra girado -90° alrededor del eje 𝑍 con respecto al sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas del vector $𝑟_{𝑥𝑦𝑧}$, si $𝑟_{𝑢𝑣𝑤} = [4,8,12]^{𝑇}$
 
-II. En Windows, ejecutar en el terminal el siguiente comando:
+![Rotación](Imagenes/image-4.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+theta = -pi/2;
+MTH=[cos(theta) -sin(theta) 0 0;
+    sin(theta) cos(theta) 0 0;
+    0 0 1 0
+    0 0 0 1];
+r = [4; 8; 12; 1]
+MTHr =MTH*r
 ```
-pyuic5 -x [FILENAME].ui -o [FILENAME].py (ej: pyuic5 -x suma.ui -o suma.py)
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+cosθ & -sinθ & 0 & 0\\ 
+sinθ & cosθ & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+𝑟_𝑢\\ 
+𝑟_𝑣\\ 
+𝑟_𝑤\\ 
+1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+0 & 1 & 0 & 0\\ 
+-1 & 0 & 0 & 0\\ 
+0 & 0 & 1 & 0\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+4\\ 
+8\\ 
+12\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+8\\ 
+-4\\ 
+12\\ 
+1
+\end{bmatrix}
+$$
+
+<h3>Rotación y traslación (MTH)</h3>
+
+La traslación y rotación no son conmutativas, por tanto, no es lo mismo rotar y trasladar que trasladar y rotar.
+
+![Rotar-Trasladar](Imagenes/image-5.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+<h3>1. Rotación y 2. traslación (MTH)</h3>
+
+En la figura, el sistema 𝑂𝑈𝑉𝑊 ha sido girado 90° alrededor del eje 𝑋 y posteriormente trasladado um vector 𝑝(8,−4,12) con respecto al sistema 𝑂𝑋𝑌𝑍. Calcular las coordenadas ($𝑟_{𝑥}$, $𝑟_{𝑦}$, $𝑟_{𝑧}$) del vector 𝑟 con coordenadas $𝑟_{𝑢^′ 𝑣^′ 𝑤^′}$ (−3,4,−11)
+
+![Rotar y trasladar](Imagenes/image-6.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+%Solución simbólica
+syms Px Py Pz theta
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+RT = dx*Rx
+
+%Solución numérica
+Px = 8
+Py = -4
+Pz = 12
+theta = deg2rad(90)
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+RT = dx*Rx
+
+r = [-3; 4; -11; 1]
+RTr = RT*r
 ```
-En Raspbian, ejecutar en el terminal el siguiente comando:
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 𝑝_𝑥\\ 
+0 & cosθ & -sinθ & 𝑝_𝑦\\ 
+0 & sinθ & cosθ & 𝑝_𝑧\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+𝑟_𝑢\\ 
+𝑟_𝑣\\ 
+𝑟_𝑤\\ 
+1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 8\\ 
+0 & 0 & -1 & -4\\ 
+0 & 1 & 0 & 12\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+-3\\ 
+4\\ 
+-11\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+5\\ 
+7\\ 
+16\\ 
+1
+\end{bmatrix}
+$$
+
+<h3>1. Traslación y 2. Rotación (MTH)</h3>
+
+En la figura, el sistema 𝑂𝑈𝑉𝑊 ha sido trasladado un vector 𝑝(8,−4,12) con respecto al sistema 𝑂𝑋𝑌𝑍 y girado 90° alrededor del eje 𝑂𝑋. Calcular las coordenadas ($𝑟_{𝑥}$, $𝑟_{𝑦}$, $𝑟_{𝑧}$) del vector 𝑟 de coordenadas $𝑟_{𝑢𝑣𝑤}$ (−3,4,−11)  
+
+![Trasladar y rotar](Imagenes/image-7.png)
+
+Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
+
+```matlab
+clear all
+close all
+clc
+
+%Solución simbólica
+syms Px Py Pz theta
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+TR = Rx*dx
+
+%Solución numérica
+Px = 8
+Py = -4
+Pz = 12
+theta = pi/2
+
+dx = [1 0 0 Px; 0 1 0 Py; 0 0 1 Pz; 0 0 0 1]
+Rx = [1     0           0      0;
+      0 cos(theta) -sin(theta) 0;
+      0 sin(theta) cos(theta)  0;
+      0     0           0      1]
+TR = Rx*dx
+
+r = [-3; 4; -11; 1]
+TRr = TR*r
 ```
-python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py (ej: python -m PyQt5.uic.pyuic -x suma.ui -o suma.py)
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 𝑝_𝑥\\ 
+0 & cosθ & -sinθ & 𝑝_𝑦cosθ-𝑝_𝑧sinθ\\ 
+0 & sinθ & cosθ & 𝑝_𝑦sinθ+𝑝_𝑧cosθ\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+𝑟_𝑢\\ 
+𝑟_𝑣\\ 
+𝑟_𝑤\\ 
+1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+𝑟_𝑥\\ 
+𝑟_𝑦\\ 
+𝑟_𝑧\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 & 8\\ 
+0 & 0 & -1 & -12\\ 
+0 & 1 & 0 & -4\\ 
+0 & 0 & 0 & 1
+\end{bmatrix} \cdot \begin{bmatrix}
+-3\\ 
+4\\ 
+-11\\ 
+1
+\end{bmatrix} = \begin{bmatrix}
+5\\ 
+-1\\ 
+0\\ 
+1
+\end{bmatrix}
+$$
+
+<h3>Ejercicio 1</h3>
+
+Encontrar la matriz de transformación homogénea (MTH) del SC{0} al SC{3}. Tenga en cuenta diferentes combinaciones de rotaciones del SC{2} al SC{3}, con respecto al sistema actual y al sistema fijo.
+
+![Ejercicio1](Imagenes/image-8.png)
+
+Fuente: Spong, M. W., Hutchinson, S., & Vidyasagar, M. (2006). Robot modeling and control.
+
+```matlab
+% Matrices de rotación (Sistema actual)
+R23_1 = round(RotarX(-pi)*RotarZ(-pi/2))
+R23_2 = round(RotarY(pi)*RotarZ(pi/2))
+R23_3 = round(RotarZ(pi/2)*RotarX(-pi))
+
+% Matrices de rotación (Sistema fijo)
+R23_1 = round(RotarZ(pi/2)*RotarX(-pi))
+R23_2 = round(RotarZ(-pi/2)*RotarY(pi))
+R23_3 = round(RotarY(-pi)*RotarZ(pi/2)) %round(RotarX(pi)*RotarZ(-pi/2))
+
+%Ángulos de Euler
+r1 = rad2deg(tr2rpy(R23_3,'zyx'))
+
+%Matrices de transformación
+T01 = [1 0 0 0; 0 1 0 1; 0 0 1 1; 0 0 0 1]
+T12 = [1 0 0 -0.5; 0 1 0 0.5; 0 0 1 0; 0 0 0 1]
+T23 = [0 1 0 0; 1 0 0 0; 0 0 -1 2; 0 0 0 1]
+T03 = T01*T12*T23
+
+%Ángulos de Euler
+m = T03(1:3,1:3)
+r2 = rad2deg(tr2rpy(m,'zyx'))
 ```
 
-4. Realizar el <em>back end</em> de la interfaz gráfica, es decir, editar el archivo `.py` para que realice la tarea específica de la suma de dos números cuando se presione el botón.
+<h3>Ejercicio 2</h3>
 
-```python
-# -*- coding: utf-8 -*-
+Encontrar la matriz de transformación homogénea (MTH) del SC{0} al SC{2}. Tenga en cuenta diferentes combinaciones de rotaciones del SC{0} al SC{1} y del SC{1} al SC{2}, con respecto al sistema actual y al sistema fijo.
 
-# Form implementation generated from reading ui file 'suma.ui'
-#
-# Created by: PyQt5 UI code generator 5.15.9
-#
-# WARNING: Any manual changes made to this file will be lost when pyuic5 is
-# run again.  Do not edit this file unless you know what you are doing.
+![Ejercicio2](Imagenes/image-9.png)
 
-
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(310, 270, 191, 61))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.pushButton.setFont(font)
-        self.pushButton.setObjectName("pushButton")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(610, 150, 141, 71))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label.setFont(font)
-        self.label.setText("")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(250, 160, 41, 51))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.label_2.setFont(font)
-        self.label_2.setTextFormat(QtCore.Qt.AutoText)
-        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(20, 170, 221, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit.setFont(font)
-        self.textEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.textEdit.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
-        self.textEdit.setObjectName("textEdit")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit_2.setGeometry(QtCore.QRect(300, 170, 221, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit_2.setFont(font)
-        self.textEdit_2.setObjectName("textEdit_2")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(540, 160, 41, 51))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.label_3.setFont(font)
-        self.label_3.setTextFormat(QtCore.Qt.AutoText)
-        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(200, 40, 421, 71))
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        self.label_4.setFont(font)
-        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(130, 370, 201, 141))
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(440, 370, 301, 151))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_6.setFont(font)
-        self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap("Aula2/ecci.jpg"))
-        self.label_6.setScaledContents(True)
-        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_6.setObjectName("label_6")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        #Acción al presionar el botón en la GUI
-        self.pushButton.clicked.connect(self.Suma)
-
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Ejemplo1"))
-        self.pushButton.setText(_translate("MainWindow", "CALCULAR"))
-        self.label_2.setText(_translate("MainWindow", "+"))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.label_3.setText(_translate("MainWindow", "="))
-        self.label_4.setText(_translate("MainWindow", "SUMA ARITMÉTICA"))
-        self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Prof. Fabián Barrera Prieto (MSc.)</p><p align=\"center\">Ingeniería mecatrónica</p><p align=\"center\">Electiva de robótica</p><p align=\"center\">2024-1</p></body></html>"))
-
-    #Función que se ejecuta con la acción anterior
-    def Suma(self):
-        a = self.textEdit.toPlainText()
-        b = self.textEdit_2.toPlainText()
-        c = int(a)+int(b)
-        self.label.setText(str(c))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-```
-5. Ejecutar el archivo `.py` para probar la aplicación
-
-![Alt text](image-1.png)
+Fuente: Spong, M. W., Hutchinson, S., & Vidyasagar, M. (2006). Robot modeling and control.
