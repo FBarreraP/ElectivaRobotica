@@ -126,7 +126,7 @@ $$\vec{r}= \begin{bmatrix}
 11
 \end{bmatrix}$$
 
-$$\vec{r}= \begin{bmatrix}
+$$\vec{p}= \begin{bmatrix}
 6\\ 
 -3\\ 
 8
