@@ -1,6 +1,6 @@
-<h1>Aula 6</h1>
+<h1>Aula 12</h1>
 
-En esta clase se enseña a crear interfaces gráficas (GUI) con Python
+En esta clase se enseña a crear interfaces gráficas (GUI) con Python (Qt designer) tanto en Windows como en Raspberry
 
 <h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
