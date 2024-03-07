@@ -118,7 +118,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.label_6.setFont(font)
         self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap("Aula2/ecci.jpg"))
+        self.label_6.setPixmap(QtGui.QPixmap("Aula12/ecci.jpg"))
         self.label_6.setScaledContents(True)
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
