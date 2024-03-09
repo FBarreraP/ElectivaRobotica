@@ -10,7 +10,7 @@ En Windows, descargar el software a través del siguiente link: https://build-sy
 ```
 pip install pyqt5
 ```
-<! --
+<!--
 ```
 pip install pyqt5-tools
 ```
