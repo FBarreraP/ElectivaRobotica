@@ -10,10 +10,11 @@ En Windows, descargar el software a través del siguiente link: https://build-sy
 ```
 pip install pyqt5
 ```
+<! --
 ```
 pip install pyqt5-tools
 ```
-
+-->
 En Raspbian, en el terminal ejecutar el siguiente comando: 
 ```
 sudo apt-get install qtcreator
