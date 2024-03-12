@@ -1,4 +1,4 @@
-<h1>Aula 4</h1>
+<h1>Aula 13</h1>
 
 Esta clase consiste en realizar una introducción a la cinemática directa.
 

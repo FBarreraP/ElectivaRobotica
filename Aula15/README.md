@@ -2,7 +2,7 @@
 
 Esta clase consiste en comprender y aplicar el segundo paso del método DH (Denavit-Hartengerg).
 
-<h3>Paso 2 - Parámetros DH</h3>
+<h2>Paso 2 - Parámetros DH</h2>
 
 Los parámetros DH (𝑑,𝜃,𝑎,𝛼) son definidos por las articulaciones y los eslabones del robot. 
 
@@ -10,31 +10,31 @@ Los parámetros DH (𝑑,𝜃,𝑎,𝛼) son definidos por las articulaciones y 
 
 Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundamentos de Robótica, 2nd edition, McGraw-Hill.
 
-<h4>Párametro $𝜃_𝒊$</h4>
+<h3>Párametro $𝜃_𝒊$</h3>
 
 Es el ángulo que forman los ejes de $x_{𝑖−1}$ a $x_𝑖$ perpendicular al eje $z_{𝑖−1}$
 
 ![𝜃_𝒊](Imagenes/image-5.png)
 
-<h4>Párametro $𝒅_𝒊$</h4>
+<h3>Párametro $𝒅_𝒊$</h3>
 
 Es la distancia de $𝑋_{𝑖−1}$ a $𝑋_𝑖$ a lo largo del eje $𝑍_{𝑖−1}$
 
 ![𝒅_𝒊](Imagenes/image-6.png)
 
-<h4>Párametro $𝜶_𝒊$</h4>
+<h3>Párametro $𝜶_𝒊$</h3>
 
 Es el ángulo que forman los ejes de $𝑍_{𝑖−1}$ a $𝑍_𝑖$ perpendicular al eje $𝑋_𝑖$
 
 ![𝜶_𝒊](Imagenes/image-7.png)
 
-<h4>Párametro $𝒂_𝒊$</h4>
+<h3>Párametro $𝒂_𝒊$</h3>
 
 Es la distancia de $𝑍_{𝑖−1}$ a $𝑍_𝑖$ a lo largo del eje $𝑋_𝑖$
 
 ![𝒂_𝒊](Imagenes/image-8.png)
 
-<h4>Ejemplo 1</h4>
+<h3>Ejemplo 1</h3>
 
 ![Ejemplo 1 paso 2 DH](Imagenes/image-9.png)
 
@@ -63,7 +63,7 @@ Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
 ```
 
-<h4>Ejemplo 2</h4>
+<h3>Ejemplo 2</h3>
 
 ![Ejemplo 2 paso 2 DH](Imagenes/image-10.png)
 
@@ -92,7 +92,7 @@ Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
 ```
 
-<h4>Ejercicio 1</h4>
+<h3>Ejercicio 1</h3>
 
 ![Ejercicio 1 paso 2 DH](Imagenes/image-11.png)
 
@@ -120,7 +120,7 @@ Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
 ```
 
-<h4>Ejercicio 2</h4>
+<h3>Ejercicio 2</h3>
 
 ![Ejercicio 2 paso 2 DH](Imagenes/image-12.png)
 
