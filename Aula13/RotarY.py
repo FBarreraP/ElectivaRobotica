@@ -1,5 +1,8 @@
-import math
+from sympy import *
+import numpy
 
 def RotarY(theta):
-    Ry = [math.cos(theta), 0, math.sin(theta)],[0, 1, 0],[-math.sin(theta), 0, math.cos(theta)];
+    Ry = numpy.array([cos(theta), 0, sin(theta)],
+                     [0, 1, 0],
+                     [-sin(theta), 0, cos(theta)])
     return Ry
