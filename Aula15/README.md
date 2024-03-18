@@ -127,7 +127,7 @@ MTH = Robot.fkine([q1,q2])
 
 ![Ejercicio 1 paso 2 DH](Imagenes/image-11.png)
 
-Peter corke en `matlab`
+Peter corke en `python`
 
 ```python
 from roboticstoolbox import *
