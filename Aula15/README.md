@@ -98,35 +98,6 @@ MTH = Robot.fkine([q1,q2])
 
 ![Ejemplo 2 paso 2 DH](Imagenes/image-10.png)
 
-```matlab
-clear all
-close all
-clc
-
-l1 = 6;
-l2 = 7;
-l3 = 3;
-l4 = 2;
-
-q1 = 0;
-q2 = 0;
-
-R(1) = Link('revolute','d',l1,'alpha',pi/2,'a',l3,'offset',pi/2);
-R(2) = Link('prismatic','theta',0,'alpha',0,'a',0,'offset',l2+l4);
-R(2).qlim = [0,10];
-
-Robot = SerialLink(R,'name','Bender')
-
-Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
-zlim([-15,30]);
-Robot.teach([q1,q2],'rpy/zyx');
-MTH = Robot.fkine([q1,q2])
-```
-
-<h3>Ejercicio 1</h3>
-
-![Ejercicio 1 paso 2 DH](Imagenes/image-11.png)
-
 Peter corke en `python`
 
 ```python
@@ -158,6 +129,35 @@ print(MTH)
 ```
 
 Peter corke en `matlab`
+
+```matlab
+clear all
+close all
+clc
+
+l1 = 6;
+l2 = 7;
+l3 = 3;
+l4 = 2;
+
+q1 = 0;
+q2 = 0;
+
+R(1) = Link('revolute','d',l1,'alpha',pi/2,'a',l3,'offset',pi/2);
+R(2) = Link('prismatic','theta',0,'alpha',0,'a',0,'offset',l2+l4);
+R(2).qlim = [0,10];
+
+Robot = SerialLink(R,'name','Bender')
+
+Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
+zlim([-15,30]);
+Robot.teach([q1,q2],'rpy/zyx');
+MTH = Robot.fkine([q1,q2])
+```
+
+<h3>Ejercicio 1</h3>
+
+![Ejercicio 1 paso 2 DH](Imagenes/image-11.png)
 
 ```matlab
 clear all
