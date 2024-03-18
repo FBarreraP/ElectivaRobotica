@@ -38,6 +38,37 @@ Es la distancia de $𝑍_{𝑖−1}$ a $𝑍_𝑖$ a lo largo del eje $𝑋_𝑖
 
 ![Ejemplo 1 paso 2 DH](Imagenes/image-9.png)
 
+Peter corke en `python`
+
+```python
+from roboticstoolbox import *
+import math
+
+a1 = 12
+a2 = 14
+a3 = 6
+a4 = 4
+
+q1 = 0
+q2 = 0
+
+R = []
+R.append(RevoluteDH(d=a1, alpha=math.pi/2, a=a2, offset=0))
+R.append(RevoluteDH(d=a3, alpha=0, a=a4, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2])
+print(MTH)
+```
+
+Peter corke en `matlab`
+
 ```matlab
 clear all
 close all
@@ -95,6 +126,38 @@ MTH = Robot.fkine([q1,q2])
 <h3>Ejercicio 1</h3>
 
 ![Ejercicio 1 paso 2 DH](Imagenes/image-11.png)
+
+Peter corke en `matlab`
+
+```python
+from roboticstoolbox import *
+import math
+
+l1 = 6
+l2 = 7
+l3 = 3
+l4 = 2
+
+q1 = 0
+q2 = 0
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=math.pi/2, a=l3, offset=math.pi/2))
+R.append(PrismaticDH(theta=0, alpha=0, a=0, offset=l2+l4))
+R[1].qlim = [0,10]
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2])
+print(MTH)
+```
+
+Peter corke en `matlab`
 
 ```matlab
 clear all
