@@ -482,7 +482,7 @@ Fabian.result()
 
 <h2>Toolbox Peter Corke</h2>
 
-(https://petercorke.github.io/robotics-toolbox-python/intro.html)
+La documentación del Toolbox de Peter Corke para `Python` se encuentra en: https://petercorke.github.io/robotics-toolbox-python/intro.html
 
 1. Instalar el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
 
