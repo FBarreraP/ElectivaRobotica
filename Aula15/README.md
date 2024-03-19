@@ -66,7 +66,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
-print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -130,7 +130,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
-print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -193,7 +193,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
-print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -261,7 +261,7 @@ Robot.teach([q1, q2, q3, q4], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2,q3,q4])
 print(MTH)
-print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
