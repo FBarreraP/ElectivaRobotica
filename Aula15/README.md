@@ -302,5 +302,3 @@ fprintf('Roll, Pitch, Yaw = [%.3f %.3f %.3f] \n',rad2deg(tr2rpy(MTH.R,'zyx')));
 Obtener los parámetros DH de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
 
 ![Ejercicios](Imagenes/image-13.png)
-
-hola
