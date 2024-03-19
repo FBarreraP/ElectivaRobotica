@@ -303,3 +303,4 @@ Obtener los parámetros DH de los siguientes cinco tipos de robots: 1. Cartesian
 
 ![Ejercicios](Imagenes/image-13.png)
 
+hola
