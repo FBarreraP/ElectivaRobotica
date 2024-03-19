@@ -1,17 +1,19 @@
+
+
 from sympy import *
 import numpy
-# from roboticstoolbox import *
-from scipy.spatial.transform import Rotation as R
+from spatialmath.base import *
+# from scipy.spatial.transform import Rotation as R
 
 #Transformaciones (MTH)
 
 # theta1, theta2, h1, h2, l1, l2 = symbols('theta1 theta2 h1 h2 l1 l2')
 theta1 = pi/2
 theta2 = pi/2
-l1 = 4
+l1 = 5
 l2 = 5
 h1 = 3
-h2 = 5
+h2 = 2
 
 T01 = numpy.array([[1, 0, 0, 0],
                    [0, 1, 0, 0],
@@ -40,8 +42,11 @@ T24 = numpy.matmul(T23,T34)
 T04 = (numpy.matmul(T02,T24))
 print(f'T04 = {T04}')
 
-r = R.from_matrix(T04[:3,:3])
+r = T04[:3,:3]
 print(f'r = {r}')
-# m = numpy.rad2deg(tr2rpy(r,'zyx'))
-m = r.as_euler('zyx', degrees=True)
-print(f'm = {m}')
+
+print(f'Yaw, Pitch, Roll = {tr2rpy(r, 'deg', 'zyx')}')
+
+
+# m = r.as_euler('zyx', degrees=True)
+# print(f'm = {m}')

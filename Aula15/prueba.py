@@ -30,4 +30,7 @@ Robot.teach([q1, q2, q3, q4], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 MTH = Robot.fkine([q1,q2,q3,q4])
 print(MTH)
 
-print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+r = MTH[:3,:3]
+print(f'r = {r}')
+
+print(f'Yaw, Pitch, Roll = {tr2rpy(r, 'deg', 'zyx')}')
