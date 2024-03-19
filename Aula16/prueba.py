@@ -9,8 +9,8 @@ h2 = 0
 l1 = 4
 l2 = 4
 
-q1 = 0
-q2 = 0
+q1 = numpy.deg2rad(45)
+q2 = numpy.deg2rad(50)
 
 R = []
 R.append(RevoluteDH(d=0, alpha=0, a=l1, offset=0))
