@@ -42,6 +42,7 @@ Peter corke en `python`
 
 ```python
 from roboticstoolbox import *
+from spatialmath.base import *
 import math
 
 a1 = 12
@@ -65,6 +66,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
+print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -92,6 +94,7 @@ Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
 zlim([-15,30]);
 Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
+fprintf('Roll, Pitch, Yaw = [%.3f %.3f %.3f] \n',rad2deg(tr2rpy(MTH.R,'zyx')));
 ```
 
 <h3>Ejemplo 2</h3>
@@ -102,10 +105,7 @@ Peter corke en `python`
 
 ```python
 from roboticstoolbox import *
-import math
-
-a1 = 10
-from roboticstoolbox import *
+from spatialmath.base import *
 import math
 
 l1 = 6
@@ -130,6 +130,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
+print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -157,6 +158,7 @@ Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
 zlim([-15,30]);
 Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
+fprintf('Roll, Pitch, Yaw = [%.3f %.3f %.3f] \n',rad2deg(tr2rpy(MTH.R,'zyx')));
 ```
 
 <h3>Ejercicio 1</h3>
@@ -167,6 +169,7 @@ Peter corke en `python`
 
 ```python
 from roboticstoolbox import *
+from spatialmath.base import *
 import math
 
 a1 = 10
@@ -190,6 +193,7 @@ Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2])
 print(MTH)
+print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -216,6 +220,7 @@ Robot.plot([q1,q2],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
 zlim([-15,30]);
 Robot.teach([q1,q2],'rpy/zyx');
 MTH = Robot.fkine([q1,q2])
+fprintf('Roll, Pitch, Yaw = [%.3f %.3f %.3f] \n',rad2deg(tr2rpy(MTH.R,'zyx')));
 ```
 
 <h3>Ejercicio 2</h3>
@@ -226,6 +231,7 @@ Peter corke en `python`
 
 ```python
 from roboticstoolbox import *
+from spatialmath.base import *
 import math
 
 a1 = 15
@@ -255,6 +261,7 @@ Robot.teach([q1, q2, q3, q4], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2,q3,q4])
 print(MTH)
+print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 ```
 
 Peter corke en `matlab`
@@ -287,6 +294,7 @@ Robot.plot([q1,q2,q3,q4],'scale',0.5,'workspace',[-30 30 -30 30 -30 30]);
 zlim([-15,30]);
 Robot.teach([q1,q2,q3,q4],'rpy/zyx');
 MTH = Robot.fkine([q1,q2,q3,q4])
+fprintf('Roll, Pitch, Yaw = [%.3f %.3f %.3f] \n',rad2deg(tr2rpy(MTH.R,'zyx')));
 ```
 
 <h3>Ejercicios</h3>

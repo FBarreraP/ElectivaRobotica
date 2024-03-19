@@ -1,4 +1,5 @@
 from roboticstoolbox import *
+from spatialmath.base import *
 import math
 
 a1 = 15
@@ -28,3 +29,5 @@ Robot.teach([q1, q2, q3, q4], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
 
 MTH = Robot.fkine([q1,q2,q3,q4])
 print(MTH)
+
+print(f'Yaw, Pitch, Roll = {tr2rpy(MTH.R, 'deg', 'zyx')}')
