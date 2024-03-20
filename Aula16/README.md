@@ -987,32 +987,31 @@ MTH = Robot.fkine([q1,q2])
 TZ0 = [1 0 0 0; 0 1 0 0; 0 0 1 h1; 0 0 0 1]
 RZ0 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T01 =  TZ0*RZ0*TX1*RZ1
-T01 =  RZ0*TZ0*RZ1*TX1
+RX1 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T01 =  TZ0*RZ0*TX1*RX1
+T01 =  RZ0*TZ0*RX1*TX1
 
 TZ1 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ1 = [cos(q1) -sin(q1) 0 0; sin(q1) cos(q1) 0 0; 0 0 1 0; 0 0 0 1]
 TX2 = [1 0 0 l1; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T12 =  TZ1*RZ1*TX2*RZ2
-T12 =  RZ1*TZ1*RZ2*TX2
+RX2 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T12 =  TZ1*RZ1*TX2*RX2
+T12 =  RZ1*TZ1*RX2*TX2
 
 TZ2 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
 RZ2 = [cos(q2) -sin(q2) 0 0; sin(q2) cos(q2) 0 0; 0 0 1 0; 0 0 0 1]
 TX3 = [1 0 0 l2; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T23 =  TZ2*RZ2*TX3*RZ3
-T23 =  RZ2*TZ2*RZ3*TX3
+RX3 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T23 =  TZ2*RZ2*TX3*RX3
+T23 =  RZ2*TZ2*RX3*TX3
 
 TZ3 = [1 0 0 0; 0 1 0 0; 0 0 1 -h2; 0 0 0 1]
 RZ3 = [cos(0) -sin(0) 0 0; sin(0) cos(0) 0 0; 0 0 1 0; 0 0 0 1]
 TX4 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]
-RZ4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
-% T34 =  TZ3*RZ3*RZ4*TX4
-T34 =  RZ3*TZ3*TX4*RZ4
+RX4 = [1 0 0 0; 0 cos(0) -sin(0) 0; 0 sin(0) cos(0) 0; 0 0 0 1]
+T34 =  TZ3*RZ3*TX4*RX4
+T34 =  RZ3*TZ3*RX4*TX4
 
-% T04 = simplify(T01*T12*T23*T34)
 T04 = T01*T12*T23*T34
 
 %Confirmar la rotación en ángulos de Euler
