@@ -484,13 +484,14 @@ Fabian.result()
 
 La documentación del Toolbox de Peter Corke para `Python` se encuentra en: https://petercorke.github.io/robotics-toolbox-python/intro.html
 
-1. Instalar el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
+1. Instalar desde pip el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
 
 En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
 
 ```
 pip3 install roboticstoolbox-python
 ```
+
 >[!WARNING]
 >En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
