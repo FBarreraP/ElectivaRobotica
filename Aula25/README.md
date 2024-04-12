@@ -1,4 +1,4 @@
-<h1>Aula 10</h1>
+<h1>Aula 25</h1>
 
 Esta clase consiste en comprender y analizar el desacople cinemático, el cual es un método de realizar la cinemática inversa de un robot de 6 GDL.
 

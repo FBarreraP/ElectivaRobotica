@@ -1,4 +1,4 @@
-<h1>Aula 9</h1>
+<h1>Aula 23</h1>
 
 Esta clase consiste en comprender y analizar la cinemática inversa de dos robots 3R, así como las rutas y las trayectorias con perfil de velocidad trapezoidal.
 
@@ -36,6 +36,67 @@ $$𝜃_3=𝛽−𝜃_1−𝜃_2$$
 
 Siendo que $𝛽$ es el ángulo escogido para la rotación de la muñeca con respecto al eje horizontal.
 
+Comprobación en `python`
+
+```python
+from roboticstoolbox import *
+from spatialmath.base import *
+import math
+import numpy
+from sympy import *
+
+l1 = 10
+l2 = 10
+l3 = 10
+
+# Cinemática inversa
+Px = 27.071
+Py = 7.071
+beta = numpy.deg2rad(45)
+
+m = Px - l3*round(cos(beta),4)
+n = Py - l3*round(sin(beta),4)
+# Theta 2
+b = round(sqrt(m**2+n**2),4)
+cos_theta2 = (b**2-l2**2-l1**2)/(2*l1*l2)
+sen_theta2 = math.sqrt(1-(cos_theta2)**2)
+theta2 = float(atan2(sen_theta2, cos_theta2))
+print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
+# Theta 1
+alpha = math.atan2(n,m)
+phi = math.atan2(l2*sen_theta2, l1+l2*cos_theta2)
+theta1 = alpha - phi
+if theta1 <= -pi:
+    theta1 = (2*pi)+theta1
+
+print(f'theta 1 = {numpy.rad2deg(theta1):.4f}')
+#Theta 3
+theta3 = beta - theta1 - theta2
+print(f'theta 3 = {numpy.rad2deg(theta3):.4f}')
+#-------------
+
+q1 = theta1
+q2 = theta2
+q3 = theta3
+
+R = []
+R.append(RevoluteDH(d=0, alpha=0, a=l1, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l3, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2, q3], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2,q3])
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+```
+Comprobación en `matlab`
+
 ```matlab
 %% Robot 3R (planar)
 
@@ -59,7 +120,7 @@ beta = deg2rad(45)
 m = Px - l3*round(cos(beta),4)
 n = Py - l3*round(sin(beta),4)
 % Theta 2
-b = sqrt(m^2+n^2)
+b = round(sqrt(m^2+n^2),4)
 cos_theta2 = (b^2-l2^2-l1^2)/(2*l1*l2);
 sen_theta2 = sqrt(1-(cos_theta2)^2);
 theta2 = atan2(sen_theta2, cos_theta2);
@@ -124,6 +185,68 @@ $$𝛼=tan^{−1}⁡\frac{𝑐}{𝑒}$$
 $$∅=tan^{−1}\frac{𝑙_3 \cdot sin⁡𝜃_3}{𝑙_2+𝑙_3 \cdot cos⁡𝜃_3}$$
 
 $$𝜃_2=𝛼−∅$$
+
+Comprobación en `python`
+
+```python
+from roboticstoolbox import *
+from spatialmath.base import *
+import math
+import numpy
+from sympy import *
+
+l1 = 10
+l2 = 10
+l3 = 10
+
+# Cinemática inversa
+Px = -9.545
+Py = 7.896
+Pz = 23.192
+
+e = sqrt(Px**2+Py**2)
+c = Pz - l1
+b = sqrt(e**2+c**2)
+# Theta 1
+theta1 = float(atan2(Py,Px))
+print(f'theta 1 = {numpy.rad2deg(theta1):.4f}')
+# Theta 3
+cos_theta3 = (b**2-l2**2-l3**2)/(2*l2*l3)
+sen_theta3 = sqrt(1-(cos_theta3)**2)
+theta3 = float(atan2(sen_theta3, cos_theta3))
+print(f'theta 3 = {numpy.rad2deg(theta3):.4f}')
+# Theta 2
+alpha = math.atan2(c,e)
+phi = math.atan2(l3*sen_theta3, l2+l3*cos_theta3)
+theta2 = float(alpha - phi)
+if theta2 <= -pi:
+    theta2 = (2*pi)+theta2
+
+print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
+#-------------
+
+q1 = theta1
+q2 = theta2
+q3 = theta3
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l3, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2, q3], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2,q3])
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+```
+
+Comprobación en `matlab`
 
 ```matlab
 %% Robot 3R (angular)

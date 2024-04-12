@@ -7,13 +7,13 @@ from spatialmath.base import *
 
 #Transformaciones (MTH)
 
-# theta1, theta2, h1, h2, l1, l2 = symbols('theta1 theta2 h1 h2 l1 l2')
-theta1 = pi/2
-theta2 = pi/2
-l1 = 5
-l2 = 5
-h1 = 3
-h2 = 2
+theta1, theta2, h1, h2, l1, l2 = symbols('theta1 theta2 h1 h2 l1 l2')
+# theta1 = pi/2
+# theta2 = pi/2
+# l1 = 5
+# l2 = 5
+# h1 = 3
+# h2 = 2
 
 T01 = numpy.array([[1, 0, 0, 0],
                    [0, 1, 0, 0],
@@ -38,14 +38,13 @@ T34 = numpy.array([[1, 0, 0, 0],
 
 T02 = numpy.matmul(T01,T12)
 T24 = numpy.matmul(T23,T34)
-# T04 = simplify(numpy.matmul(T02,T24))
-T04 = (numpy.matmul(T02,T24))
-print(f'T04 = {T04}')
+T04 = simplify(numpy.matmul(T02,T24))
+# T04 = (numpy.matmul(T02,T24))
+# print(f'T04 = {T04}')
 
-r = T04[:3,:3]
-print(f'r = {r}')
-
-print(f'Yaw, Pitch, Roll = {tr2rpy(r, 'deg', 'zyx')}')
+# r = T04[:3,:3]
+# print(f'r = {r}')
+# print(f'Roll, Pitch, Yaw = {tr2rpy(r, 'deg', 'zyx')}')
 
 
 # m = r.as_euler('zyx', degrees=True)
