@@ -34,7 +34,7 @@ Fuente: Barrientos, A., Peñín, L.F., Balaguer, C., y Aracil, R., 2007, Fundame
 
 Peter Corke en `python`
 
-```
+```python
 from roboticstoolbox import *
 from spatialmath.base import *
 import math
@@ -112,7 +112,7 @@ $$𝜃_1=𝛼−∅$$
 
 Peter Corke en `python`
 
-```
+```python
 from roboticstoolbox import *
 from spatialmath.base import *
 import math
