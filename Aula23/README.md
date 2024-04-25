@@ -645,12 +645,6 @@ l1 = 10;
 l2 = 10;
 l3 = 10;
 
-R(1) = Link('revolute','d',l1,'alpha',pi/2,'a',0,'offset',0);
-R(2) = Link('revolute','d',0,'alpha',0,'a',l2,'offset',0);
-R(3) = Link('revolute','d',0,'alpha',0,'a',l3,'offset',0);
-
-Robot = SerialLink(R,'name','Bender')
-
 %Trayectoria 1 - perfil trapezoidal
 t0 = 0
 tf = 10
@@ -732,10 +726,7 @@ for i=1:length(q1T)
     plot(figC,t_(:),d2q3T_(:,1),'-r')
     
     figure(1)
-    %Robot.plot([q1T(i),q2T(i),q3T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
-    Robot.teach([q1T(i),q2T(i),q3T(i)],'scale',1.0,'workspace',[-30 30 -30 30 -30 30]);
-%     zlim([-15,30]);
-    MTH = Robot.fkine([q1T(i),q2T(i),q3T(i)])
+    [MTH] = ForwardKinematics3R(l1,l2,l3,q1T(i),q2T(i),q3T(i));
     hold on
     plot3(MTH.t(1),MTH.t(2),MTH.t(3),'.g')
 end
