@@ -354,13 +354,6 @@ theta1_P1toP2 = numpy.linspace(theta1_P1, theta1_P2, n)
 theta2_P1toP2 = numpy.linspace(theta2_P1, theta2_P2, n)
 theta3_P1toP2 = numpy.linspace(theta3_P1, theta3_P2, n)
 
-R = []
-R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l3, offset=0))
-Robot = DHRobot(R, name='Bender')
-print(Robot)
-
 d = numpy.zeros((3,n))
 
 fig1 = plt.figure().add_subplot(projection='3d')
@@ -398,10 +391,6 @@ ax2.plot(x, d[1,:],'tab:green')
 ax2.plot(x, d[2,:],'tab:blue')
 ax2.legend(['X','Y','Z'],loc="upper left")
 plt.show(block=True)
-
-
-
-
 ```
 
 ```matlab
