@@ -466,6 +466,87 @@ Las rutas con puntos intermedios a través de la interpolación de posiciones de
 
 ![Interpolación de posiciones ruta 3R](Imagenes/image-4.png)
 
+```python
+# Ruta 2 (espacio operacional (MoveL) - interpolando posiciones)
+
+import math
+import numpy
+from sympy import *
+from InverseKinematics3R import *
+from ForwardKinematics3R import *
+import matplotlib.pyplot as plt
+import time
+
+l1 = 10
+l2 = 10
+l3 = 10
+
+# Cinemática inversa
+# Punto 1
+P1x = 2.456
+P1y = 0.31
+P1z = 26.933
+
+# Punto 2
+P2x = -9.804
+P2y = 11.851
+P2z = 20.723
+
+n = 10
+x = numpy.arange(1,n+1,1)
+
+Px_P1toP2 = numpy.linspace(P1x, P2x, n)
+Py_P1toP2 = numpy.linspace(P1y, P2y, n)
+Pz_P1toP2 = numpy.linspace(P1z, P2z, n)
+
+d = numpy.zeros((3,n))
+
+fig1 = plt.figure().add_subplot(projection='3d')
+fig1.set_xlabel('X')
+fig1.set_ylabel('Y')
+fig1.set_zlabel('Z')
+fig1.set_xlim(-30, 30)
+fig1.set_ylim(-30, 30)
+fig1.set_zlim(-30, 30)
+
+theta1 = []
+theta2 = []
+theta3 = []
+
+for i in range (0,n):
+    [q1, q2, q3] = InverseKinematics3R(l1,l2,l3,Px_P1toP2[i],Py_P1toP2[i],Pz_P1toP2[i])
+    theta1.append(q1)
+    theta2.append(q2)
+    theta3.append(q3)
+
+    MTH = ForwardKinematics3R(l1,l2,l3,theta1[i],theta2[i],theta3[i])
+    d[:,i] =  MTH.t    
+    fig1.plot(d[0,i],d[1,i],d[2,i],'.b')
+
+plt.show(block=True)
+
+fig2 = plt.figure(2)
+ax1, ax2 = fig2.subplots(2,1)
+ax1.plot(x, numpy.rad2deg(theta1),'tab:red')
+ax1.set_title('Espacio articulacional')
+ax1.set_xlabel('Waypoint')
+ax1.set_ylabel('Ángulo (°)')
+plt.grid()
+ax1.plot(x, numpy.rad2deg(theta2),'tab:green')
+ax1.plot(x, numpy.rad2deg(theta3),'tab:blue')
+ax1.legend(['q1','q2','q3'],loc="upper left")
+
+ax2.plot(x, Px_P1toP2[:],'tab:red')
+ax2.set_title('Espacio operacional')
+ax2.set_xlabel('Waypoint')
+ax2.set_ylabel('Posición (m)')
+plt.grid()
+ax2.plot(x, Py_P1toP2[:],'tab:green')
+ax2.plot(x, Pz_P1toP2[:],'tab:blue')
+ax2.legend(['X','Y','Z'],loc="upper left")
+plt.show(block=True)
+```
+
 ```matlab
 %% Ruta 2 (espacio operacional (MoveL) - interpolando posiciones)
 
