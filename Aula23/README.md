@@ -318,6 +318,74 @@ Las rutas con puntos intermedios a través de la interpolación de ángulos del 
 
 ![Interpolación de ángulos ruta 3R](image-3.png)
 
+```python
+import math
+import numpy
+from sympy import *
+from InverseKinematics3R import *
+from ForwardKinematics3R import *
+import matplotlib.pyplot as plt
+import time
+
+l1 = 10
+l2 = 10
+l3 = 10
+
+# Cinemática inversa
+# Punto 1
+P1x = 2.456
+P1y = 0.31
+P1z = 26.933
+
+[theta1_P1, theta2_P1, theta3_P1] = InverseKinematics3R(l1,l2,l3,P1x,P1y,P1z)
+
+# Punto 2
+P2x = -9.804
+P2y = 11.851
+P2z = 20.723
+
+[theta1_P2, theta2_P2, theta3_P2] = InverseKinematics3R(l1,l2,l3,P2x,P2y,P2z)
+
+n = 10
+x = numpy.arange(1,n+1,1)
+
+theta1_P1toP2 = numpy.linspace(theta1_P1, theta1_P2, n)
+theta2_P1toP2 = numpy.linspace(theta2_P1, theta2_P2, n)
+theta3_P1toP2 = numpy.linspace(theta3_P1, theta3_P2, n)
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l3, offset=0))
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+d = numpy.zeros((3,n))
+
+for i in range (0,n):
+    MTH = ForwardKinematics3R(l1,l2,l3,theta1_P1toP2[i],theta2_P1toP2[i],theta3_P1toP2[i])
+    d[0,i] =  MTH.t[0]
+    d[1,i] =  MTH.t[1]
+    d[2,i] =  MTH.t[2]
+    fig1 = plt.figure().add_subplot(projection='3d')
+    plt.plot(d[0,i],d[1,i],d[2,i],'.b')
+    time.sleep(1)
+
+plt.show()
+
+fig2 = plt.figure(3)
+ax1, ax2 = fig2.subplots(2,1)
+ax1.plot(x, numpy.rad2deg(theta1_P1toP2),'tab:red')
+ax1.set_title('Espacio articulacional')
+ax1.set_xlabel('Waypoint')
+ax1.set_ylabel('Ángulo (°)')
+plt.grid()
+ax1.plot(x, numpy.rad2deg(theta2_P1toP2),'tab:green')
+ax1.plot(x, numpy.rad2deg(theta3_P1toP2),'tab:blue')
+ax1.legend(['q1','q2','q3'],loc="upper left")
+plt.show()
+```
+
 ```matlab
 %% Ruta 1 (espacio articulacional (MoveJ) - interpolando ángulos)
 
