@@ -367,6 +367,9 @@ fig1 = plt.figure().add_subplot(projection='3d')
 fig1.set_xlabel('X')
 fig1.set_ylabel('Y')
 fig1.set_zlabel('Z')
+fig1.set_xlim(-30, 30)
+fig1.set_ylim(-30, 30)
+fig1.set_zlim(-30, 30)
 
 for i in range (0,n):
     MTH = ForwardKinematics3R(l1,l2,l3,theta1_P1toP2[i],theta2_P1toP2[i],theta3_P1toP2[i])
@@ -396,6 +399,10 @@ ax2.plot(x, d[1,:],'tab:green')
 ax2.plot(x, d[2,:],'tab:blue')
 ax2.legend(['X','Y','Z'],loc="upper left")
 plt.show(block=True)
+
+
+
+
 ```
 
 ```matlab
