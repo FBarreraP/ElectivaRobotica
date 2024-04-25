@@ -375,7 +375,6 @@ for i in range (0,n):
     MTH = ForwardKinematics3R(l1,l2,l3,theta1_P1toP2[i],theta2_P1toP2[i],theta3_P1toP2[i])
     d[:,i] =  MTH.t    
     fig1.plot(d[0,i],d[1,i],d[2,i],'.b')
-    time.sleep(1)
 
 plt.show(block=True)
 
