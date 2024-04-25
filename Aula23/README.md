@@ -319,6 +319,7 @@ Las rutas con puntos intermedios a través de la interpolación de ángulos del 
 ![Interpolación de ángulos ruta 3R](image-3.png)
 
 ```python
+# Ruta 1 (espacio articulacional (MoveJ) - interpolando ángulos)
 import math
 import numpy
 from sympy import *
@@ -362,18 +363,20 @@ print(Robot)
 
 d = numpy.zeros((3,n))
 
+fig1 = plt.figure().add_subplot(projection='3d')
+fig1.set_xlabel('X')
+fig1.set_ylabel('Y')
+fig1.set_zlabel('Z')
+
 for i in range (0,n):
     MTH = ForwardKinematics3R(l1,l2,l3,theta1_P1toP2[i],theta2_P1toP2[i],theta3_P1toP2[i])
-    d[0,i] =  MTH.t[0]
-    d[1,i] =  MTH.t[1]
-    d[2,i] =  MTH.t[2]
-    fig1 = plt.figure().add_subplot(projection='3d')
-    plt.plot(d[0,i],d[1,i],d[2,i],'.b')
+    d[:,i] =  MTH.t    
+    fig1.plot(d[0,i],d[1,i],d[2,i],'.b')
     time.sleep(1)
 
-plt.show()
+plt.show(block=True)
 
-fig2 = plt.figure(3)
+fig2 = plt.figure(2)
 ax1, ax2 = fig2.subplots(2,1)
 ax1.plot(x, numpy.rad2deg(theta1_P1toP2),'tab:red')
 ax1.set_title('Espacio articulacional')
@@ -383,7 +386,16 @@ plt.grid()
 ax1.plot(x, numpy.rad2deg(theta2_P1toP2),'tab:green')
 ax1.plot(x, numpy.rad2deg(theta3_P1toP2),'tab:blue')
 ax1.legend(['q1','q2','q3'],loc="upper left")
-plt.show()
+
+ax2.plot(x, d[0,:],'tab:red')
+ax2.set_title('Espacio operacional')
+ax2.set_xlabel('Waypoint')
+ax2.set_ylabel('Posición (m)')
+plt.grid()
+ax2.plot(x, d[1,:],'tab:green')
+ax2.plot(x, d[2,:],'tab:blue')
+ax2.legend(['X','Y','Z'],loc="upper left")
+plt.show(block=True)
 ```
 
 ```matlab
