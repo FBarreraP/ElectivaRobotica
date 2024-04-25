@@ -336,13 +336,13 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 
 <h3>Bibliografía</h3>
 
-Peter Corke. Robotics, Vision and Control: Fundamental Algorithms in MATLAB. 1st. Springer Publishing Company, Incorporated, 2013.
-John J. Craig. Introduction to Robotics: Mechanics and Control. 2nd. Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc., 1989.
-Antonio Barrientos Cruz. Fundamentos de robótica. 2nd. McGraw-Hill, 2007.
-Mark W. Spong. Robot Dynamics and Control. 1st. New York, NY, USA: John Wiley & Sons, Inc., 1989. Poole, H. H. (2012). Fundamentals of robotics engineering. Springer Science & Business Media.
-Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & Business Media. Jazar, R. N. (2010). Theory of applied robotics: kinematics, dynamics, and control. Springer Science & Business Media.
-Peter Corke. Robotics toolbox for Matlab, release 9.10. 1st. 2015.
-Martinez, A., Fernandez E., Leaning ROS for robotics programming, PackT Publishing.
-O’Kane J., A Gentle Introduction to ROS.
-http://petercorke.com/Robotics_Toolbox.html
-Kim, S., Laschi, C., & Trimmer, B. (2013). Soft robotics: a bioinspired evolution in robotics. Trends in biotechnology, 31(5), 287-294.
+- Peter Corke. Robotics, Vision and Control: Fundamental Algorithms in MATLAB. 1st. Springer Publishing Company, Incorporated, 2013.
+- John J. Craig. Introduction to Robotics: Mechanics and Control. 2nd. Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc., 1989.
+- Antonio Barrientos Cruz. Fundamentos de robótica. 2nd. McGraw-Hill, 2007.
+- Mark W. Spong. Robot Dynamics and Control. 1st. New York, NY, USA: John Wiley & Sons, Inc., 1989. Poole, H. H. (2012). Fundamentals of robotics engineering. Springer Science & Business Media.
+- Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2010). Robotics: modelling, planning and control. Springer Science & - Business Media. Jazar, R. N. (2010). Theory of applied robotics: kinematics, dynamics, and control. Springer Science & Business Media.
+- Peter Corke. Robotics toolbox for Matlab, release 9.10. 1st. 2015.
+- Martinez, A., Fernandez E., Leaning ROS for robotics programming, PackT Publishing.
+- O’Kane J., A Gentle Introduction to ROS.
+- http://petercorke.com/Robotics_Toolbox.html
+- Kim, S., Laschi, C., & Trimmer, B. (2013). Soft robotics: a bioinspired evolution in robotics. Trends in biotechnology, 31(5), 287-294.
