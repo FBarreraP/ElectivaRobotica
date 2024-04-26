@@ -519,6 +519,8 @@ IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y
 >[!WARNING]
 >En las últimas versiones de Scipy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
 
+![Error scipy](image-8.png)
+
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
 I. Verificar la versión de la librería Scipy a través de un código en `Python`:
@@ -536,8 +538,6 @@ sudo pip install "scipy<1.12.0"
 ```
 
 Fuente: https://github.com/petercorke/RVC3-python/issues/16
-
-![Error scipy](image-8.png)
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
