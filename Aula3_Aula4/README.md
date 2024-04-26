@@ -495,7 +495,7 @@ pip3 install roboticstoolbox-python
 >[!WARNING]
 >En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
 
-![Alt text](image-2.png)
+![Error ambiente virtual](image-2.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
@@ -509,6 +509,29 @@ III. Al final del archivo agregar la siguiente línea:
 break-system-packages = true
 ```
 IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
+
+>[!WARNING]
+>En las última versión de Scipy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+
+I. Verificar la versión de la librería Scipy a través de un código en `Python`:
+```python
+import scipy
+scipy.__version__
+```
+II. Si la versión de Scipy es mayor a 1.12.0, desinstalar dicha versión a través de la siguiente línea comando:
+```
+sudo uninstall scipy
+```
+III. Instalar una versión de Scipy menor a 1.12.0
+```
+sudo pip install "scipy<1.12.0"
+```
+
+Fuente: https://github.com/petercorke/RVC3-python/issues/16
+
+![Error scipy](image-8.png)
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
