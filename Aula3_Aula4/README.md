@@ -517,7 +517,7 @@ break-system-packages = true
 IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y finalmente presionar `enter`
 
 >[!WARNING]
->En las última versión de Scipy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
+>En las últimas versiones de Scipy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
