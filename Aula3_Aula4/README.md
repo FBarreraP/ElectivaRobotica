@@ -486,10 +486,16 @@ La documentación del Toolbox de Peter Corke para `Python` se encuentra en: http
 
 1. Instalar desde pip el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
 
-En Windows y en Raspbian, en el terminal ejecutar el siguiente comando:
+En Windows, en el terminal ejecutar el siguiente comando:
 
 ```
 pip3 install roboticstoolbox-python
+```
+
+En Raspbian, en el terminal buscar la siguiente ruta: /home/[USER] y ejecutar el siguiente comando:
+
+```
+sudo pip3 install roboticstoolbox-python
 ```
 
 >[!WARNING]
