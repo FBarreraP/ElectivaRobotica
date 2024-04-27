@@ -56,6 +56,15 @@ Toda la información necesaria para instalar de forma adecuada Raspbian en la SD
 2. Cargar la imagen (.iso) de Raspbian en la SD Card a través de Balena etcher (https://etcher.balena.io)
 3. Colocar la SD Card en la RPi y realizar las configuraciones iniciales, para lo cual se necesitará un monitor HDMI, un teclado y un mouse
 
+> [!IMPORTANT]
+>Verificar que en Raspbian se instalaron las actualizaciones iniciales al momento de la configuración del sistema operativo, lo cual se realiza en la primera vez que se ejecuta en la Raspberry el sistema operativo en la SD Card o con el asistente de actualización en Raspbian, instalar dichas actualizaciones o ejecutar en la terminal los siguientes comandos:<br>
+>1. sudo apt-get -y update<br>
+>2. sudo apt-get -y dist-upgrade<br>
+>3. sudo apt-get -y autoremove<br>
+>4. sudo apt-get autoclean<br>
+>5. sudo reboot<br>
+>Fuente: https://www.luisllamas.es/actualizar-version-raspbian-raspberry-pi/#:~:text=En%20primer%20lugar%2C%20verificamos%20la%20versi%C3%B3n%20actual%20con,apt-get%20-y%20autoremove%20sudo%20apt-get%20autoclean%20sudo%20reboot
+
 <h3>Habilitar comunicación remota por VNC entre PC y RPi</h3>
 
 Para realizar la comunicación remota por VNC entre PC y RPi es indispensable que los dos dispositivos estén conectados en la misma red de internet.
@@ -481,15 +490,6 @@ Fabian.result()
 ```
 
 <h2>Toolbox Peter Corke</h2>
-
-> [!IMPORTANT]
->Antes de realizar la instalación del toolbox de Peter Corke, verificar que en Raspbian se instalaron las actualizaciones iniciales después de correr en la Raspberry el sistema operativo en la SD Card por primera vez, para lo cual se deben ejecutar los siguientes comandos:<br>
->1. sudo apt-get -y update<br>
->2. sudo apt-get -y dist-upgrade<br>
->3. sudo apt-get -y autoremove<br>
->4. sudo apt-get autoclean<br>
->5. sudo reboot<br>
->Fuente: https://www.luisllamas.es/actualizar-version-raspbian-raspberry-pi/#:~:text=En%20primer%20lugar%2C%20verificamos%20la%20versi%C3%B3n%20actual%20con,apt-get%20-y%20autoremove%20sudo%20apt-get%20autoclean%20sudo%20reboot
 
 La documentación del Toolbox de Peter Corke para `Python` se encuentra en: https://petercorke.github.io/robotics-toolbox-python/intro.html
 
