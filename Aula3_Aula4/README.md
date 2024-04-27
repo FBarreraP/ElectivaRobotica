@@ -482,6 +482,15 @@ Fabian.result()
 
 <h2>Toolbox Peter Corke</h2>
 
+> [!IMPORTANT]
+>Antes de realizar la instalación del toolbox de Peter Corke, verificar que en Raspbian se instalaron las actualizaciones iniciales después de correr en la Raspberry el sistema operativo en la SD Card por primera vez, para lo cual se deben ejecutar los siguientes comandos:
+>sudo apt-get -y update
+>sudo apt-get -y dist-upgrade
+>sudo apt-get -y autoremove
+>sudo apt-get autoclean
+>sudo reboot
+>Fuente: https://www.luisllamas.es/actualizar-version-raspbian-raspberry-pi/#:~:text=En%20primer%20lugar%2C%20verificamos%20la%20versi%C3%B3n%20actual%20con,apt-get%20-y%20autoremove%20sudo%20apt-get%20autoclean%20sudo%20reboot
+
 La documentación del Toolbox de Peter Corke para `Python` se encuentra en: https://petercorke.github.io/robotics-toolbox-python/intro.html
 
 1. Instalar desde pip el toolbox de Peter Corke en `Python` (https://github.com/petercorke/robotics-toolbox-python)
@@ -492,7 +501,7 @@ En Windows, en el terminal ejecutar el siguiente comando:
 pip3 install roboticstoolbox-python
 ```
 
-En Raspbian, en el terminal buscar la siguiente ruta: /home/[USER] y ejecutar el siguiente comando:
+En Raspbian, en el terminal buscar la siguiente ruta: /home/[USER] con el comando `cd ~`y ejecutar el siguiente comando:
 
 ```
 sudo pip3 install roboticstoolbox-python
