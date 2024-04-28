@@ -93,6 +93,7 @@ from RotarX import *
 import numpy
 
 theta1 = symbols('theta1')
+
 R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
 print(f'R01 = {R01}')
 ```
@@ -119,6 +120,16 @@ $$R_2^1 = \begin{bmatrix}
 0 & 0 & 1 \\ 
 \end{bmatrix}
 $$
+
+```python
+from sympy import *
+from RotarZ import *
+
+theta2 = symbols('theta2')
+
+R12 = RotarZ(theta2)
+print(f'R12 = {R12}')
+```
 
 ```matlab
 clear all
@@ -154,6 +165,19 @@ $$R_3^2 = \begin{bmatrix}
 0 & 1 & 0 \\ 
 \end{bmatrix} 
 $$
+
+```python
+from sympy import *
+from RotarZ import *
+from RotarX import *
+from RotarY import *
+from numpy.linalg import multi_dot
+
+theta3 = symbols('theta3')
+
+R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+print(f'R23 = {R23}')
+```
 
 ```matlab
 clear all
@@ -192,6 +216,19 @@ $$R_4^3 = \begin{bmatrix}
 \end{bmatrix} 
 $$
 
+```python
+from sympy import *
+from RotarZ import *
+from RotarX import *
+from RotarY import *
+from numpy.linalg import multi_dot
+
+theta4 = symbols('theta4')
+
+R34 = multi_dot([RotarZ(theta4),RotarZ(-pi/2),RotarX(-pi/2)])
+print(f'R34 = {R34}')
+```
+
 ```matlab
 clear all
 close all
@@ -223,6 +260,18 @@ $$R_5^4 = \begin{bmatrix}
 \end{bmatrix} 
 $$
 
+```python
+from sympy import *
+from RotarZ import *
+from RotarX import *
+import numpy
+
+theta5 = symbols('theta5')
+
+R45 = numpy.matmul(RotarZ(theta5),RotarX(pi/2))
+print(f'R45 = {R45}')
+```
+
 ```matlab
 clear all
 close all
@@ -246,6 +295,16 @@ $$R_6^5 = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+```python
+from sympy import *
+from RotarZ import *
+
+theta6 = symbols('theta6')
+
+R56 = RotarZ(theta6)
+print(f'R56 = {R56}')
+```
+
 ```matlab
 clear all
 close all
@@ -253,7 +312,7 @@ clc
 
 syms theta6
 
-R45 = RotarZ(theta6)
+R56 = RotarZ(theta6)
 ```
 
 <h4>Paso 1</h4>
