@@ -634,6 +634,103 @@ Las trayectorias con puntos intermedios a través de la interpolación de ángul
 
 ![Interpolación de ángulos PVT 3R](Imagenes/image-6.png)
 
+<!-- ```python
+# Ruta 1 (espacio articulacional (MoveJ) - interpolando ángulos)
+import math
+import numpy
+from sympy import *
+from InverseKinematics3R import *
+from ForwardKinematics3R import *
+import matplotlib.pyplot as plt
+import time
+from roboticstoolbox import trapezoidal
+
+l1 = 10
+l2 = 10
+l3 = 10
+
+#Trayectoria 1 - perfil trapezoidal
+t0 = 0
+tf = 10
+t = numpy.linspace(t0,tf,50)
+
+# Punto 1
+P1x = 2.456
+P1y = 0.31
+P1z = 26.933
+
+[theta1_P1, theta2_P1, theta3_P1] = InverseKinematics3R(l1,l2,l3,P1x,P1y,P1z)
+
+# Punto 2
+P2x = -9.804
+P2y = 11.851
+P2z = 20.723
+
+[theta1_P2, theta2_P2, theta3_P2] = InverseKinematics3R(l1,l2,l3,P2x,P2y,P2z)
+
+q1 = trapezoidal(theta1_P1,theta1_P2,t)
+q2 = trapezoidal(theta2_P1,theta2_P2,t)
+q3 = trapezoidal(theta3_P1,theta3_P2,t)
+
+fig1 = plt.figure().add_subplot(projection='3d')
+fig1.set_xlabel('X')
+fig1.set_ylabel('Y')
+fig1.set_zlabel('Z')
+fig1.set_xlim(-30, 30)
+fig1.set_ylim(-30, 30)
+fig1.set_zlim(-30, 30)
+
+
+# q1.plot()
+# q2.plot()
+# q3.plot()
+fig2 = plt.figure(2)
+ax1, ax2, ax3 = fig2.subplots(3,1)
+ax1.set_title('Posición angular')
+ax1.grid()
+ax1.set_xlabel('Tiempo (s)')
+ax1.set_ylabel('Ángulo (°)')
+
+ax2.set_title('Velocidad angular')
+ax2.grid()
+ax2.set_xlabel('Tiempo (s)')
+ax2.set_ylabel('Ángulo (rad/s)')
+
+ax3.set_title('Aceleración angular')
+ax3.grid()
+ax3.set_xlabel('Tiempo (s)')
+ax3.set_ylabel('Ángulo (rad/s^2)')
+
+t_ = numpy.zeros((len(q1),1))
+q1T_ = numpy.zeros((len(q1),1))
+q2T_ = numpy.zeros((len(q2),1))
+q3T_ = numpy.zeros((len(q2),1))
+
+for i in range (0,n):
+    t_[i,0] = t[i];
+    # Gráfica de posición
+    q1T_[i,0] = numpy.rad2deg(q1.q[i])
+    ax1.plot(t_[i,0],q1T_[i,0],'-b')
+    q2T_[i,0] = numpy.rad2deg(q2.q[i])
+    ax1.plot(t_[i,0],q2T_[i,0],'-b')
+    q3T_[i,0] = numpy.rad2deg(q3.q[i])
+    ax1.plot(t_[i,0],q3T_[i,0],'-b')
+    
+    # ax1.plot(x, numpy.rad2deg(theta1_P1toP2),'tab:red')
+    # ax1.plot(x, numpy.rad2deg(theta2_P1toP2),'tab:green')
+    # ax1.plot(x, numpy.rad2deg(theta3_P1toP2),'tab:blue')
+    
+    
+    
+    MTH = ForwardKinematics3R(l1,l2,l3,q1.q[i],q2.q[i],q3.q[i])
+    d[:,i] =  MTH.t    
+    fig1.plot(d[0,i],d[1,i],d[2,i],'.b')
+
+ax1.legend(['q1','q2','q3'],loc="upper left")
+
+plt.show(block=True)
+``` -->
+
 ```matlab
 %% Trayectoria de perfil de velocidad trapezoidal 3R (MoveJ)
 
