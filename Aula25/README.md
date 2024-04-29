@@ -33,7 +33,6 @@ from roboticstoolbox import *
 from spatialmath.base import *
 import numpy
 from sympy import *
-from InverseKinematics3R import *
 
 l1 = 12
 l2 = 10
@@ -51,15 +50,15 @@ q6 = 0
 
 q = [q1,q2,q3,q4,q5,q6]
 
-R = []
-R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
-R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
-R.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
-R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
+L = []
+L.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
+L.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
 
-Robot = DHRobot(R, name='Bender')
+Robot = DHRobot(L, name='Bender')
 print(Robot)
 
 Robot.teach(q, 'rpy/zyx', limits=[-50,50,-50,50,-50,50])
@@ -493,12 +492,12 @@ q1 = theta1
 q2 = theta2
 q3 = theta3
 
-R = []
-R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l3+l4, offset=0))
+F = []
+F.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+F.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+F.append(RevoluteDH(d=0, alpha=0, a=l3+l4, offset=0))
 
-Robot = DHRobot(R, name='Bender')
+Robot = DHRobot(F, name='Bender')
 print(Robot)
 
 Robot.teach([q1, q2, q3], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
