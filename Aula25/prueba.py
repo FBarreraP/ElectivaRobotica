@@ -41,14 +41,14 @@ print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 #print(f'theta1, theta2, theta3, theta4, theta5, theta6 = {theta}')
 
 #------------------------------- Paso 1 ----------------------------------
-from RotarX import *
-from RotarY import *
-from RotarZ import *
+from NRotarX import *
+from NRotarY import *
+from NRotarZ import *
 from numpy.linalg import multi_dot
 
 d = [-9.4519, 33.8090, 42.7623]
-R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
-mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[0]], [R[2][0],R[2][1],R[2][2],d[0]], [0, 0, 0, 1]])
+R = multi_dot([NRotarZ(numpy.deg2rad(51.7776)),NRotarY(numpy.deg2rad(10.0935)),NRotarX(numpy.deg2rad(-26.561))])
+mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[1]], [R[2][0],R[2][1],R[2][2],d[2]], [0, 0, 0, 1]])
 print(f'MTH = {mth}')
 
 rz = R[0:3,2]#Desplazamiento en Z
@@ -113,21 +113,37 @@ print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 
 #------------------------------- Paso 3 ----------------------------------
 # R03 = R01*R12*R23
+# from SRotarX import *
+# from SRotarY import *
+# from SRotarZ import *
 # theta1, theta2, theta3, theta4, theta5, theta6 = symbols('theta1 theta2 theta3 theta4 theta5 theta6')
-# R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
-# R12 = RotarZ(theta2)
-# R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+# R01 = numpy.matmul(SRotarZ(theta1),SRotarX(pi/2))
+# R12 = SRotarZ(theta2)
+# R23 = multi_dot([SRotarZ(theta3),SRotarX(pi/2),SRotarY(pi/2)])
 # R03 = simplify(multi_dot([R01,R12,R23]))
 # print(f'R03 = {R03}')
 # LR03 = latex(R03)
 # print(f'Latex R03 = {LR03}')
-R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
+
+R01 = numpy.matmul(NRotarZ(theta1),NRotarX(pi/2))
 print(f'R01 = {R01}')
-R12 = RotarZ(theta2)
+R12 = NRotarZ(theta2)
 print(f'R12 = {R12}')
-R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+R23 = multi_dot([NRotarZ(theta3),NRotarX(pi/2),NRotarY(pi/2)])
 print(f'R23 = {R23}')
 R03 = multi_dot([R01,R12,R23])
 print(f'R03 = {R03}')
 RPY = tr2rpy(R03,'deg','zyx')
 print(f'Roll, Pitch, Yaw = {RPY}')
+
+
+#------------------------------- Paso 4 ----------------------------------
+#Inversa de R03
+# R03i = simplify(numpy.linalg.inv(R03))
+# LR03 = latex(R03)
+# I = simplify(multi_dot([R03,R03i]))
+
+R03i = numpy.linalg.inv(R03)
+print(f'R03i = {R03i}')
+I = numpy.matmul(R03i,R03) #Matriz identidad
+print(f'I = {I}')

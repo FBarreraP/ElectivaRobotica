@@ -384,14 +384,14 @@ $$𝑌𝑎𝑤 = 51.7776$$
 ```python
 #------------------------------- Paso 1 ----------------------------------
 #Paso 1 (Posición y orientación deseada del TCP) DH 6R
-from RotarX import *
-from RotarY import *
-from RotarZ import *
+from NRotarX import *
+from NRotarY import *
+from NRotarZ import *
 from numpy.linalg import multi_dot
 
 d = [-9.4519, 33.8090, 42.7623]
-R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
-mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[0]], [R[2][0],R[2][1],R[2][2],d[0]], [0, 0, 0, 1]])
+R = multi_dot([NRotarZ(numpy.deg2rad(51.7776)),NRotarY(numpy.deg2rad(10.0935)),NRotarX(numpy.deg2rad(-26.561))])
+mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[1]], [R[2][0],R[2][1],R[2][2],d[2]], [0, 0, 0, 1]])
 print(f'MTH = {mth}')
 
 rz = R[0:3,2]#Desplazamiento en Z
@@ -592,19 +592,23 @@ $$
 ```python
 #------------------------------- Paso 3 ----------------------------------
 # R03 = R01*R12*R23
+# from SRotarX import *
+# from SRotarY import *
+# from SRotarZ import *
 # theta1, theta2, theta3, theta4, theta5, theta6 = symbols('theta1 theta2 theta3 theta4 theta5 theta6')
-# R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
-# R12 = RotarZ(theta2)
-# R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+# R01 = numpy.matmul(SRotarZ(theta1),SRotarX(pi/2))
+# R12 = SRotarZ(theta2)
+# R23 = multi_dot([SRotarZ(theta3),SRotarX(pi/2),SRotarY(pi/2)])
 # R03 = simplify(multi_dot([R01,R12,R23]))
 # print(f'R03 = {R03}')
 # LR03 = latex(R03)
 # print(f'Latex R03 = {LR03}')
-R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
+
+R01 = numpy.matmul(NRotarZ(theta1),NRotarX(pi/2))
 print(f'R01 = {R01}')
-R12 = RotarZ(theta2)
+R12 = NRotarZ(theta2)
 print(f'R12 = {R12}')
-R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+R23 = multi_dot([NRotarZ(theta3),NRotarX(pi/2),NRotarY(pi/2)])
 print(f'R23 = {R23}')
 R03 = multi_dot([R01,R12,R23])
 print(f'R03 = {R03}')
@@ -655,6 +659,19 @@ $$(R_3^0)^{−1} = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+```python
+#------------------------------- Paso 4 ----------------------------------
+#Inversa de R03
+# R03i = simplify(numpy.linalg.inv(R03))#Error de dtype('O') 
+# LR03 = latex(R03)
+# I = simplify(multi_dot([R03,R03i]))
+
+R03i = numpy.linalg.inv(R03)
+print(f'R03i = {R03i}')
+I = numpy.matmul(R03i,R03) #Matriz identidad
+print(f'I = {I}')
+```
+
 ```matlab
 %R03i = simplify(inv(R03))
 % LR03 = latex(R03)
@@ -694,6 +711,10 @@ $$𝑅_6^3 A= \begin{bmatrix}
 \end{bmatrix}
 $$ 
 
+```python
+
+```
+
 ```matlab
 R06 = R %Rotación deseada en el efector final
 R36A = R03i*R06
@@ -729,6 +750,10 @@ $$𝑅_6^3 𝐵 = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+```python
+
+```
+
 ```matlab
 syms theta4 theta5 theta6 
 R34 = RotarZ(theta4)*round(RotarZ(-pi/2)*RotarX(-pi/2))
@@ -758,6 +783,10 @@ $$𝜃_5=tan^{−1}⁡\frac{\sqrt{1−(𝐶(𝜃_5))^2}}{𝐶(𝜃_5)}=tan^{−1
 
 $𝜃_5$ tiene singularidad para $𝜃_5=90°=270°$
 
+```python
+
+```
+
 ```matlab
 theta4 = atan2(R36A(1,3),-R36A(2,3))
 theta6 = atan2(R36A(3,2),-R36A(3,1))
@@ -769,6 +798,10 @@ theta5 = atan2(sqrt(1-(R36A(3,3))^2),R36A(3,3))
 Verificar la cinemática inversa 6R por el método de desacople cinemático.
 
 ![CI 6R](Imagenes/image-14.png)
+
+```python
+
+```
 
 ```matlab
 q1 = theta1;
