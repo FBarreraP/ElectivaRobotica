@@ -116,7 +116,7 @@ print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 # from SRotarX import *
 # from SRotarY import *
 # from SRotarZ import *
-# theta1, theta2, theta3, theta4, theta5, theta6 = symbols('theta1 theta2 theta3 theta4 theta5 theta6')
+# theta1, theta2, theta3 = symbols('theta1 theta2 theta3 ')
 # R01 = numpy.matmul(SRotarZ(theta1),SRotarX(pi/2))
 # R12 = SRotarZ(theta2)
 # R23 = multi_dot([SRotarZ(theta3),SRotarX(pi/2),SRotarY(pi/2)])
@@ -160,7 +160,28 @@ print(f'R36A = {R36A}')
 
 #------------------------------- Paso 6 ----------------------------------
 # R36 simbólica
+from SRotarX import *
+from SRotarY import *
+from SRotarZ import *
+theta4, theta5, theta6 = symbols('theta4 theta5 theta6')
+R34 = multi_dot([SRotarZ(theta4),SRotarZ(-pi/2),SRotarX(-pi/2)])
+R45 = numpy.matmul(SRotarZ(theta5),SRotarX(pi/2))
+R56 = SRotarZ(theta6)
+R36B=simplify(multi_dot([R34,R45,R56]))
+print(f'R36B = {R36B}')
+LR36 = latex(R36B)
+print(f'Latex R36B = {LR36}')
 
+# R34 = numpy.matmul(NRotarZ(theta4),NRotarX(-pi/2))
+# R45 = numpy.matmul(NRotarZ(theta5),NRotarX(pi/2))
+# R56 = NRotarZ(theta6)
+# R36B = multi_dot([R34,R45,R56])
 
 
 #------------------------------- Paso 7 ----------------------------------
+theta4 = math.atan2(R36A[0,2],-R36A[1,2])
+print(f'theta4 = {theta4}')
+theta6 = math.atan2(R36A[2,1],-R36A[2,0])
+print(f'theta6 = {theta6}')
+theta5 = math.atan2(sqrt(1-(R36A[2,2])**2),R36A[2,2])
+print(f'theta5 = {theta5}')

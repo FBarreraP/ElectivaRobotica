@@ -757,7 +757,24 @@ $$𝑅_6^3 𝐵 = \begin{bmatrix}
 $$
 
 ```python
+#------------------------------- Paso 6 ----------------------------------
+# R36 simbólica
+from SRotarX import *
+from SRotarY import *
+from SRotarZ import *
+theta4, theta5, theta6 = symbols('theta4 theta5 theta6')
+R34 = multi_dot([SRotarZ(theta4),SRotarZ(-pi/2),SRotarX(-pi/2)])
+R45 = numpy.matmul(SRotarZ(theta5),SRotarX(pi/2))
+R56 = SRotarZ(theta6)
+R36B=simplify(multi_dot([R34,R45,R56]))
+print(f'R36B = {R36B}')
+LR36 = latex(R36B)
+print(f'Latex R36B = {LR36}')
 
+# R34 = numpy.matmul(NRotarZ(theta4),NRotarX(-pi/2))
+# R45 = numpy.matmul(NRotarZ(theta5),NRotarX(pi/2))
+# R56 = NRotarZ(theta6)
+# R36B = multi_dot([R34,R45,R56])
 ```
 
 ```matlab
