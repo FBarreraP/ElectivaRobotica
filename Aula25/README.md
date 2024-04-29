@@ -27,6 +27,51 @@ El centro de la muñeca es el punto donde las tres primeras articulaciones son l
 
 ![Paso 1 y 2 DH 6R](Imagenes/image-2.png)
 
+```python
+from roboticstoolbox import *
+from spatialmath.base import *
+import numpy
+from sympy import *
+from InverseKinematics3R import *
+
+l1 = 12
+l2 = 10
+l3 = 10
+l4 = 10
+l5 = 10
+l6 = 10
+
+q1 = 0
+q2 = 0
+q3 = 0
+q4 = 0
+q5 = 0
+q6 = 0
+
+q = [q1,q2,q3,q4,q5,q6]
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
+R.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
+R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
+R.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach(q, 'rpy/zyx', limits=[-50,50,-50,50,-50,50])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine(q)
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+#theta = Robot.ikine_6s(MTH,'llllll',)
+#print(f'theta1, theta2, theta3, theta4, theta5, theta6 = {theta}')
+```
+
 ```matlab
 % DH 6R
 clear all
@@ -334,6 +379,34 @@ $$𝑌𝑎𝑤 = 51.7776$$
 ![MTH06](Imagenes/image-9.png)
 
 ![PosWrist](Imagenes/image-10.png)
+
+```python
+#Paso 1 (Posición y orientación deseada del TCP) DH 6R
+
+from RotarX import *
+from RotarY import *
+from RotarZ import *
+import numpy
+from numpy.linalg import multi_dot
+
+l5 = 10
+l6 = 10
+
+d = [-9.4519, 33.8090, 42.7623]
+R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
+mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[0]], [R[2][0],R[2][1],R[2][2],d[0]], [0, 0, 0, 1]])
+print(f'MTH = {mth}')
+
+rz = R[0:3,2]#Desplazamiento en Z
+print(f'rz = {rz}')
+PosWrist = d-(l5+l6)*rz
+print(f'PosWrist = {PosWrist}')
+Tw = mth
+Tw[0,3] = PosWrist[0]
+Tw[1,3] = PosWrist[1]
+Tw[2,3] = PosWrist[2]
+print(f'Tw = {Tw}')
+```
 
 ```matlab
 % Paso 1 (Posición y orientación deseada del TCP) DH 6R
