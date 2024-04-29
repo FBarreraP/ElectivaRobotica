@@ -1,25 +1,45 @@
-#Paso 1 (Posición y orientación deseada del TCP) DH 6R
-
-from RotarX import *
-from RotarY import *
-from RotarZ import *
+from roboticstoolbox import *
+from spatialmath.base import *
+import math
 import numpy
-from numpy.linalg import multi_dot
+from sympy import *
 
-l5 = 10
-l6 = 10
+l1 = 10
+l2 = 10
 
-d = [-9.4519, 33.8090, 42.7623]
-R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
-mth = numpy.array([[R[0][0],R[0][1],R[0][2],d[0]], [R[1][0],R[1][1],R[1][2],d[0]], [R[2][0],R[2][1],R[2][2],d[0]], [0, 0, 0, 1]])
-print(f'MTH = {mth}')
+# Cinemática inversa
+Px = -10.577
+Py = -3.808
 
-rz = R[0:3,2]#Desplazamiento en Z
-print(f'rz = {rz}')
-PosWrist = d-(l5+l6)*rz
-print(f'PosWrist = {PosWrist}')
-Tw = mth
-Tw[0,3] = PosWrist[0]
-Tw[1,3] = PosWrist[1]
-Tw[2,3] = PosWrist[2]
-print(f'Tw = {Tw}')
+b = math.sqrt(Px**2+Py**2)
+# Theta 2
+cos_theta2 = (b**2-l2**2-l1**2)/(2*l1*l2)
+sen_theta2 = math.sqrt(1-(cos_theta2)**2)#(+)codo abajo y (-)codo arriba
+theta2 = math.atan2(sen_theta2, cos_theta2)
+print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
+# Theta 1
+alpha = math.atan2(Py,Px)
+phi = math.atan2(l2*sen_theta2, l1+l2*cos_theta2)
+theta1 = alpha - phi
+print(f'theta 1 = {numpy.rad2deg(theta1):.4f}')
+if theta1 <= -numpy.pi:
+    theta1 = (2*numpy.pi)+theta1
+#-------------
+
+q1 = theta1
+q2 = theta2
+
+R = []
+R.append(RevoluteDH(d=0, alpha=0, a=l1, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2])
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')

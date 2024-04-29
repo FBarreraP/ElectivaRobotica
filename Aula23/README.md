@@ -66,8 +66,8 @@ print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
 alpha = math.atan2(n,m)
 phi = math.atan2(l2*sen_theta2, l1+l2*cos_theta2)
 theta1 = alpha - phi
-if theta1 <= -pi:
-    theta1 = (2*pi)+theta1
+if theta1 <= -numpy.pi:
+    theta1 = (2*numpy.pi)+theta1
 
 print(f'theta 1 = {numpy.rad2deg(theta1):.4f}')
 #Theta 3
@@ -219,8 +219,8 @@ print(f'theta 3 = {numpy.rad2deg(theta3):.4f}')
 alpha = math.atan2(c,e)
 phi = math.atan2(l3*sen_theta3, l2+l3*cos_theta3)
 theta2 = float(alpha - phi)
-if theta2 <= -pi:
-    theta2 = (2*pi)+theta2
+if theta2 <= -numpy.pi:
+    theta2 = (2*numpy.pi)+theta2
 
 print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
 #-------------

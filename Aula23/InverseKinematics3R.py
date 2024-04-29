@@ -20,8 +20,8 @@ def InverseKinematics3R(l1,l2,l3,Px,Py,Pz):
     alpha = math.atan2(c,e)
     phi = math.atan2(l3*sen_theta3, l2+l3*cos_theta3)
     theta2 = float(alpha - phi)
-    if theta2 <= -pi:
-        theta2 = (2*pi)+theta2
+    if theta2 <= -numpy.pi:
+        theta2 = (2*numpy.pi)+theta2
 
     print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
     

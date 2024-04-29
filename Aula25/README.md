@@ -383,14 +383,11 @@ $$𝑌𝑎𝑤 = 51.7776$$
 ```python
 #Paso 1 (Posición y orientación deseada del TCP) DH 6R
 
-from RotarX import *
-from RotarY import *
-from RotarZ import *
-import numpy
-from numpy.linalg import multi_dot
-
-l5 = 10
-l6 = 10
+# from RotarX import *
+# from RotarY import *
+# from RotarZ import *
+# import numpy
+# from numpy.linalg import multi_dot
 
 d = [-9.4519, 33.8090, 42.7623]
 R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
