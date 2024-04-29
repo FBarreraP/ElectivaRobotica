@@ -19,15 +19,15 @@ q6 = 0
 
 q = [q1,q2,q3,q4,q5,q6]
 
-R = []
-R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
-R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
-R.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
-R.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
+L = []
+L.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
+L.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
 
-Robot = DHRobot(R, name='Bender')
+Robot = DHRobot(L, name='Bender')
 print(Robot)
 
 Robot.teach(q, 'rpy/zyx', limits=[-50,50,-50,50,-50,50])
@@ -94,12 +94,12 @@ q1 = theta1
 q2 = theta2
 q3 = theta3
 
-R = []
-R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
-R.append(RevoluteDH(d=0, alpha=0, a=l3+l4, offset=0))
+F = []
+F.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+F.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+F.append(RevoluteDH(d=0, alpha=0, a=l3+l4, offset=0))
 
-Robot = DHRobot(R, name='Bender')
+Robot = DHRobot(F, name='Bender')
 print(Robot)
 
 Robot.teach([q1, q2, q3], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
@@ -139,7 +139,7 @@ print(f'Roll, Pitch, Yaw = {RPY}')
 
 #------------------------------- Paso 4 ----------------------------------
 #Inversa de R03
-# R03i = simplify(numpy.linalg.inv(R03))
+# R03i = simplify(numpy.linalg.inv(R03))#Error de dtype('O') 
 # LR03 = latex(R03)
 # I = simplify(multi_dot([R03,R03i]))
 
@@ -147,3 +147,20 @@ R03i = numpy.linalg.inv(R03)
 print(f'R03i = {R03i}')
 I = numpy.matmul(R03i,R03) #Matriz identidad
 print(f'I = {I}')
+
+
+#------------------------------- Paso 5 ----------------------------------
+# R36 numérica
+R06 = R #Rotación deseada en el efector final
+R36A = numpy.matmul(R03i,R06)
+print(f'R36A = {R36A}')
+# R36 = simplify(R03i*round(Tw.R)) #Error por R03i simbólica
+# LR36 = latex(R36)
+
+
+#------------------------------- Paso 6 ----------------------------------
+# R36 simbólica
+
+
+
+#------------------------------- Paso 7 ----------------------------------

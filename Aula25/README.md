@@ -712,7 +712,13 @@ $$𝑅_6^3 A= \begin{bmatrix}
 $$ 
 
 ```python
-
+#------------------------------- Paso 5 ----------------------------------
+# R36 numérica
+R06 = R #Rotación deseada en el efector final
+R36A = numpy.matmul(R03i,R06)
+print(f'R36A = {R36A}')
+# R36 = simplify(R03i*round(Tw.R)) #Error por R03i simbólica
+# LR36 = latex(R36)
 ```
 
 ```matlab
