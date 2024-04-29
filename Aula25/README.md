@@ -28,6 +28,7 @@ El centro de la muñeca es el punto donde las tres primeras articulaciones son l
 ![Paso 1 y 2 DH 6R](Imagenes/image-2.png)
 
 ```python
+#------------------------------- Peter Corke ----------------------------------
 from roboticstoolbox import *
 from spatialmath.base import *
 import numpy
@@ -381,13 +382,12 @@ $$𝑌𝑎𝑤 = 51.7776$$
 ![PosWrist](Imagenes/image-10.png)
 
 ```python
+#------------------------------- Paso 1 ----------------------------------
 #Paso 1 (Posición y orientación deseada del TCP) DH 6R
-
-# from RotarX import *
-# from RotarY import *
-# from RotarZ import *
-# import numpy
-# from numpy.linalg import multi_dot
+from RotarX import *
+from RotarY import *
+from RotarZ import *
+from numpy.linalg import multi_dot
 
 d = [-9.4519, 33.8090, 42.7623]
 R = multi_dot([RotarZ(numpy.deg2rad(51.7776)),RotarY(numpy.deg2rad(10.0935)),RotarX(numpy.deg2rad(-26.561))])
@@ -459,8 +459,58 @@ $$𝜃_2=𝛼−∅ = 0.1571 𝑟𝑎𝑑$$
 
 ![3R Peter Corke](Imagenes/image-12.png)
 
-```matlab
+```python
+#------------------------------- Paso 2 ----------------------------------
+# Cinemática inversa
+import math
 
+Px = PosWrist[0]
+Py = PosWrist[1]
+Pz = PosWrist[2]
+
+e = sqrt(Px**2+Py**2)
+c = Pz - l1
+b = sqrt(e**2+c**2)
+# Theta 1
+theta1 = float(atan2(Py,Px))
+print(f'theta 1 = {numpy.rad2deg(theta1):.4f}')
+# Theta 3
+cos_theta3 = (b**2-l2**2-(l3+l4)**2)/(2*l2*(l3+l4))
+sen_theta3 = sqrt(1-(cos_theta3)**2)
+theta3 = float(atan2(sen_theta3, cos_theta3))
+print(f'theta 3 = {numpy.rad2deg(theta3):.4f}')
+# Theta 2
+alpha = math.atan2(c,e)
+phi = math.atan2((l3+l4)*sen_theta3, l2+(l3+l4)*cos_theta3)
+theta2 = float(alpha - phi)
+if theta2 <= -numpy.pi:
+    theta2 = (2*numpy.pi)+theta2
+
+print(f'theta 2 = {numpy.rad2deg(theta2):.4f}')
+#-------------
+
+q1 = theta1
+q2 = theta2
+q3 = theta3
+
+R = []
+R.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+R.append(RevoluteDH(d=0, alpha=0, a=l3+l4, offset=0))
+
+Robot = DHRobot(R, name='Bender')
+print(Robot)
+
+Robot.teach([q1, q2, q3], 'rpy/zyx', limits=[-30,30,-30,30,-30,30])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine([q1,q2,q3])
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+```
+
+```matlab
 % Cinemática inversa
 Px = PosWrist(1);
 Py = PosWrist(2);
