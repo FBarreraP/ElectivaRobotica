@@ -185,3 +185,34 @@ theta6 = math.atan2(R36A[2,1],-R36A[2,0])
 print(f'theta6 = {theta6}')
 theta5 = math.atan2(sqrt(1-(R36A[2,2])**2),R36A[2,2])
 print(f'theta5 = {theta5}')
+
+#------------------------------- Paso 8 ----------------------------------
+q1 = theta1
+q2 = theta2
+q3 = theta3
+q4 = theta4
+q5 = theta5
+q6 = theta6
+
+q = [q1,q2,q3,q4,q5,q6]
+
+L = []
+L.append(RevoluteDH(d=l1, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=0, alpha=0, a=l2, offset=0))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=numpy.pi/2))
+L.append(RevoluteDH(d=l3+l4, alpha=-numpy.pi/2, a=0, offset=-numpy.pi/2))
+L.append(RevoluteDH(d=0, alpha=numpy.pi/2, a=0, offset=0))
+L.append(RevoluteDH(d=l5+l6, alpha=0, a=0, offset=0))
+
+Robot = DHRobot(L, name='Bender')
+print(Robot)
+
+Robot.teach(q, 'rpy/zyx', limits=[-50,50,-50,50,-50,50])
+
+#zlim([-15,30]);
+
+MTH = Robot.fkine(q)
+print(MTH)
+print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
+#theta = Robot.ikine_6s(MTH,'llllll',)
+#print(f'theta1, theta2, theta3, theta4, theta5, theta6 = {theta}')
