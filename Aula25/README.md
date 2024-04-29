@@ -589,6 +589,29 @@ $$R_3^0 = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+```python
+#------------------------------- Paso 3 ----------------------------------
+# R03 = R01*R12*R23
+# theta1, theta2, theta3, theta4, theta5, theta6 = symbols('theta1 theta2 theta3 theta4 theta5 theta6')
+# R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
+# R12 = RotarZ(theta2)
+# R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+# R03 = simplify(multi_dot([R01,R12,R23]))
+# print(f'R03 = {R03}')
+# LR03 = latex(R03)
+# print(f'Latex R03 = {LR03}')
+R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
+print(f'R01 = {R01}')
+R12 = RotarZ(theta2)
+print(f'R12 = {R12}')
+R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+print(f'R23 = {R23}')
+R03 = multi_dot([R01,R12,R23])
+print(f'R03 = {R03}')
+RPY = tr2rpy(R03,'deg','zyx')
+print(f'Roll, Pitch, Yaw = {RPY}')
+```
+
 ```matlab
 % syms theta1 theta2 theta3 
 % R01 = RotarZ(theta1)*round(RotarX(pi/2))
