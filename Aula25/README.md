@@ -134,13 +134,13 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
-from RotarX import *
+from SRotarZ import *
+from SRotarX import *
 import numpy
 
 theta1 = symbols('theta1')
 
-R01 = numpy.matmul(RotarZ(theta1),RotarX(pi/2))
+R01 = numpy.matmul(SRotarZ(theta1),SRotarX(pi/2))
 print(f'R01 = {R01}')
 ```
 
@@ -169,11 +169,11 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
+from SRotarZ import *
 
 theta2 = symbols('theta2')
 
-R12 = RotarZ(theta2)
+R12 = SRotarZ(theta2)
 print(f'R12 = {R12}')
 ```
 
@@ -214,14 +214,14 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
-from RotarX import *
-from RotarY import *
+from SRotarZ import *
+from SRotarX import *
+from SRotarY import *
 from numpy.linalg import multi_dot
 
 theta3 = symbols('theta3')
 
-R23 = multi_dot([RotarZ(theta3),RotarX(pi/2),RotarY(pi/2)])
+R23 = multi_dot([SRotarZ(theta3),SRotarX(pi/2),SRotarY(pi/2)])
 print(f'R23 = {R23}')
 ```
 
@@ -264,14 +264,14 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
-from RotarX import *
-from RotarY import *
+from SRotarZ import *
+from SRotarX import *
+from SRotarY import *
 from numpy.linalg import multi_dot
 
 theta4 = symbols('theta4')
 
-R34 = multi_dot([RotarZ(theta4),RotarZ(-pi/2),RotarX(-pi/2)])
+R34 = multi_dot([SRotarZ(theta4),SRotarZ(-pi/2),SRotarX(-pi/2)])
 print(f'R34 = {R34}')
 ```
 
@@ -308,13 +308,13 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
-from RotarX import *
+from SRotarZ import *
+from SRotarX import *
 import numpy
 
 theta5 = symbols('theta5')
 
-R45 = numpy.matmul(RotarZ(theta5),RotarX(pi/2))
+R45 = numpy.matmul(SRotarZ(theta5),SRotarX(pi/2))
 print(f'R45 = {R45}')
 ```
 
@@ -343,11 +343,11 @@ $$
 
 ```python
 from sympy import *
-from RotarZ import *
+from SRotarZ import *
 
 theta6 = symbols('theta6')
 
-R56 = RotarZ(theta6)
+R56 = SRotarZ(theta6)
 print(f'R56 = {R56}')
 ```
 
