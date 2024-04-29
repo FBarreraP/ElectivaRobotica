@@ -807,7 +807,13 @@ $$𝜃_5=tan^{−1}⁡\frac{\sqrt{1−(𝐶(𝜃_5))^2}}{𝐶(𝜃_5)}=tan^{−1
 $𝜃_5$ tiene singularidad para $𝜃_5=90°=270°$
 
 ```python
-
+#------------------------------- Paso 7 ----------------------------------
+theta4 = math.atan2(R36A[0,2],-R36A[1,2])
+print(f'theta4 = {theta4}')
+theta6 = math.atan2(R36A[2,1],-R36A[2,0])
+print(f'theta6 = {theta6}')
+theta5 = math.atan2(sqrt(1-(R36A[2,2])**2),R36A[2,2])
+print(f'theta5 = {theta5}')
 ```
 
 ```matlab
