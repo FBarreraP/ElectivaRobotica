@@ -597,6 +597,8 @@ I. Instalar la siguiente dependencia en el terminal de Raspberry:
 sudo apt-get install libopenblas-dev
 ```
 
+Fuente: https://stackoverflow.com/questions/36893382/scipy-installation-issue-getting-importerror-libopenblas-so-0-cannot-open-sha
+
 ![Error libopenblas.so.0](image-9.png)
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
