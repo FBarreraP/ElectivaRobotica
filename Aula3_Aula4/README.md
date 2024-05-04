@@ -588,7 +588,7 @@ sudo apt-get install libqt4-test
 Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-cannot-open-shared-object-file-no-such-file-or-dire
 
 >[!WARNING]
->En las últimas versiones de Numpy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
+>En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
