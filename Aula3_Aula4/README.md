@@ -590,6 +590,8 @@ Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-c
 >[!WARNING]
 >En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
+![Error libopenblas.so.0](image-9.png)
+
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
 I. Instalar la siguiente dependencia en el terminal de Raspberry:
@@ -598,8 +600,6 @@ sudo apt-get install libopenblas-dev
 ```
 
 Fuente: https://stackoverflow.com/questions/36893382/scipy-installation-issue-getting-importerror-libopenblas-so-0-cannot-open-sha
-
-![Error libopenblas.so.0](image-9.png)
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
