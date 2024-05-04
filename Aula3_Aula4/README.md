@@ -508,7 +508,7 @@ sudo pip3 install roboticstoolbox-python
 ```
 
 >[!WARNING]
->En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando anterior
+>En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
 ![Error ambiente virtual](image-2.png)
 
@@ -539,7 +539,7 @@ scipy.__version__
 ```
 II. Si la versión de Scipy es mayor a 1.12.0, desinstalar dicha versión a través de la siguiente línea comando:
 ```
-sudo uninstall scipy
+sudo pip uninstall scipy
 ```
 III. Instalar una versión de Scipy menor a 1.12.0
 ```
@@ -547,6 +547,57 @@ sudo pip install "scipy<1.12.0"
 ```
 
 Fuente: https://github.com/petercorke/RVC3-python/issues/16
+
+>[!WARNING]
+>En las últimas versiones de Numpy se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
+
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+
+I. Verificar la versión de la librería Numpy a través del siguiente comando:
+```
+pip show numpy
+```
+II. Si la versión de Numpy es mayor a 1.23.2, desinstalar dicha versión a través de la siguiente línea comando:
+```
+sudo pip uninstall numpy
+```
+III. Instalar una versión de Numpy menor a 1.23.2
+```
+sudo pip install "numpy<1.23.2"
+``` 
+
+>[!WARNING]
+>En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
+
+Original error was: libcblas.so.3: cannot open shared object file: No such file or directory
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+
+I. Instalar las siguientes dependencias en el terminal de Raspberry:
+```
+sudo apt-get install libcblas-dev
+sudo apt-get install libhdf5-dev
+sudo apt-get install libhdf5-serial-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libjasper-dev 
+sudo apt-get install libqtgui4 
+sudo apt-get install libqt4-test
+```
+
+Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-cannot-open-shared-object-file-no-such-file-or-dire
+
+>[!WARNING]
+>En las últimas versiones de Numpy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+
+I. Instalar la siguiente dependencia en el terminal de Raspberry:
+```
+sudo apt-get install libopenblas-dev
+```
+
+![Error libopenblas.so.0](image-9.png)
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 

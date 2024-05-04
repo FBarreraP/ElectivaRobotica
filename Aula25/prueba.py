@@ -1,3 +1,4 @@
+#------------------------------- Peter Corke ----------------------------------
 from roboticstoolbox import *
 from spatialmath.base import *
 import numpy
@@ -40,7 +41,9 @@ print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 #theta = Robot.ikine_6s(MTH,'llllll',)
 #print(f'theta1, theta2, theta3, theta4, theta5, theta6 = {theta}')
 
+
 #------------------------------- Paso 1 ----------------------------------
+#Paso 1 (Posición y orientación deseada del TCP) DH 6R
 from NRotarX import *
 from NRotarY import *
 from NRotarZ import *
@@ -110,13 +113,12 @@ MTH = Robot.fkine([q1,q2,q3])
 print(MTH)
 print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 
-
 #------------------------------- Paso 3 ----------------------------------
 # R03 = R01*R12*R23
 # from SRotarX import *
 # from SRotarY import *
 # from SRotarZ import *
-# theta1, theta2, theta3 = symbols('theta1 theta2 theta3 ')
+# theta1, theta2, theta3, theta4, theta5, theta6 = symbols('theta1 theta2 theta3 theta4 theta5 theta6')
 # R01 = numpy.matmul(SRotarZ(theta1),SRotarX(pi/2))
 # R12 = SRotarZ(theta2)
 # R23 = multi_dot([SRotarZ(theta3),SRotarX(pi/2),SRotarY(pi/2)])
@@ -136,7 +138,6 @@ print(f'R03 = {R03}')
 RPY = tr2rpy(R03,'deg','zyx')
 print(f'Roll, Pitch, Yaw = {RPY}')
 
-
 #------------------------------- Paso 4 ----------------------------------
 #Inversa de R03
 # R03i = simplify(numpy.linalg.inv(R03))#Error de dtype('O') 
@@ -148,7 +149,6 @@ print(f'R03i = {R03i}')
 I = numpy.matmul(R03i,R03) #Matriz identidad
 print(f'I = {I}')
 
-
 #------------------------------- Paso 5 ----------------------------------
 # R36 numérica
 R06 = R #Rotación deseada en el efector final
@@ -156,7 +156,6 @@ R36A = numpy.matmul(R03i,R06)
 print(f'R36A = {R36A}')
 # R36 = simplify(R03i*round(Tw.R)) #Error por R03i simbólica
 # LR36 = latex(R36)
-
 
 #------------------------------- Paso 6 ----------------------------------
 # R36 simbólica
@@ -176,7 +175,6 @@ print(f'Latex R36B = {LR36}')
 # R45 = numpy.matmul(NRotarZ(theta5),NRotarX(pi/2))
 # R56 = NRotarZ(theta6)
 # R36B = multi_dot([R34,R45,R56])
-
 
 #------------------------------- Paso 7 ----------------------------------
 theta4 = math.atan2(R36A[0,2],-R36A[1,2])
