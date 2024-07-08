@@ -655,3 +655,11 @@ Robot.teach([q1, q2], limits=[-30,30,-30,30,-30,30])
 MTH = Robot.fkine([q1,q2])
 print(MTH)
 ```
+>[!WARNING]
+>En algunas versiones de Raspbian (ej:buster), se presenta este error posteriormente a la instalación del toolbox de Peter Corke en Raspberry y al momento de ejecutar un código con dicho toolbox, específicamente con la función teach.
+
+![Error call update Tkinter](image-12.png)
+
+Para solucionar ese error, se debe ejecutar el siguiente comando:
+
+Reemplazar teach por plot.
