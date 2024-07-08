@@ -588,9 +588,9 @@ sudo apt-get install libqt4-test
 Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-cannot-open-shared-object-file-no-such-file-or-dire
 
 >[!WARNING]
->En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
+>En algunas versiones de Raspbian (ej:buster) se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
-Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory
+![Error libf77blas.so.3](image-10.png)
 
 Para solucionar ese error, se debe ejecutar el siguiente comando:
 
@@ -599,9 +599,6 @@ sudo apt-get install libatlas-base-dev
 ```
 
 Fuente: https://github.com/numpy/numpy/issues/14772
-
-
-
 
 >[!WARNING]
 >En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
@@ -616,6 +613,23 @@ sudo apt-get install libopenblas-dev
 ```
 
 Fuente: https://stackoverflow.com/questions/36893382/scipy-installation-issue-getting-importerror-libopenblas-so-0-cannot-open-sha
+
+>[!WARNING]
+>En algunas versiones de Raspbian (ej:buster) se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
+
+![Error HASHES (files whl)](image-11.png)
+
+Para solucionar ese error, se debe ejecutar el siguiente comando:
+
+```
+sudo pip3 install "cython>=0.29.24"
+```
+
+*Si se presenta este error con otro paquete de Python (ej. scipy, rtb-data, etc), se debe instalar el paquete específico de manera independiente, así como se realizó con el paquete cython. Además de esto, es recomendable intentar la instalación con otra red de Internet y actualizar pip a través del siguiente comando:
+
+```
+python -m pip install --upgrade pip
+```
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
