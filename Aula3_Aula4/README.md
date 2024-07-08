@@ -625,11 +625,7 @@ Para solucionar ese error, se debe ejecutar el siguiente comando:
 sudo pip3 install "cython>=0.29.24"
 ```
 
-*Si se presenta este error con otro paquete de Python (ej. scipy, rtb-data, etc), se debe instalar el paquete específico de manera independiente, así como se realizó con el paquete cython. Además de esto, es recomendable intentar la instalación con otra red de Internet y actualizar pip a través del siguiente comando:
-
-```
-python -m pip install --upgrade pip
-```
+*Si se presenta este error con otro paquete de `Python` (ej. scipy, rtb-data, etc), se debe instalar el paquete específico de manera independiente, así como se realizó con el paquete cython. Además de esto, es recomendable intentar la instalación con otra red de Internet.
 
 2. Ejecutar un código en `Python` donde se importe la libreria `roboticstoolbox` para verificar la correcta instalación de la misma
 
