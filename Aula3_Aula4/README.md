@@ -590,6 +590,22 @@ Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-c
 >[!WARNING]
 >En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
+Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory
+
+Para solucionar ese error, se debe ejecutar el siguiente comando:
+
+```
+sudo apt-get install libatlas-base-dev
+```
+
+Fuente: https://github.com/numpy/numpy/issues/14772
+
+
+
+
+>[!WARNING]
+>En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
+
 ![Error libopenblas.so.0](image-9.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:

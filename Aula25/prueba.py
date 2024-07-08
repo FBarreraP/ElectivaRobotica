@@ -41,7 +41,6 @@ print(f'Roll, Pitch, Yaw = {tr2rpy(MTH.R, 'deg', 'zyx')}')
 #theta = Robot.ikine_6s(MTH,'llllll',)
 #print(f'theta1, theta2, theta3, theta4, theta5, theta6 = {theta}')
 
-
 #------------------------------- Paso 1 ----------------------------------
 #Paso 1 (Posición y orientación deseada del TCP) DH 6R
 from NRotarX import *
