@@ -20,19 +20,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>01/02/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
+		<td>01/08/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
 	</tr>
 	<tr>
-		<td>08/02/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
+		<td>08/08/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
 	</tr>
 	<tr>
-		<td>15/02/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
+		<td>15/08/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
 	</tr>
     <tr>
-		<td>22/02/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
+		<td>22/08/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>29/02/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>29/08/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--semana de parciales del primer corte--><!--semana de registro de notas del primer corte-->
 
 </table>
@@ -44,19 +44,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>03/02/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
+		<td>05/09/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
 	</tr>
 	<tr>
-		<td>10/02/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
+		<td>12/09/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
 	</tr>
 	<tr>
-		<td>17/02/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
+		<td>19/09/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
 	</tr>
     <tr>
-		<td>24/02/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
+		<td>26/09/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>02/03/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>03/10/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--semana de parciales del primer corte--><!--semana de registro de notas del primer corte-->
 
 </table>
@@ -68,22 +68,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>07/03/2024</td> <td>2<br>2</td> <td>11<br>12</td> <td>6</td> <td>Propuesta de proyecto<br>GUI Python</td>
+		<td>10/10/2024</td> <td>2<br>2</td> <td>11<br>12</td> <td>6</td> <td>Propuesta de proyecto<br>GUI Python</td>
 	</tr>
 	<tr>
-		<td>14/03/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Introducción a la cinemática directa<br>Paso 1 DH (asignación de sistemas coordenados)</td>
+		<td>17/10/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Introducción a la cinemática directa<br>Paso 1 DH (asignación de sistemas coordenados)</td>
 	</tr>
 	<tr>
-		<td>21/03/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Paso 2 DH (tabla DH)<br>Paso 3 DH (matriz MTH (Peter Corke))</td>
+		<td>24/10/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Paso 2 DH (tabla DH)<br>Paso 3 DH (matriz MTH (Peter Corke))</td>
 	</tr>
     <tr>
-		<td>28/03/2024</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
+		<td>31/10/2024</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
 	</tr>
     <tr>
-		<td>04/04/2024</td> <td>2<br>2</td> <td>17<br>18</td> <td>9</td> <td>Desarrollo de Laboratorio</td>
+		<td>07/11/2024</td> <td>2<br>2</td> <td>17<br>18</td> <td>9</td> <td>Desarrollo de Laboratorio</td>
 	</tr>
     <tr>
-		<td>11/04/2024</td> <td>2<br>2</td> <td>19<br>20</td> <td>10</td> <td>Parcial segundo corte<br>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>14/11/2024</td> <td>2<br>2</td> <td>19<br>20</td> <td>10</td> <td>Parcial segundo corte<br>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--semana de parciales del segundo corte--><!--semana de registro de notas del segundo corte-->
 </table>
 
