@@ -23,10 +23,10 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>01/08/2024</td> <td>2<br>2</td> <td>1<br>2</td> <td>1</td> <td>Presentación de la materia<br>Repositorio GitHub</td>
 	</tr>
 	<tr>
-		<td>08/08/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y Python (toolbox Peter Corke)</td>
+		<td>08/08/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y toolbox Peter Corke<br>Traslación y rotación de un sistema coordenado</td>
 	</tr>
 	<tr>
-		<td>15/08/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado<br>Matriz de transformación homogénea (MTH)</td>
+		<td>15/08/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Matriz de transformación homogénea (MTH)<br>Desarrollo de Laboratorio</td>
 	</tr>
     <tr>
 		<td>22/08/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
