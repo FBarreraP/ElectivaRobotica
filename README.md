@@ -26,10 +26,10 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>08/08/2024</td> <td>2<br>2</td> <td>3<br>4</td> <td>2</td> <td>Introducción a Raspberry y toolbox Peter Corke<br>Traslación y rotación de un sistema coordenado</td>
 	</tr>
 	<tr>
-		<td>15/08/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Matriz de transformación homogénea (MTH)<br>Desarrollo de Laboratorio</td>
+		<td>15/08/2024</td> <td>2<br>2</td> <td>5<br>6</td> <td>3</td> <td>Matriz de transformación homogénea (MTH)<br>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
-		<td>22/08/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo de Laboratorio</td>
+		<td>22/08/2024</td> <td>2<br>2</td> <td>7<br>8</td> <td>4</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
 		<td>29/08/2024</td> <td>2<br>2</td> <td>9<br>10</td> <td>5</td> <td>Parcial primer corte<br>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
@@ -50,10 +50,10 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>12/09/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Introducción a la cinemática directa<br>Método DH</td>
 	</tr>
 	<tr>
-		<td>19/09/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Desarrollo de Laboratorio</td>
+		<td>19/09/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
-		<td>26/09/2024</td> <td>2<br>2</td> <td>17<br>18</td> <td>9</td> <td>Desarrollo de Laboratorio</td>
+		<td>26/09/2024</td> <td>2<br>2</td> <td>17<br>18</td> <td>9</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
 		<td>03/10/2024</td> <td>2<br>2</td> <td>19<br>20</td> <td>10</td> <td>Parcial segundo corte<br>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
@@ -76,13 +76,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>24/10/2024</td> <td>2<br>2</td> <td>25<br>26</td> <td>13</td> <td>Desacople cinemático 6R<br>Desarrollo de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>31/10/2024</td> <td>2<br>2</td> <td>27<br>28</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>31/10/2024</td> <td>2<br>2</td> <td>27<br>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>07/11/2024</td> <td>2<br>2</td> <td>29<br>30</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>07/11/2024</td> <td>2<br>2</td> <td>29<br>30</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>14/11/2024</td> <td>2<br>2</td> <td>31<br>32</td> <td>16</td> <td>Examen final<br>Entrega de proyecto</td>
+		<td>14/11/2024</td> <td>2<br>2</td> <td>31<br>32</td> <td>16</td> <td>Examen final<br>Desarrollo y/o entrega de proyecto</td>
 	</tr><!--Finalización de clases-->
 </table>
 
