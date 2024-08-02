@@ -156,6 +156,7 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 		<li> Los talleres se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
 		<li> Los parciales y el examen final serán solucionados en hoja examen 📄</li> 
         <li> Uso obligatorio de bata blanca en el laboratorio 🥼</li>
+		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li> 
 	</ul>
 
 <h4>Observaciones de reglamento estudiantil</h4>
