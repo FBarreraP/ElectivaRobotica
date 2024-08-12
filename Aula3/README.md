@@ -13,19 +13,19 @@ La Raspberry Pi es un microcomputador sobre la cual pueden correr diferentes sis
 
 La documentación detallada de la RPi, en relación a: la placa, la instalación del sistema operativo, las configuraciones de la RPi, el software y librerias de la cámara, el acceso remoto, los datasheets, los tutoriales, etc, se encuentran en: https://www.raspberrypi.com/documentation/computers/
 
-![RPi 3B+](image-4.png)
+![RPi 3B+](Imagenes/image-4.png)
 
 Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
-![RPi 4B](image-6.png)
+![RPi 4B](Imagenes/image-6.png)
 
 Fuente: https://www.seeedstudio.com/blog/2020/05/28/meet-the-brand-new-raspberry-pi-4-8gb-ram/
 
-![Conexiones RPi](image-3.png)
+![Conexiones RPi](Imagenes/image-3.png)
 
 Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
-![Conexiones inalámbricas RPi](image-5.png)
+![Conexiones inalámbricas RPi](Imagenes/image-5.png)
 
 Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
@@ -33,7 +33,7 @@ Fuente: https://www.sharetechnote.com/html/RaspberryPi_WhatIsIt.html
 
 Algunos ejemplos con GPIOs se encuentran en: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
-![Hola mundo](image-1.png)
+![Hola mundo](Imagenes/image-1.png)
 
 ```python
 from gpiozero import LED
@@ -52,8 +52,8 @@ while True:
 
 Toda la información necesaria para instalar de forma adecuada Raspbian en la SD Card (clase 10) para la Raspberry Pi se encuentra en: https://www.raspberrypi.com/software/operating-systems/
 
-1. Descarga la imagen (.iso) correspondiente a la opción <i>Raspberry Pi OS with desktop and recommended software</i>
-2. Cargar la imagen (.iso) de Raspbian en la SD Card a través de Balena etcher (https://etcher.balena.io)
+1. Descarga la Imagenes/imagen (.iso) correspondiente a la opción <i>Raspberry Pi OS with desktop and recommended software</i>
+2. Cargar la Imagenes/imagen (.iso) de Raspbian en la SD Card a través de Balena etcher (https://etcher.balena.io)
 3. Colocar la SD Card en la RPi y realizar las configuraciones iniciales, además de instalar las actualizaciones del sistema operativo, para lo cual se necesitará un monitor HDMI, un teclado y un mouse
 
 > [!IMPORTANT]
@@ -118,7 +118,7 @@ sudo pip3 install roboticstoolbox-python
 >[!WARNING]
 >En las últimas versiones de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
-![Error ambiente virtual](image-2.png)
+![Error ambiente virtual](Imagenes/image-2.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
@@ -136,7 +136,7 @@ IV. Presionar `Ctrl+x`, luego presionar la `s` para guardar las modificaciones y
 >[!WARNING]
 >En las últimas versiones de Scipy se presenta el siguiente error posteriormente a la ejecución de un código de prueba importando el toolbox de Peter Corke en Python
 
-![Error scipy](image-8.png)
+![Error scipy](Imagenes/image-8.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
@@ -198,7 +198,7 @@ Fuente: https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-c
 >[!WARNING]
 >En algunas versiones de Raspbian (ej:buster) se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
-![Error libf77blas.so.3](image-10.png)
+![Error libf77blas.so.3](Imagenes/image-10.png)
 
 Para solucionar ese error, se debe ejecutar el siguiente comando:
 
@@ -211,7 +211,7 @@ Fuente: https://github.com/numpy/numpy/issues/14772
 >[!WARNING]
 >En las versiones de 32 bits de Raspbian se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
-![Error libopenblas.so.0](image-9.png)
+![Error libopenblas.so.0](Imagenes/image-9.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
@@ -225,7 +225,7 @@ Fuente: https://stackoverflow.com/questions/36893382/scipy-installation-issue-ge
 >[!WARNING]
 >En algunas versiones de Raspbian (ej:buster) se presenta el siguiente error posteriormente a la ejecución del comando de instalación del toolbox de Peter Corke en Raspberry
 
-![Error HASHES (files whl)](image-11.png)
+![Error HASHES (files whl)](Imagenes/image-11.png)
 
 Para solucionar ese error, se debe ejecutar el siguiente comando:
 
@@ -266,7 +266,7 @@ print(MTH)
 >[!WARNING]
 >En algunas versiones de Raspbian (ej:buster), se presenta este error posteriormente a la instalación del toolbox de Peter Corke en Raspberry y al momento de ejecutar un código con dicho toolbox, específicamente con la función teach.
 
-![Error call update Tkinter](image-12.png)
+![Error call update Tkinter](Imagenes/image-12.png)
 
 Para solucionar ese error, se debe ejecutar el siguiente comando:
 

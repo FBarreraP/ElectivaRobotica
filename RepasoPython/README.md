@@ -23,7 +23,7 @@ sudo apt install code
 >[!WARNING]
 >En la version de Raspbian Buster aparece el siguiente error:
 
-![libxkbfile1](image.png)
+![libxkbfile1](Imagenes/image.png)
 
 Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
 
@@ -256,7 +256,7 @@ print(notas)
 print(f'La suma de las notas es: {sum(notas)}')
 ```
 
-![depuración Python Tutor](image-1.png)
+![depuración Python Tutor](Imagenes/image-1.png)
 
 El ciclo `while` se utiliza para ejecutar un código una cantidad indeterminada de veces, teniendo en cuenta una condición
 
