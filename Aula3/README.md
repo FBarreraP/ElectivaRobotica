@@ -1,6 +1,6 @@
 <h1>Aula 3</h1>
 
-Esta clase consiste en la presentación de la Raspberry Pi y en realizar un repaso de `Python`.
+Esta clase consiste en la presentación de la Raspberry Pi y contextualizar el toolbox de Peter Corke.
 
 <h2>Introducción a Raspberry</h2>
 
