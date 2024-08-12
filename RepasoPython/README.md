@@ -20,6 +20,31 @@ En Raspbian, ejecutar en el terminal la siguiente línea de comando:
 sudo apt install code
 ```
 
+>[!WARNING]
+>En la version de Raspbian Buster aparece el siguiente error:
+
+![libxkbfile1](image.png)
+
+Para solucionar ese error, se deben tener en cuenta los siguientes pasos:
+
+I. Remover la versión actual de la dependencia "libxkbfile1"
+
+```
+sudo apt-get remove libxkbfile1
+```
+
+II. Descargar el libxkbfile1 versión 1.1.0 para arquitectura armhf desde un repositorio oficial de Debian
+
+```
+wget http://ftp.us.debian.org/debian/pool/main/libx/libxkbfile/libxkbfile1_1.1.0-1_armhf.deb
+```
+
+III. Instalar el paquete anteriormente descargado
+
+```
+sudo dpkg -i libxkbfile1_1.1.0-1_armhf.deb
+```
+
 <h2>3. Ejemplos de programación en Python</h2>
 
 Los ejemplos de esta clase están orientados a un repaso básico de programación, teniendo en cuenta la impresión de datos en consola, variables, ingreso de datos por consola, arreglos, condicionales, bucles, funciones y clases.
@@ -231,7 +256,7 @@ print(notas)
 print(f'La suma de las notas es: {sum(notas)}')
 ```
 
-![depuración Python Tutor](image.png)
+![depuración Python Tutor](image-1.png)
 
 El ciclo `while` se utiliza para ejecutar un código una cantidad indeterminada de veces, teniendo en cuenta una condición
 
