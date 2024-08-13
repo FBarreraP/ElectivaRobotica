@@ -19,7 +19,7 @@ En Raspbian, ejecutar en el terminal la siguiente línea de comando:
 ```
 sudo apt install code
 ```
-
+<!--
 >[!WARNING]
 >En la version de Raspbian Buster aparece el siguiente error:
 
@@ -44,6 +44,7 @@ III. Instalar el paquete anteriormente descargado
 ```
 sudo dpkg -i libxkbfile1_1.1.0-1_armhf.deb
 ```
+-->
 
 <h2>3. Ejemplos de programación en Python</h2>
 
