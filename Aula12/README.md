@@ -4,8 +4,9 @@ En esta clase se enseña a crear interfaces gráficas (GUI) con Python (Qt desig
 
 <h2>Interfaces gráficas (GUI) con Qt designer</h2>
 
-1. Instalar Qt designer<br>
-En Windows, descargar el software a través del siguiente link: https://build-system.fman.io/qt-designer-download y ejecutar los siguientes comandos para complementar la instalación de pyqt5:<br> 
+1. Instalar Qt designer
+
+En Windows, descargar el software <a href="https://build-system.fman.io/qt-designer-download">aquí</a> y ejecutar los siguientes comandos para complementar la instalación de pyqt5:
 
 ```
 pip install pyqt5
