@@ -1,246 +1,47 @@
-<h1>Aula 13</h1>
+<h1>Aula 14</h1>
 
-Esta clase consiste en realizar una introducción a la cinemática directa.
+Esta clase consiste en comprender y aplicar el primer paso del método DH (Denavit-Hartengerg), el cual es una solución de la cinemática directa de robots manipuladores seriales.
 
-<h2>Introducción a la cinemática directa</h2>
+<h2>Método DH</h2>
 
-Consiste en determinar la posición (traslación) y orientación (rotación) del efector final (TCP) con respecto al sistema coordenado de referencia (SC{0}), teniendo en cuenta los movimientos angulares y/o lineales de las articulaciones rotacionales y/o prismáticas, respectivamente.
+El método Denavit Hartenberg (DH) fue propuesto en 1955 por Jacques Denavit y Richard S. Hartenberg, el cual consiste en un método matricial que permite establecer de manera sistemática un sistema coordenado final con respecto al sistema coordenado de referencia. Para aplicar el método DH se deben tener en cuenta los siguientes pasos:
 
-El problema cinemático directo se reduce a una matriz homogénea de transformación (MTH) donde se relacione la posición y orientación del TCP
+1. Asignar el sistema coordenado para cada articulación del robot
+2. Determinar los parámetros DH (𝜃,𝑑,𝛼,𝑎), los cuales se utilizarán en el Toolbox Peter Corke de Matlab 
+3. Obtener la siguiente matriz :
 
-$$𝑇_6^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3 \cdot 𝑇_5^4 \cdot 𝑇_6^5$$
+$$𝑇_𝑛^{𝑛−1}=𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛)$$
 
-![CD](Imagenes/image-11.png)
+$$𝑇_𝑛^{𝑛−1}= 𝑅𝑜𝑡_{𝑧_{𝑛−1}}(𝜃_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑧_{𝑛−1}}(𝑑_𝑛) \cdot 𝑅𝑜𝑡_{𝑥_𝑛}(𝛼_𝑛) \cdot 𝑇𝑟𝑎𝑛𝑠_{𝑥_𝑛}(𝑎_𝑛)$$
 
-![Articulaciones](Imagenes/image-2.png)
+<h3>Paso 1 - Asignación de sistemas coordenados</h3>
 
-<h3>Método geométrico</h3>
+Regla 1: El eje Z se debe ubicar de manera positiva en el eje de rotación si la articulación es rotacional o en la misma dirección de movimiento si es prismática.
 
-1. Conocimientos de geometría espacial y trigonometría
+Regla 2: El eje X debe ser perpendicular al eje Z de su mismo SC y al eje Z del anterior SC.
 
-2. Los sistemas coordenados son arbitrarios (no tienen requisitos), pero se debe cumplir con la regla de la mano derecha
+Regla 3: Todos los sistemas deben respetar la regla de la mano derecha (eje Y).
 
-3. No es un método sistemático, es decir, para cada robot hay que realizar el análisis.
+Regla 4: Cada eje X debe intersecar el eje Z del SC inmediatamente anterior.
 
-<h3>Método DH</h3>
+<h4>Ejemplo 1</h4>
 
-1. Utilizado para robots manipuladores seriales
+![Ejemplo 1 paso 1 DH](Imagenes/image.png)
 
-2. Los sistemas coordenados deben ubicarse de acuerdo al movimiento de las articulaciones que están en medio de dos eslabones
+<h4>Ejemplo 2</h4>
 
-3. Es un método sistemático, es decir, el análisis funciona para cualquier robot de configuración serial
+![Ejemplo 2 paso 1 DH](Imagenes/image-1.png)
 
-![2R 2D y 3D](Imagenes/image-3.png)
+<h4>Ejercicio 1</h4>
 
-<h3>Método geométrico</h3>
+![Ejercicio 1 paso 1 DH](Imagenes/image-2.png)
 
-![2R 2D](Imagenes/image-4.png)
+<h4>Ejercicio 2</h4>
 
-Traslación (posición)
-
-$$𝑥=𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)$$
-
-$$𝑦=𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)$$
-
-$$𝑧=ℎ_1−ℎ_2$$
-
-Rotación (orientación)
-
-$$𝑅_𝑧(𝜃_1)\cdot 𝑅_𝑧(𝜃_2)=𝑅_𝑧(𝜃_2) \cdot 𝑅_𝑧(𝜃_1)=𝑅_𝑧(𝜃_1+𝜃_2)$$
-
-$$𝑅_𝑧(𝜃_1+𝜃_2)=\begin{bmatrix}
-cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0\\ 
-sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 \\ 
-0 & 0 & 1 
-\end{bmatrix}$$
-
-Comprobación en `Python`
-
-```python
-from sympy import *
-from RotarZ import *
-import numpy
-
-theta1, theta2 = symbols('theta1 theta2')
-RZ1 = simplify(numpy.matmul(RotarZ(theta1),RotarZ(theta2)))
-print(f'RZ1 = {RZ1}')
-RZ2 = simplify(numpy.matmul(RotarZ(theta2),RotarZ(theta1)))
-print(f'RZ2 = {RZ2}')
-RZ3 = simplify(RotarZ(theta1+theta2))
-print(f'RZ3 = {RZ3}')
-```
-
-Comprobación en `Matlab`
-
-```matlab
-syms theta1 theta2
-RZ1 = simplify(RotarZ(theta1)*RotarZ(theta2))
-RZ2 = simplify(RotarZ(theta2)*RotarZ(theta1))
-RZ3 = simplify(RotarZ(theta1+theta2))
-```
-
-Resultado final de la cinemática directa
-
-$$𝑇_4^0 = \begin{bmatrix}
-cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
-sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
-0 & 0 & 1 & ℎ_1−ℎ_2\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
-
-<h3>Transformaciones</h3>
-
-![2R 3D](Imagenes/image-7.png)
-
-$$𝑇_4^0 = 𝑇_1^0 \cdot 𝑇_2^1 \cdot 𝑇_3^2 \cdot 𝑇_4^3$$
-
-$$𝑇_1^0 = \begin{bmatrix}
-1 & 0 & 0 & 0 \\ 
-0 & 1 & 0 & 0 \\ 
-0 & 0 & 1 & ℎ_1 \\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
-
-$$𝑇_2^1 = \begin{bmatrix}
-cos⁡(𝜃_1) & -sen⁡(𝜃_1) & 0 & 𝑙_1cos⁡(𝜃_1)\\ 
-sen⁡(𝜃_1) & cos⁡(𝜃_1) & 0 & 𝑙_1sen⁡(𝜃_1)\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
-
-$$𝑇_3^2 = \begin{bmatrix}
-cos⁡(𝜃_2) & -sen⁡(𝜃_2) & 0 & 𝑙_2cos⁡(𝜃_2)\\ 
-sen⁡(𝜃_2) & cos⁡(𝜃_2) & 0 & 𝑙_2sen⁡(𝜃_2)\\ 
-0 & 0 & 1 & 0\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
-
-$$𝑇_4^3 = \begin{bmatrix}
-1 & 0 & 0 & 0 \\ 
-0 & 1 & 0 & 0 \\ 
-0 & 0 & 1 & -ℎ_2 \\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
-
-Comprobación en `Python`
-
-```python
-from sympy import *
-import numpy
-from spatialmath.base import *
-# from scipy.spatial.transform import Rotation as R
-
-#Transformaciones (MTH)
-
-theta1, theta2, h1, h2, l1, l2 = symbols('theta1 theta2 h1 h2 l1 l2')
-# theta1 = pi/2
-# theta2 = pi/2
-# l1 = 5
-# l2 = 5
-# h1 = 3
-# h2 = 2
-
-T01 = numpy.array([[1, 0, 0, 0],
-                   [0, 1, 0, 0],
-                   [0, 0, 1, h1],
-                   [0, 0, 0, 1]])
-
-T12 = numpy.array([[cos(theta1), -sin(theta1), 0, l1*cos(theta1)],
-                   [sin(theta1), cos(theta1), 0, l1*sin(theta1)],
-                   [0, 0, 1, 0],
-                   [0, 0, 0, 1]])
-
-T23 = numpy.array([[cos(theta2), -sin(theta2), 0, l2*cos(theta2)],
-                   [sin(theta2), cos(theta2), 0, l2*sin(theta2)],
-                   [0, 0, 1, 0],
-                   [0, 0, 0, 1]])
-
-   
-T34 = numpy.array([[1, 0, 0, 0],
-                   [0, 1, 0, 0],
-                   [0, 0, 1, -h2],
-                   [0, 0, 0, 1]])
-
-T02 = numpy.matmul(T01,T12)
-T24 = numpy.matmul(T23,T34)
-T04 = simplify(numpy.matmul(T02,T24))
-# T04 = (numpy.matmul(T02,T24))
-# print(f'T04 = {T04}')
-
-# r = T04[:3,:3]
-# print(f'r = {r}')
-# print(f'Roll, Pitch, Yaw = {tr2rpy(r, 'deg', 'zyx')}')
-
-#-------------Opción 2 (scipy.spatial.transform)-------------
-# r = R.from_matrix(T04[:3,:3])
-# print(f'r = {r}')
-# # m = numpy.rad2deg(tr2rpy(r,'zyx'))
-# m = r.as_euler('zyx', degrees=True)
-# print(f'm = {m}')
-
-```
-
-Comprobación en `Matlab`
-
-```matlab
-%Transformaciones (MTH)
-
-syms h1 h2 theta1 theta2 l1 l2
-% theta1 = pi/2
-% theta2 = pi/2
-% l1 = 5;
-% l2 = 5;
-% h1 = 3;
-% h2 = 2;
-
-T01 = [1 0 0 0;
-       0 1 0 0;
-       0 0 1 h1;
-       0 0 0 1]
-
-T12 = [cos(theta1) -sin(theta1) 0 l1*cos(theta1);
-       sin(theta1) cos(theta1)  0 l1*sin(theta1);
-       0           0            1 0;
-       0           0            0 1]
-   
-T23 = [cos(theta2) -sin(theta2) 0 l2*cos(theta2);
-       sin(theta2) cos(theta2)  0 l2*sin(theta2);
-       0           0            1 0;
-       0           0            0 1]
-   
-T34 = [1 0 0 0;
-       0 1 0 0;
-       0 0 1 -h2;
-       0 0 0 1]
-
-T04 = simplify(T01*T12*T23*T34)
-% T04 = T01*T12*T23*T34
-
-% r = T04(1:3,1:3)
-% m = rad2deg(tr2rpy(r,'zyx'))
-```
-
-Resultado final de la cinemática directa
-
-$$𝑇_4^0 = \begin{bmatrix}
-cos⁡(𝜃_1+𝜃_2) & -sen⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1cos⁡(𝜃_1)+𝑙_2cos⁡(𝜃_1+𝜃_2)\\ 
-sen⁡(𝜃_1+𝜃_2) & cos⁡(𝜃_1+𝜃_2) & 0 & 𝑙_1sen⁡(𝜃_1)+𝑙_2sen⁡(𝜃_1+𝜃_2)\\ 
-0 & 0 & 1 & ℎ_1−ℎ_2\\ 
-0 & 0 & 0 & 1
-\end{bmatrix}$$
+![Ejercicio 2 paso 1 DH](Imagenes/image-3.png)
 
 <h3>Ejercicios</h3>
 
-Calcular en Matlab el valor de la matriz de transformación homogénea para el robot planar, con los siguientes valores:
+Realizar la asignación de sistemas coordenados de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
 
-$$1. 𝜃_1=0, 𝜃_2=0, 𝑙_1=6, 𝑙_2=7, ℎ_1=2, ℎ_2=2$$
-
-$$2. 𝜃_1=𝜋/2, 𝜃_2=𝜋/2, 𝑙_1=4, 𝑙_2=5, ℎ_1=3, ℎ_2=5$$
-
-$$3. 𝜃_1=𝜋/2, 𝜃_2=𝜋/9, 𝑙_1=5, 𝑙_2=8, ℎ_1=7, ℎ_2=4$$
-
-$$4. 𝜃_1=𝜋/6, 𝜃_2=𝜋/3, 𝑙_1=3, 𝑙_2=2, ℎ_1=4, ℎ_2=1$$
-
-
-
-
+![Ejercicios](Imagenes/image-13.png)

@@ -1,0 +1,29 @@
+1. Modificar párametros de los widgets en el front end:
+
+- Edit text
+
+Point size
+Doble click en text para centrar el texto
+
+- Label
+
+Editar el texto en text
+Point size
+Alignment (centrar horizontal y vertical)
+
+- Push button
+
+Editar el texto en text
+Point size
+
+* Tener en cuenta el tag de cada widget (objectName)
+
+2. Agregar en el código de back end:
+
+self.pushButton.clicked.connect(self.Suma)
+
+def Suma(self):
+        a = self.textEdit.toPlainText()
+        b = self.textEdit_2.toPlainText()
+        c = int(a)+int(b)
+        self.label_5.setText(str(c))
