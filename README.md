@@ -44,10 +44,10 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>05/09/2024</td> <td>2<br>2</td> <td>11<br>12</td> <td>6</td> <td>Propuesta de proyecto<br>GUI Python</td>
+		<td>05/09/2024</td> <td>2<br>2</td> <td>11<br>12</td> <td>6</td> <td>GUI Python y Socialización de proyecto<br>Introducción a la cinemática directa</td>
 	</tr>
 	<tr>
-		<td>12/09/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Introducción a la cinemática directa<br>Método DH</td>
+		<td>12/09/2024</td> <td>2<br>2</td> <td>13<br>14</td> <td>7</td> <td>Método DH<br>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
 		<td>19/09/2024</td> <td>2<br>2</td> <td>15<br>16</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
