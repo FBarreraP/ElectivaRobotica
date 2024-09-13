@@ -1,5 +1,3 @@
-
-
 from sympy import *
 import numpy
 from spatialmath.base import *
@@ -39,6 +37,7 @@ T34 = numpy.array([[1, 0, 0, 0],
 T02 = numpy.matmul(T01,T12)
 T24 = numpy.matmul(T23,T34)
 T04 = simplify(numpy.matmul(T02,T24))
+print(f'T04 {T04}')
 # T04 = (numpy.matmul(T02,T24))
 # print(f'T04 = {T04}')
 
@@ -46,6 +45,9 @@ T04 = simplify(numpy.matmul(T02,T24))
 # print(f'r = {r}')
 # print(f'Roll, Pitch, Yaw = {tr2rpy(r, 'deg', 'zyx')}')
 
-
+#-------------Opción 2 (scipy.spatial.transform)-------------
+# r = R.from_matrix(T04[:3,:3])
+# print(f'r = {r}')
+# # m = numpy.rad2deg(tr2rpy(r,'zyx'))
 # m = r.as_euler('zyx', degrees=True)
 # print(f'm = {m}')
