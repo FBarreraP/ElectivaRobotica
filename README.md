@@ -73,7 +73,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>17/10/2024</td> <td>2<br>2</td> <td>23<br>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
 	</tr>
 	<tr>
-		<td>24/10/2024</td> <td>2<br>2</td> <td>25<br>26</td> <td>13</td> <td>Cinemática Inversa 3R y trayectorias del robot 3R<br>Desarrollo de Laboratorio y proyecto</td>
+		<td>24/10/2024</td> <td>2<br>2</td> <td>25<br>26</td> <td>13</td> <td>Cinemática Inversa 3R<br>Trayectorias del robot 3R</td>
 	</tr>
     <tr>
 		<td>31/10/2024</td> <td>2<br>2</td> <td>27<br>28</td> <td>14</td> <td>Desacople cinemático 6R<br>Desarrollo de Laboratorio y proyecto</td>

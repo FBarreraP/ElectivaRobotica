@@ -639,9 +639,3 @@ legend(figD,'X','Y','Z','Location','northwest')
 legend(figE,'dX','dy','dZ','Location','southeast')
 legend(figF,'d2X','d2Y','d2Z','Location','northeast')
 ```
-
-<h3>Ejercicios</h3>
-
-Determinar la cinemática inversa para cada uno de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
-
-![Ejercicios](Imagenes/image-7.png)

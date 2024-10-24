@@ -301,3 +301,9 @@ zlim([-15,30]);
 Robot.teach([q1,q2,q3],'scale',1.0,'workspace',[-30 30 -30 30 -30 30],'rpy/zyx');
 Robot.fkine([q1,q2,q3])
 ```
+
+<h3>Ejercicios</h3>
+
+Determinar la cinemática inversa para cada uno de los siguientes cinco tipos de robots: 1. Cartesiano, 2. Cilíndrico, 3. Esférico, 4. Scara y 5. Angular.
+
+![Ejercicios](Imagenes/image-7.png)
