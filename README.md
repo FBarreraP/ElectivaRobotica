@@ -115,13 +115,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>04/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desacople cinemático 6R</td>
 	</tr>
     <tr>
-		<td>06/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>06/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	 <tr>
-		<td>11/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>11/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>13/11/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>13/11/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	<tr>
 		<td>18/11/2025</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
@@ -145,40 +145,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (20%)</td>
 		<td>Parcial</td>
 		<td>10%</td>
-		<td>29/08/2025</td>
+		<td>02/09/2025</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>10%</td>
-		<td>15/08/2025<br>22/08/2025</td>
+		<td>26/08/2025<br>28/08/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (30%)</td>
 		<td>Parcial</td>
 		<td>15%</td>
-		<td>03/10/2025</td>
+		<td>07/10/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>19/09/2025<br>26/09/2025</td>
+		<td>23/09/2025<br>25/09/2025<br>30/09/2025<br>02/10/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (50%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>14/11/2025</td>
+		<td>18/11/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>17/10/2025<br>24/10/2025<br>31/10/2025<br>07/11/2025</td>
+		<td>06/11/2025<br>11/11/2025<br>13/11/2025</td>
 	</tr>
     <tr>
 		<td>Proyecto</td>
 		<td>20%</td>
-		<td>14/11/2025</td>
+		<td>06/11/2025<br>11/11/2025<br>13/11/2025</td>
 	</tr>
 </table>
 
