@@ -1,7 +1,7 @@
 <h1 align="center">Profesor: MSc. Fabián Barrera Prieto 👨‍🏫<br>
 Materia: Electiva de robótica 🦾<br>
 Universidad: ECCI 🏫<br>
-Año: 2025 📅</h1><br>
+Año: 2026 📅</h1><br>
 
 La electiva de robótica está enfocada al desarrollo de brazos manipuladores de 4 DOF programados con `Python` a través de Raspberry Pi 3B, 3B+ o 4B integrando una cámara y operados por medio de una interfaz gráfica.
 
@@ -20,34 +20,34 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>05/08/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>03/02/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>07/08/2025</td> <td>2</td> <td>2</td> <td>1</td> <td>FESTIVO</td>
+		<td>05/02/2026</td> <td>2</td> <td>2</td> <td>1</td> <td>Repositorio GitHub</td>
 	</tr>
 	<tr>
-		<td>12/08/2025</td> <td>2</td> <td>3</td> <td>2</td> <td>Repositorio GitHub</td>
+		<td>10/02/2026</td> <td>2</td> <td>3</td> <td>2</td> <td>Introducción a Raspberry y toolbox Peter Corke</td>
 	</tr>
 	<tr>
-		<td>14/08/2025</td> <td>2</td> <td>4</td> <td>2</td> <td>Introducción a Raspberry y toolbox Peter Corke</td>
+		<td>12/02/2026</td> <td>2</td> <td>4</td> <td>2</td> <td>Traslación y rotación de un sistema coordenado</td>
 	</tr>
 	<tr>
-		<td>19/08/2025</td> <td>2</td> <td>5</td> <td>3</td> <td>Traslación y rotación de un sistema coordenado</td>
+		<td>17/02/2026</td> <td>2</td> <td>5</td> <td>3</td> <td>Matriz de transformación homogénea (MTH)</td>
 	</tr>
 	<tr>
-		<td>21/08/2025</td> <td>2</td> <td>6</td> <td>3</td> <td>Matriz de transformación homogénea (MTH)</td>
+		<td>19/02/2026</td> <td>2</td> <td>6</td> <td>3</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>26/08/2025</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>24/02/2026</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
-		<td>28/08/2025</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>26/02/2026</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>02/09/2025</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
+		<td>03/03/2026</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr>
 	<tr>
-		<td>04/09/2025</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>05/03/2026</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--semana de parciales del primer corte--><!--semana de registro de notas del primer corte-->
 
 </table>
@@ -59,34 +59,37 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>09/09/2025</td> <td>2</td> <td>11</td> <td>6</td> <td>Propuesta de proyecto</td>
+		<td>10/03/2026</td> <td>2</td> <td>11</td> <td>6</td> <td>Propuesta de proyecto</td>
 	</tr>
 	<tr>
-		<td>11/09/2025</td> <td>2</td> <td>12</td> <td>6</td> <td>GUI Python</td>
+		<td>12/03/2026</td> <td>2</td> <td>12</td> <td>6</td> <td>GUI Python</td>
 	</tr>
 	<tr>
-		<td>16/09/2025</td> <td>2</td> <td>13</td> <td>7</td> <td>Introducción a la cinemática directa</td>
+		<td>17/03/2026</td> <td>2</td> <td>13</td> <td>7</td> <td>Introducción a la cinemática directa</td>
 	</tr>
 	<tr>
-		<td>18/09/2025</td> <td>2</td> <td>14</td> <td>7</td> <td>Método DH</td>
+		<td>19/03/2026</td> <td>2</td> <td>14</td> <td>7</td> <td>Método DH</td>
 	</tr>
 	<tr>
-		<td>23/09/2025</td> <td>2</td> <td>15</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>24/03/2026</td> <td>2</td> <td>15</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>25/09/2025</td> <td>2</td> <td>16</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>26/03/2026</td> <td>2</td> <td>16</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+	</tr>
+	<tr>
+		<td>31/03/2026<br>02/04/2026</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
 	</tr>
     <tr>
-		<td>30/09/2025</td> <td>2</td> <td>17</td> <td>9</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>07/04/2026</td> <td>2</td> <td>17</td> <td>9</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>02/10/2025</td> <td>2</td> <td>18</td> <td>9</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>09/04/2026</td> <td>2</td> <td>18</td> <td>9</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>07/10/2025</td> <td>2</td> <td>19</td> <td>10</td> <td>Parcial segundo corte</td>
+		<td>14/04/2026</td> <td>2</td> <td>19</td> <td>10</td> <td>Parcial segundo corte</td>
 	</tr>
     <tr>
-		<td>09/10/2025</td> <td>2</td> <td>20</td> <td>10</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>16/04/2026</td> <td>2</td> <td>20</td> <td>10</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--semana de parciales del segundo corte--><!--semana de registro de notas del segundo corte-->
 </table>
 
@@ -97,37 +100,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>14/10/2025</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
+		<td>21/04/2026</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td>16/10/2025</td> <td>2</td> <td>22</td> <td>11</td> <td>Introducción a la cinemática Inversa y 2R</td>
+		<td>23/04/2026</td> <td>2</td> <td>22</td> <td>11</td> <td>Introducción a la cinemática Inversa y 2R</td>
 	</tr>
 	<tr>
-		<td>21/10/2025<br>23/10/2025</td> <td>2<br>2</td> <td>23<br>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
+		<td>28/04/2026</td> <td>2</td> <td>23</td> <td>12</td> <td>Cinemática Inversa 3R</td>
 	</tr>
 	<tr>
-		<td>28/10/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Cinemática Inversa 3R</td>
+		<td>30/04/2026</td> <td>2</td> <td>24</td> <td>13</td> <td>Trayectorias del robot 3</td>
 	</tr>
 	<tr>
-		<td>30/10/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Trayectorias del robot 3R</td>
+		<td>05/05/2026</td> <td>2</td> <td>25</td> <td>13</td> <td>Desacople cinemático 6R</td>
 	</tr>
 	<tr>
-		<td>04/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desacople cinemático 6R</td>
+		<td>07/05/2026</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+	</tr>
+	<tr>
+		<td>12/05/2026</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>06/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>14/05/2026</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	 <tr>
-		<td>11/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>19/05/2026</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>13/11/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>21/05/2026</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	<tr>
-		<td>18/11/2025</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
+		<td>26/05/2026</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
 	</tr>
     <tr>
-		<td>20/11/2025</td> <td>2</td> <td>32</td> <td>16</td> <td>Retroalimentación del examen final y entrega de notas tercer corte</td>
+		<td>28/05/2026</td> <td>2</td> <td>32</td> <td>16</td> <td>Retroalimentación del examen final y entrega de notas tercer corte</td>
 	</tr><!--Finalización de clases-->
 </table>
 
@@ -145,40 +151,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (20%)</td>
 		<td>Parcial</td>
 		<td>10%</td>
-		<td>02/09/2025</td>
+		<td>02/09/2026</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>10%</td>
-		<td>26/08/2025<br>28/08/2025</td>
+		<td>26/08/2026<br>28/08/2026</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (30%)</td>
 		<td>Parcial</td>
 		<td>15%</td>
-		<td>07/10/2025</td>
+		<td>07/10/2026</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>23/09/2025<br>25/09/2025<br>30/09/2025<br>02/10/2025</td>
+		<td>23/09/2026<br>25/09/2026<br>30/09/2026<br>02/10/2026</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (50%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>18/11/2025</td>
+		<td>18/11/2026</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>06/11/2025<br>11/11/2025<br>13/11/2025</td>
+		<td>06/11/2026<br>11/11/2026<br>13/11/2026</td>
 	</tr>
     <tr>
 		<td>Proyecto</td>
 		<td>20%</td>
-		<td>06/11/2025<br>11/11/2025<br>13/11/2025</td>
+		<td>06/11/2026<br>11/11/2026<br>13/11/2026</td>
 	</tr>
 </table>
 
